@@ -312,6 +312,62 @@
         </lifelines>
       </interaction>
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="69e80559-49c7-4f9a-9eab-6e0213225af5"
+        name="Bolig"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="6a9dbfdc-339b-4edd-b435-54dd1dce6f31"
+        name="Arrangement"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="b3f3f204-5dca-4029-a110-212ce2893df9"
+        name="Tilmelding"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="820625e7-1ced-4d23-8ad1-ad86b9a297e5"
+        name="Bolig3"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="4f6c0f5b-54ba-4b46-aa9b-3b5db406d305"
+        name="Bolig31"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="b214092b-dde5-4dca-a0de-75c76088a9b7"
+        name="Bolig32"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="5c6bb956-73db-44cc-a482-ae9e15ee5f44"
+        name="Bolig33"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
   </packagedElements>
   <primitiveType
     Id="220a3521-e091-4221-bae9-3ef9018e845c"

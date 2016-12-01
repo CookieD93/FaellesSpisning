@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="11b46e8f-6c04-4cca-a0d3-4fe48bc64a1f" name="ClassDiagram" linkedPackageId="1bd13136-f3bd-41a1-896c-64939d336ca1" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="e88dad06-fc4a-45bf-a249-1b757efa08d0">
+      <profileInstance Id="771eed8e-2b85-472a-ae4d-046c20027366" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="a005f757-fad7-4382-88e0-7bbb3ef38306">
+      <profileInstance Id="7d27c877-5344-442b-a19b-f3e074f90205" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="59e96893-ef3b-4457-86bb-882cdaf3e578" name="Bolig" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="69e80559-49c7-4f9a-9eab-6e0213225af5" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="9c61421d-b9c9-44a0-80eb-de8531a44d85" name="Arrangement" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="6a9dbfdc-339b-4edd-b435-54dd1dce6f31" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="7fee8524-954b-40bf-b5d0-fcba1936e39e" name="Tilmelding" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b3f3f204-5dca-4029-a110-212ce2893df9" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="f6aad089-95e6-49dd-b9d3-1ab4baa5608c" name="Bolig3" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="820625e7-1ced-4d23-8ad1-ad86b9a297e5" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="f8377823-57ac-446f-9333-70c3bf678963" name="Bolig31" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="4f6c0f5b-54ba-4b46-aa9b-3b5db406d305" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="10d8d407-c5f7-4160-a292-ce14dd5cbaf8" name="Bolig32" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b214092b-dde5-4dca-a0de-75c76088a9b7" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="c63af81e-9875-4846-b7a0-77b4f09b3b70" name="Bolig33" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="5c6bb956-73db-44cc-a482-ae9e15ee5f44" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="1bd13136-f3bd-41a1-896c-64939d336ca1" name="Diagrammer">
+    <elementDefinition Id="c0f52b76-d1af-4e60-b82b-4a792cfb4b96" />
+  </package>
+</logicalClassDesignerModel>
