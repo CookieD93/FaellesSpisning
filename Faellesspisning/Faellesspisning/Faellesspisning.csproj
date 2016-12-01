@@ -95,6 +95,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Bolig.cs" />
     <Compile Include="HistorikView.xaml.cs">
       <DependentUpon>HistorikView.xaml</DependentUpon>
     </Compile>

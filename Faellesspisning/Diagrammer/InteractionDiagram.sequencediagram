@@ -1,1 +1,35 @@
-﻿ 
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="22bb57c0-a39e-4264-8fe2-6a6be01a1cdc" name="InteractionDiagram" linkedPackageId="fcddbff2-84c1-4715-aaf1-4c61cfb23c83" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="310bf8ec-054d-4711-837a-e9da2d9042e3">
+      <profileInstance Id="ea40b870-f05d-4d59-82c0-ac097721b586" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="0dd36096-f303-4d48-acb0-ac0ab137a5f5">
+      <profileInstance Id="f74bcc98-9564-4ef9-9c1f-4af3921008ed" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <interaction Id="09e6b2ec-1e85-472b-af82-33e9c7467ba9" name="InteractionDiagram" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
+        <elementDefinition Id="83b73ae7-ef7b-4957-a5bb-24a0fcb1ef87" />
+        <lifelines>
+          <lifeline Id="8fa10ea2-68ce-4acc-87f0-d5ae270c35f8" name="Bruger" isActor="false" lifelineDisplayName="Bruger">
+            <elementDefinition Id="20a1d04e-4bf8-485b-87fd-874533267cee" />
+          </lifeline>
+          <lifeline Id="9b1f62a3-bd75-411f-9d2f-d492d6ca17b1" name="System" isActor="false" lifelineDisplayName="System">
+            <elementDefinition Id="ef10d912-2c80-4574-b481-9b78e918f9f3" />
+          </lifeline>
+        </lifelines>
+      </interaction>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="fcddbff2-84c1-4715-aaf1-4c61cfb23c83" name="Diagrammer">
+    <elementDefinition Id="c0f52b76-d1af-4e60-b82b-4a792cfb4b96" />
+  </package>
+</SequenceDesignerModel>

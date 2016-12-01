@@ -1,1 +1,30 @@
-﻿ 
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sequenceDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="InteractionDiagram">
+  <SequenceDesignerModelMoniker Id="22bb57c0-a39e-4264-8fe2-6a6be01a1cdc" />
+  <nestedChildShapes>
+    <lifelineShape Id="6156e4e4-4940-4808-9be1-ead617bfd5b6" absoluteBounds="3.15625, 1, 0.15, 7" visible="true" visualStyleMode="Modified">
+      <lifelineMoniker Id="8fa10ea2-68ce-4acc-87f0-d5ae270c35f8" LastKnownName="Bruger" />
+      <relativeChildShapes>
+        <umlLifelineHeadShape Id="2f48a911-6938-4b6e-9983-de1bc2b5785a" absoluteBounds="2.73125, 0.6, 1, 0.4" customColor="White" visualStyleMode="Modified">
+          <lifelineMoniker Id="8fa10ea2-68ce-4acc-87f0-d5ae270c35f8" LastKnownName="Bruger" />
+          <relativeChildShapes />
+        </umlLifelineHeadShape>
+        <lifelineHoverShape Id="e20172fc-45da-4b17-96aa-98f94debdc1b" absoluteBounds="3.15625, 1, 0, 7">
+          <lifelineMoniker Id="8fa10ea2-68ce-4acc-87f0-d5ae270c35f8" LastKnownName="Bruger" />
+        </lifelineHoverShape>
+      </relativeChildShapes>
+    </lifelineShape>
+    <lifelineShape Id="a3834d0b-3bc7-45be-8e94-ee789ff5e516" absoluteBounds="7.28125, 1, 0.15, 7" visible="true" visualStyleMode="Modified">
+      <lifelineMoniker Id="9b1f62a3-bd75-411f-9d2f-d492d6ca17b1" LastKnownName="System" />
+      <relativeChildShapes>
+        <umlLifelineHeadShape Id="1f19ee57-bfbf-411e-baa3-10a4739d1cf5" absoluteBounds="6.85625, 0.6, 1, 0.4" customColor="White" visualStyleMode="Modified">
+          <lifelineMoniker Id="9b1f62a3-bd75-411f-9d2f-d492d6ca17b1" LastKnownName="System" />
+          <relativeChildShapes />
+        </umlLifelineHeadShape>
+        <lifelineHoverShape Id="8d1689d4-467b-47c2-b590-f1ad379c141d" absoluteBounds="7.28125, 1, 0, 7">
+          <lifelineMoniker Id="9b1f62a3-bd75-411f-9d2f-d492d6ca17b1" LastKnownName="System" />
+        </lifelineHoverShape>
+      </relativeChildShapes>
+    </lifelineShape>
+  </nestedChildShapes>
+</sequenceDesignerDiagram>
