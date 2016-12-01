@@ -8,10 +8,11 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid HorizontalAlignment="Left" Height="100" Margin="-4,-4,0,0" VerticalAlignment="Top" Width="1284"/>
+        <Grid HorizontalAlignment="Left" Height="100" Margin="-4,-4,0,0" VerticalAlignment="Top" Width="1284">
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="959,0,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="100" Width="315"/>
+        </Grid>
         <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Height="100" Margin="10,-4,0,0" VerticalAlignment="Top" Width="315"/>
         <Button x:Name="button_Copy" Content="Button" HorizontalAlignment="Left" Height="100" Margin="640,-4,0,0" VerticalAlignment="Top" Width="315"/>
-        <Button x:Name="button_Copy1" Content="Button" HorizontalAlignment="Left" Height="100" Margin="955,-4,0,0" VerticalAlignment="Top" Width="315"/>
         <Button x:Name="button_Copy2" Content="Button" HorizontalAlignment="Left" Height="100" Margin="325,-4,0,0" VerticalAlignment="Top" Width="315"/>
 
     </Grid>
