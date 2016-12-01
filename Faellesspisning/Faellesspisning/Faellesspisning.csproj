@@ -108,6 +108,7 @@
       <DependentUpon>TilmedlingView.xaml</DependentUpon>
     </Compile>
     <Compile Include="TilmeldlingVM.cs" />
+    <Compile Include="uge.cs" />
     <Compile Include="UgePlanView.xaml.cs">
       <DependentUpon>UgePlanView.xaml</DependentUpon>
     </Compile>

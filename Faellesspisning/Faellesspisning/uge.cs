@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace Faellesspisning
 {
-    class Bolig
+    class uge
     {
-        public int BoligNr { get; set; }
-
     }
 }
