@@ -1,354 +1,60 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="983a7b72-6556-4701-921b-62ec369d1f7e" name="DomainModel" linkedPackageId="d52b5a5d-a4f6-4143-b3c4-40cdffcdede4" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="a7573fb3-7ca5-40ce-a370-5e6fb3f2d663" name="DomainModel" linkedPackageId="2a26e0fc-4e53-4076-881f-11bb7cbb335b" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <profileInstances>
-    <packageHasProfileInstances Id="35a2597b-5021-4a46-8558-4f3910e4e340">
-      <profileInstance Id="a79f50d9-6e49-4183-af51-c5b2812c921a" name="StandardProfileL2">
+    <packageHasProfileInstances Id="c287c25d-8943-4b64-9f5e-36f1929a665b">
+      <profileInstance Id="cb996296-dc53-44a5-a704-6283fab345f9" name="StandardProfileL2">
         <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
       </profileInstance>
       <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
     </packageHasProfileInstances>
-    <packageHasProfileInstances Id="8dd07c7d-4c05-4866-a189-d88d49128f8e">
-      <profileInstance Id="c7ba394a-6623-4068-ab64-605742adaea8" name="StandardProfileL3">
+    <packageHasProfileInstances Id="a804eeaa-2fc9-4424-9f95-dff790446984">
+      <profileInstance Id="6da163a7-b344-47f8-ad81-43dfc0e58fb3" name="StandardProfileL3">
         <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
       </profileInstance>
       <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
     </packageHasProfileInstances>
   </profileInstances>
   <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="3f8c570d-b6a6-4867-9ca3-c5003b638708" name="Hus" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e66e1672-6bad-448a-a14a-61a000612aff" />
+        <ownedAttributesInternal>
+          <property Id="56d0263d-f2be-4f49-9c39-b482396ee0ee" name="Nr" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3afed06c-f607-4e7d-b152-5c0588515ca4" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="793e3811-f9de-4bf5-b275-eaceb2ebb977" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="5f97b6b3-848f-43ea-bc95-2bf315b0b98f" name="Beregning" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="7b8d6f55-8217-4f5b-82c5-21578cd16437" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="6150f58c-5f36-4cc3-8cf5-5ead02537637" name="Ugeplan" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="27f109f6-6635-4e16-8320-0d61dc0983ad" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d7de8654-6915-41eb-ba82-3f0853cbb7ea" name="Tilmelding" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="79794386-ce75-4683-923c-7777ce6de138" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="b1717106-2662-49d1-a7ce-0df3cbf41ea2" name="Særarrangement" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a9d0dcfe-1f7b-4a82-a333-3ba620401583" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
     <packageHasNamedElement>
-      <referencedType Id="d5bdd808-aae9-49e1-a2c7-ec3af5df4ba8" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+      <referencedType Id="793e3811-f9de-4bf5-b275-eaceb2ebb977" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
         <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
       </referencedType>
     </packageHasNamedElement>
-    <logicalClassDesignerModelHasTypes>
-      <class Id="d6ec06f4-3d44-4468-8a88-df418e350f9e" name="Hus" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <elementDefinition Id="c44f45ea-c748-40a3-ac67-6dde89876656" />
-        <targetEnds>
-          <association Id="168fde13-7f0b-4759-b2c6-344d7275944a" isDerived="false" sourceEndRoleName="Hus" targetEndRoleName="Tilmelding" isLeaf="false" isAbstract="false">
-            <classMoniker Id="0ba596cc-2d04-44c2-8289-2fb6a01227ce" LastKnownName="Tilmelding" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="156364e5-cda2-4f3b-892b-5931182e48b8" name="Hus" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="41f84b09-5172-4583-9bd5-e890048aeabd" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="2698c64e-9f85-40dc-8076-7bcd25cbeb96" name="Tilmelding" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="6ff62de8-e2ca-4840-a704-b7d4f428eb73" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="bc6104dd-9e1d-428b-8968-7864781d645e" />
-          </association>
-          <association Id="0a11a01d-957b-41bc-9141-871412281e36" isDerived="false" sourceEndRoleName="Hus" targetEndRoleName="Ugeplan" isLeaf="false" isAbstract="false">
-            <classMoniker Id="1f819d6f-3fef-481e-aad9-ad4573a8537f" LastKnownName="Ugeplan" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="4160993e-94df-44e5-9be8-fa2771f3bbe0" name="Hus" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="b308ec90-4d8c-445d-a18e-343824f8b615" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="f2b9f6f2-1432-4742-bfac-dae9c2ee7d00" name="Ugeplan" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="0c0b4a55-f688-4c2e-8763-c83f4bbb1cd5" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="9699be9d-8a79-416d-8bed-34827d69aabe" />
-          </association>
-        </targetEnds>
-        <ownedAttributesInternal>
-          <property Id="5b9fa786-cd11-46e1-86c9-f86a27fb7c8e" name="Nr" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="1b786a26-0111-40e7-be74-21f9334987a6" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="d5bdd808-aae9-49e1-a2c7-ec3af5df4ba8" LastKnownName="Integer" />
-            </type_NamedElement>
-          </property>
-        </ownedAttributesInternal>
-      </class>
-    </logicalClassDesignerModelHasTypes>
-    <packageHasNamedElement>
-      <referencedType Id="8db248f7-745d-423e-bdb1-1dd9636366b4" name="DateTime" isAbstract="false" isLeaf="false" cachedFullName="DateTime">
-        <elementDefinition Id="99478572-278b-45c8-82ee-f76e730cbeea" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="397bfcd6-38be-4922-9762-bd35b49dda10" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
-        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="455f2061-9716-401e-af04-293feb38b4a9" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
-        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="c8db2bdd-ee3f-41d0-b631-3f6bf8aad568" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
-        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="fe2e51eb-aef7-48e6-9d89-8d1298381e7b" name="Double" isAbstract="false" isLeaf="false" cachedFullName="Double">
-        <elementDefinition Id="b0a484ab-d9a9-4308-a4df-878043e97dd7" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="4d02bff0-52ad-4f93-8555-7183f2f57cf6" name="DateTime" isAbstract="false" isLeaf="false" cachedFullName="DateTime">
-        <elementDefinition Id="99478572-278b-45c8-82ee-f76e730cbeea" />
-      </referencedType>
-    </packageHasNamedElement>
-    <logicalClassDesignerModelHasTypes>
-      <class Id="1f819d6f-3fef-481e-aad9-ad4573a8537f" name="Ugeplan" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <elementDefinition Id="b6ce6a19-0861-4b6e-bb78-70ddeea49014" />
-        <targetEnds>
-          <association Id="fb3445b0-eddc-43a1-b2ac-d56e57d96423" isDerived="false" sourceEndRoleName="Ugeplan" targetEndRoleName="Beregning" isLeaf="false" isAbstract="false">
-            <classMoniker Id="f490f5b0-7e72-424a-9d09-9932effdb206" LastKnownName="Beregning" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="253944dc-ac73-43a5-9483-ffdc33cd1b83" name="Ugeplan" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="dccca833-dd75-444b-ad12-579e6155ca23" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="dccbc177-1880-4f36-b74d-722f0e437127" name="Beregning" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="5d5d90e0-25f9-451d-8dea-91053caf37e2" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="c183b0ef-4657-40ac-a72e-632dda029d6b" />
-          </association>
-        </targetEnds>
-        <ownedAttributesInternal>
-          <property Id="f4968b68-5d2b-45ea-84bf-71450003d8af" name="Dag" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="86f1e991-4bfb-46ff-b711-bdd9e667416e" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="8db248f7-745d-423e-bdb1-1dd9636366b4" LastKnownName="DateTime" />
-            </type_NamedElement>
-          </property>
-          <property Id="8d87798c-e03b-409f-bffd-b71dcccc72b9" name="Ret" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="0456aa64-afd8-4b61-b705-4d109d10ae1b" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="397bfcd6-38be-4922-9762-bd35b49dda10" LastKnownName="String" />
-            </type_NamedElement>
-          </property>
-          <property Id="e2cd882f-bced-43c6-ac70-bda3ae834b5b" name="Kok" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="16be3642-033f-494e-8115-52e3c7ee361a" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="455f2061-9716-401e-af04-293feb38b4a9" LastKnownName="String" />
-            </type_NamedElement>
-          </property>
-          <property Id="24c016d9-13e7-4a02-bc53-4c604757b5e7" name="Medhjælpere" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="c52fdbe8-0d45-42a0-8725-ef734042f472" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="c8db2bdd-ee3f-41d0-b631-3f6bf8aad568" LastKnownName="String" />
-            </type_NamedElement>
-          </property>
-          <property Id="15a4c540-184a-49c4-b80c-52fa8362ff60" name="Udlæg" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="7ccf45cb-9b46-41f3-8b76-2e0cbf7a4a0c" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="fe2e51eb-aef7-48e6-9d89-8d1298381e7b" LastKnownName="Double" />
-            </type_NamedElement>
-          </property>
-          <property Id="f0929a8b-e99b-4d34-a324-e9263e1eb5cd" name="Uge" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="a866a2b6-92b7-466e-b5a8-d5c74a415369" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="4d02bff0-52ad-4f93-8555-7183f2f57cf6" LastKnownName="DateTime" />
-            </type_NamedElement>
-          </property>
-        </ownedAttributesInternal>
-      </class>
-    </logicalClassDesignerModelHasTypes>
-    <packageHasNamedElement>
-      <referencedType Id="49975e2b-b1b0-4b3c-902d-4cad0cb32ac0" name="DateTime" isAbstract="false" isLeaf="false" cachedFullName="DateTime">
-        <elementDefinition Id="99478572-278b-45c8-82ee-f76e730cbeea" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="0fb97e37-fb63-40a2-9a89-d314c269ce9b" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
-        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="29253649-baef-4382-95f4-3b5089fbce5b" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
-        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="9c265211-e830-432a-ab87-b8dcff38bcd5" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
-        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="61853533-744f-4a54-8da4-660b6e6c1dd5" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
-        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="e6440005-e755-43be-af87-71b78a9a2f2a" name="DateTime" isAbstract="false" isLeaf="false" cachedFullName="DateTime">
-        <elementDefinition Id="99478572-278b-45c8-82ee-f76e730cbeea" />
-      </referencedType>
-    </packageHasNamedElement>
-    <logicalClassDesignerModelHasTypes>
-      <class Id="0ba596cc-2d04-44c2-8289-2fb6a01227ce" name="Tilmelding" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <elementDefinition Id="965e15ef-310f-44be-b98c-412495b2a232" />
-        <targetEnds>
-          <association Id="273fdc86-4778-46ab-a502-d26172096150" isDerived="false" sourceEndRoleName="Tilmelding" targetEndRoleName="Beregning" isLeaf="false" isAbstract="false">
-            <classMoniker Id="f490f5b0-7e72-424a-9d09-9932effdb206" LastKnownName="Beregning" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="383f3914-cf4b-4eb0-861a-883677478497" name="Tilmelding" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="210fa96e-759b-48a2-abfd-c3c3f23f421e" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="f5e7b67a-8bb8-44bb-9cfe-64be1c4b3e66" name="Beregning" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="2423e6c8-1fc8-4b7b-8521-03a35efb8f9d" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="91731683-41a5-4681-b5d3-1da621863fbe" />
-          </association>
-        </targetEnds>
-        <ownedAttributesInternal>
-          <property Id="3fa60759-6914-4fcf-8e80-5fb399cd49a3" name="Dag" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="257fd3b9-9daf-4da7-827f-08d6e8bced21" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="49975e2b-b1b0-4b3c-902d-4cad0cb32ac0" LastKnownName="DateTime" />
-            </type_NamedElement>
-          </property>
-          <property Id="65cb3850-0971-4c36-bfda-377a6601ba7f" name="Voksne" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="9748e242-0cb9-4312-babe-229d2a84b6bf" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="0fb97e37-fb63-40a2-9a89-d314c269ce9b" LastKnownName="Integer" />
-            </type_NamedElement>
-          </property>
-          <property Id="32e7c047-ed1f-4339-b34d-0d7c2644f3c9" name="Børn 0-3" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="29c754dd-e9b3-4af0-8315-e1d5b9b6d4f2" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="29253649-baef-4382-95f4-3b5089fbce5b" LastKnownName="String" />
-            </type_NamedElement>
-          </property>
-          <property Id="69cf9bc6-f054-41bc-81bc-256043a59adc" name="Børn 3-6" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="7c441465-2272-4fc3-815a-b7b7f214c35a" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="9c265211-e830-432a-ab87-b8dcff38bcd5" LastKnownName="String" />
-            </type_NamedElement>
-          </property>
-          <property Id="04dc9899-45a2-4311-966c-96dd526dfb3a" name="Ung 7-15" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="6b4a45a3-e32b-401c-bbd0-a1394609e7d8" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="61853533-744f-4a54-8da4-660b6e6c1dd5" LastKnownName="Integer" />
-            </type_NamedElement>
-          </property>
-          <property Id="43750382-e552-4de1-84d5-864d51e4968e" name="Uge" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="87f225a1-00e8-4fb3-9353-7a19e3e9b58b" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="e6440005-e755-43be-af87-71b78a9a2f2a" LastKnownName="DateTime" />
-            </type_NamedElement>
-          </property>
-        </ownedAttributesInternal>
-      </class>
-    </logicalClassDesignerModelHasTypes>
-    <packageHasNamedElement>
-      <referencedType Id="2cfc7808-36eb-4ed8-a3f9-fa03c63be771" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
-        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="f428fd8b-2f0b-4e34-8773-aad7156c08b9" name="DateTime" isAbstract="false" isLeaf="false" cachedFullName="DateTime">
-        <elementDefinition Id="99478572-278b-45c8-82ee-f76e730cbeea" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="b763396a-f253-4bc2-ac21-d32c597820b2" name="Double" isAbstract="false" isLeaf="false" cachedFullName="Double">
-        <elementDefinition Id="b0a484ab-d9a9-4308-a4df-878043e97dd7" />
-      </referencedType>
-    </packageHasNamedElement>
-    <logicalClassDesignerModelHasTypes>
-      <class Id="e53f45af-dcf3-4b36-8edf-59da2cb7448d" name="Særarrangementer" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <elementDefinition Id="7f757017-e9ac-49ec-8672-becdd0ab0a7e" />
-        <targetEnds>
-          <association Id="d86c1c1f-51d8-4770-85e8-af5a66a55247" isDerived="false" sourceEndRoleName="Særarrangementer" targetEndRoleName="Beregning" isLeaf="false" isAbstract="false">
-            <classMoniker Id="f490f5b0-7e72-424a-9d09-9932effdb206" LastKnownName="Beregning" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="d1a81842-ca24-4cc5-a4ba-f54b48ae667f" name="Særarrangementer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="008d6641-d42a-43ce-9daf-d3be323ff295" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="54f92ce1-517f-41ea-a861-801bb10d707d" name="Beregning" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="992fbd9f-43ee-4aa2-9ee0-3df0b3f7578e" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="148c3976-3055-4e59-b5c6-d09abf3bfc6c" />
-          </association>
-        </targetEnds>
-        <ownedAttributesInternal>
-          <property Id="8bea13e0-e726-4086-a9d4-13f7c53425e0" name="Titel" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="f0f55f25-59da-4952-a354-3ce3fc55a0ef" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="2cfc7808-36eb-4ed8-a3f9-fa03c63be771" LastKnownName="String" />
-            </type_NamedElement>
-          </property>
-          <property Id="7bf26d4e-127d-456e-9f1d-8abe5d1e96eb" name="Dag" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="1f266d62-1fe7-4d44-aaca-37ca07fc0abc" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="f428fd8b-2f0b-4e34-8773-aad7156c08b9" LastKnownName="DateTime" />
-            </type_NamedElement>
-          </property>
-          <property Id="3b3bc9dd-9549-4a6f-9a4c-cf1ee67cea8e" name="Udlæg" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="a309a2bc-f87e-4c13-bff6-607c23e4fd95" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="b763396a-f253-4bc2-ac21-d32c597820b2" LastKnownName="Double" />
-            </type_NamedElement>
-          </property>
-        </ownedAttributesInternal>
-      </class>
-    </logicalClassDesignerModelHasTypes>
-    <packageHasNamedElement>
-      <referencedType Id="dedad949-fe0f-45cc-987f-c0ffd29a1ac5" name="Double" isAbstract="false" isLeaf="false" cachedFullName="Double">
-        <elementDefinition Id="b0a484ab-d9a9-4308-a4df-878043e97dd7" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="0bd22e0a-5e89-49c6-a029-dcac2267cf92" name="DateTime" isAbstract="false" isLeaf="false" cachedFullName="DateTime">
-        <elementDefinition Id="99478572-278b-45c8-82ee-f76e730cbeea" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="d4737fab-69a8-4a6a-ad52-d6165fe7c91c" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
-        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
-      </referencedType>
-    </packageHasNamedElement>
-    <logicalClassDesignerModelHasTypes>
-      <class Id="f490f5b0-7e72-424a-9d09-9932effdb206" name="Beregning" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <elementDefinition Id="02fc4080-9a1f-4ba0-ae14-295e5b614775" />
-        <ownedAttributesInternal>
-          <property Id="6b620433-5739-4a73-845b-50c86fdc9f40" name="PrisPerPersonPerDag" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="b92a13e0-9349-4631-86a2-4e2b442bca12" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="dedad949-fe0f-45cc-987f-c0ffd29a1ac5" LastKnownName="Double" />
-            </type_NamedElement>
-          </property>
-          <property Id="4de26cf4-3fcf-460d-bdff-8e5c1c70531e" name="UgeplanUdlæg" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="93c1de07-d117-4a9c-b719-fdb5a7e9be05" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="0bd22e0a-5e89-49c6-a029-dcac2267cf92" LastKnownName="DateTime" />
-            </type_NamedElement>
-          </property>
-          <property Id="c1dabe50-3b2f-4c1d-8dc5-bdd3e981784f" name="AntalPersoner" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="63cac7a5-2a42-41a9-8cf3-a159102c98b0" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="d4737fab-69a8-4a6a-ad52-d6165fe7c91c" LastKnownName="Integer" />
-            </type_NamedElement>
-          </property>
-        </ownedAttributesInternal>
-      </class>
-    </logicalClassDesignerModelHasTypes>
   </packagedElements>
-  <package Id="d52b5a5d-a4f6-4143-b3c4-40cdffcdede4" name="Diagrammer">
-    <elementDefinition Id="2d06b69a-4ef4-4cd5-a915-4399ac22783b" />
+  <package Id="2a26e0fc-4e53-4076-881f-11bb7cbb335b" name="Diagrammer">
+    <elementDefinition Id="c0f52b76-d1af-4e60-b82b-4a792cfb4b96" />
   </package>
 </logicalClassDesignerModel>
