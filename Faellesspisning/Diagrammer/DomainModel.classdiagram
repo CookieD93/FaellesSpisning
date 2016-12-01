@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="a7573fb3-7ca5-40ce-a370-5e6fb3f2d663" name="DomainModel" linkedPackageId="2a26e0fc-4e53-4076-881f-11bb7cbb335b" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="a7573fb3-7ca5-40ce-a370-5e6fb3f2d663" name="DomainModel" linkedPackageId="2a26e0fc-4e53-4076-881f-11bb7cbb335b" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <profileInstances>
     <packageHasProfileInstances Id="c287c25d-8943-4b64-9f5e-36f1929a665b">
       <profileInstance Id="cb996296-dc53-44a5-a704-6283fab345f9" name="StandardProfileL2">
@@ -31,21 +31,83 @@
     <logicalClassDesignerModelHasTypes>
       <class Id="5f97b6b3-848f-43ea-bc95-2bf315b0b98f" name="Beregning" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="7b8d6f55-8217-4f5b-82c5-21578cd16437" />
+        <ownedAttributesInternal>
+          <property Id="c9f73c04-80d1-4ab7-8547-0dbce8dec404" name="Ugeplan.Udlæg" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a0df575a-809a-477a-ba6a-f30f0501244b" />
+          </property>
+          <property Id="78978806-e344-4c64-aada-59113abf9df5" name="PrisPerPersonPerDag" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d7ecd4c5-4285-460f-8321-61cb688dc798" />
+          </property>
+          <property Id="921981cd-64e2-41f3-8d2e-6e2312ea9647" name="Antal Tilmeldninger" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d0524ae3-0946-4cc8-8a87-b3e24ef0e875" />
+          </property>
+        </ownedAttributesInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
       <class Id="6150f58c-5f36-4cc3-8cf5-5ead02537637" name="Ugeplan" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="27f109f6-6635-4e16-8320-0d61dc0983ad" />
+        <ownedAttributesInternal>
+          <property Id="00cde3c1-c911-4040-9bdf-7840974b7ca8" name="Uge" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d076795c-0400-4aa3-bca3-55ae5c3e6fed" />
+          </property>
+          <property Id="f6fb764e-e2eb-4269-b894-7a31226accaf" name="Dag" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="78a1ac5b-d744-42cb-b20e-748586785622" />
+          </property>
+          <property Id="9c48b29a-b426-4d4d-a935-0060e19cd769" name="Ret" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="37ea67f9-a541-4852-9d59-6eabebd4171b" />
+          </property>
+          <property Id="85093743-5c72-4a63-9ec2-6186052141e8" name="Kok" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="1f94a083-06cd-4267-a9c5-d3eb6ee35152" />
+          </property>
+          <property Id="38c9f209-4fe4-4bd8-8ea4-159ca4ea0684" name="Medhjælpere" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9350ae78-f517-428e-9ae9-617567c1b9b2" />
+          </property>
+          <property Id="39555cd3-867e-475c-b4c9-688ffb848acf" name="Udlæg" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="823bc832-d03b-4fa6-b6f9-6097cffadd94" />
+          </property>
+        </ownedAttributesInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
       <class Id="d7de8654-6915-41eb-ba82-3f0853cbb7ea" name="Tilmelding" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="79794386-ce75-4683-923c-7777ce6de138" />
+        <ownedAttributesInternal>
+          <property Id="536ba9a1-ae3f-48fb-ab5a-3b4202777aaa" name="Dag" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7be9c72e-e25e-4f32-a46c-34a9e96c7655" />
+          </property>
+          <property Id="3820eecd-550f-4635-afad-6f46b773fe50" name="Børn 0-3" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8bfbe795-89f3-4954-a258-40bf302f9d61" />
+          </property>
+          <property Id="d243b60d-6bf0-4730-a58c-23049d8101f2" name="Børn 3-7" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3327a1dd-f185-4850-adc7-581988c7f131" />
+          </property>
+          <property Id="facb00d9-b603-4dc3-8013-629422e7faf1" name="Børn 7-13" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="32ab2c7d-5553-488b-9031-60c750fff218" />
+          </property>
+          <property Id="57ba3711-7ad8-4923-ad55-b6a2c21afef0" name="Voksen" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="72dd2dc9-63c3-4e8a-b627-8c35db8fa7a5" />
+          </property>
+          <property Id="36cfa0ad-6609-4aba-8952-429294491483" name="Uge" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="ed6c45ae-1ee3-4daa-bee3-8a9824ae5809" />
+          </property>
+        </ownedAttributesInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
       <class Id="b1717106-2662-49d1-a7ce-0df3cbf41ea2" name="Særarrangement" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="a9d0dcfe-1f7b-4a82-a333-3ba620401583" />
+        <ownedAttributesInternal>
+          <property Id="b312219e-59e0-489a-a409-40bbbb1363cb" name="Titel" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f0debeff-a7a9-452a-9f14-e3ec24947b9f" />
+          </property>
+          <property Id="ccc6192b-6e0a-4959-aaf0-c5bc35254609" name="Udlæg" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="058498c2-81c6-4325-8a80-094e20307329" />
+          </property>
+          <property Id="677d75fa-ce95-4b51-addb-7af75bb6f932" name="Dato" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b3587dcc-a8f9-4441-ae53-3205668f3ce0" />
+          </property>
+        </ownedAttributesInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <packageHasNamedElement>

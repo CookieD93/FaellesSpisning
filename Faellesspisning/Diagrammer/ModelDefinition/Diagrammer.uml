@@ -53,7 +53,43 @@
         name="Beregning"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false" />
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="a0df575a-809a-477a-ba6a-f30f0501244b"
+            name="Ugeplan.Udlæg"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="d7ecd4c5-4285-460f-8321-61cb688dc798"
+            name="PrisPerPersonPerDag"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="d0524ae3-0946-4cc8-8a87-b3e24ef0e875"
+            name="Antal Tilmeldninger"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
@@ -61,7 +97,76 @@
         name="Ugeplan"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false" />
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="d076795c-0400-4aa3-bca3-55ae5c3e6fed"
+            name="Uge"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="78a1ac5b-d744-42cb-b20e-748586785622"
+            name="Dag"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="37ea67f9-a541-4852-9d59-6eabebd4171b"
+            name="Ret"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="1f94a083-06cd-4267-a9c5-d3eb6ee35152"
+            name="Kok"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="9350ae78-f517-428e-9ae9-617567c1b9b2"
+            name="Medhjælpere"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="823bc832-d03b-4fa6-b6f9-6097cffadd94"
+            name="Udlæg"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
@@ -69,7 +174,76 @@
         name="Tilmelding"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false" />
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="7be9c72e-e25e-4f32-a46c-34a9e96c7655"
+            name="Dag"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="8bfbe795-89f3-4954-a258-40bf302f9d61"
+            name="Børn 0-3"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="3327a1dd-f185-4850-adc7-581988c7f131"
+            name="Børn 3-7"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="32ab2c7d-5553-488b-9031-60c750fff218"
+            name="Børn 7-13"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="72dd2dc9-63c3-4e8a-b627-8c35db8fa7a5"
+            name="Voksen"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="ed6c45ae-1ee3-4daa-bee3-8a9824ae5809"
+            name="Uge"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
@@ -77,7 +251,43 @@
         name="Særarrangement"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false" />
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="f0debeff-a7a9-452a-9f14-e3ec24947b9f"
+            name="Titel"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="058498c2-81c6-4325-8a80-094e20307329"
+            name="Udlæg"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="b3587dcc-a8f9-4441-ae53-3205668f3ce0"
+            name="Dato"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
