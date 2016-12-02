@@ -8,5 +8,6 @@ namespace Faellesspisning
 {
     class Bolig
     {
+        public int Husnr { get; set; }
     }
 }
