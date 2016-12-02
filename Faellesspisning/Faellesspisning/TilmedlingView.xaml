@@ -1,17 +1,36 @@
 ﻿<Page
-    x:Class="Faellesspisning.TilmedlingView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Faellesspisning"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:interactivity="using:Microsoft.Xaml.Interactivity" xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    x:Class="Faellesspisning.TilmedlingView"
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid HorizontalAlignment="Left" Height="100" Margin="-4,-4,0,0" VerticalAlignment="Top" Width="1284"/>
-        <Button x:Name="UgeplanButton" Content="Ugeplan" HorizontalAlignment="Left" Height="100" Margin="10,-4,0,0" VerticalAlignment="Top" Width="315"/>
-        <Button x:Name="HistorikButton" Content="Historik/Betaling" HorizontalAlignment="Left" Height="100" Margin="640,-4,0,0" VerticalAlignment="Top" Width="315"/>
-        <Button x:Name="MadplanButton" Content="Madplan" HorizontalAlignment="Left" Height="100" Margin="955,-4,0,0" VerticalAlignment="Top" Width="315"/>
+        <Button x:Name="UgeplanButton" Content="Ugeplan" HorizontalAlignment="Left" Height="100" Margin="10,-4,0,0" VerticalAlignment="Top" Width="315">
+            <interactivity:Interaction.Behaviors>
+                <core:EventTriggerBehavior EventName="Click">
+                    <core:NavigateToPageAction TargetPage="Faellesspisning.MainPage"/>
+                </core:EventTriggerBehavior>
+            </interactivity:Interaction.Behaviors>
+        </Button>
+        <Button x:Name="HistorikButton" Content="Historik/Betaling" HorizontalAlignment="Left" Height="100" Margin="640,-4,0,0" VerticalAlignment="Top" Width="315">
+            <interactivity:Interaction.Behaviors>
+                <core:EventTriggerBehavior EventName="Click">
+                    <core:NavigateToPageAction TargetPage="Faellesspisning.HistorikView"/>
+                </core:EventTriggerBehavior>
+            </interactivity:Interaction.Behaviors>
+        </Button>
+        <Button x:Name="MadplanButton" Content="Madplan" HorizontalAlignment="Left" Height="100" Margin="955,-4,0,0" VerticalAlignment="Top" Width="315">
+            <interactivity:Interaction.Behaviors>
+                <core:EventTriggerBehavior EventName="Click">
+                    <core:NavigateToPageAction TargetPage="Faellesspisning.MadPlanlaegningView"/>
+                </core:EventTriggerBehavior>
+            </interactivity:Interaction.Behaviors>
+        </Button>
         <Button x:Name="TilmeldingButton" Content="Tilmelding" HorizontalAlignment="Left" Height="100" Margin="325,-4,0,0" VerticalAlignment="Top" Width="315" IsEnabled="False"/>
 
     </Grid>
