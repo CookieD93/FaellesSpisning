@@ -668,7 +668,7 @@
     <packageHasNamedElement>
       <class
         Id="820625e7-1ced-4d23-8ad1-ad86b9a297e5"
-        name="Bolig3"
+        name="Dagsplan"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false" />
@@ -676,7 +676,7 @@
     <packageHasNamedElement>
       <class
         Id="4f6c0f5b-54ba-4b46-aa9b-3b5db406d305"
-        name="Bolig31"
+        name="Dag"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false" />
@@ -684,7 +684,7 @@
     <packageHasNamedElement>
       <class
         Id="b214092b-dde5-4dca-a0de-75c76088a9b7"
-        name="Bolig32"
+        name="Historik"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false" />
@@ -692,7 +692,7 @@
     <packageHasNamedElement>
       <class
         Id="5c6bb956-73db-44cc-a482-ae9e15ee5f44"
-        name="Bolig33"
+        name="Ugeplan"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false" />

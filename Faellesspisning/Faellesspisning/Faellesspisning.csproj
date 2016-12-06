@@ -11,7 +11,7 @@
     <AssemblyName>Faellesspisning</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion>10.0.10586.0</TargetPlatformVersion>
+    <TargetPlatformVersion>10.0.10240.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
@@ -102,9 +102,12 @@
     <Compile Include="MadPlanlaegningView.xaml.cs">
       <DependentUpon>MadPlanlaegningView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="RelayArgCommand.cs" />
+    <Compile Include="RelayCommand.cs" />
     <Compile Include="TilmedlingView.xaml.cs">
       <DependentUpon>TilmedlingView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TilmeldlingVM.cs" />
     <Compile Include="UgePlanView.xaml.cs">
       <DependentUpon>UgePlanView.xaml</DependentUpon>
     </Compile>
@@ -147,9 +150,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
