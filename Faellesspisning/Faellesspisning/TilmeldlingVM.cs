@@ -11,10 +11,17 @@ namespace Faellesspisning
 {
     class TilmeldlingVm : INotifyPropertyChanged
     {
+        private int _dropDownValg;
         public RelayCommand StandardRelayCommand { get; set; }
         public RelayCommand TilmeldRelayCommand { get; set; }
 
-        
+        public int DropDownValg
+        {
+            get { return _dropDownValg; }
+            set { _dropDownValg = value;OnPropertyChanged();GetView(); }
+        }
+
+
         public TilmeldlingVm()
         {
             StandardRelayCommand = new RelayCommand(SetStandard);
@@ -22,10 +29,13 @@ namespace Faellesspisning
 
         }
 
-
-        public void SetStandard()
+        public void GetView()
         {
             
+        }
+        public void SetStandard()
+        {
+            Persistance.SaveJson(HusSamling.GetHusSamling().HuseOC,"Standard");
         }
 
         public void Tilmeld()
