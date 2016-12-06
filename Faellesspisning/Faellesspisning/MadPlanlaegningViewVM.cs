@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace Faellesspisning
 {
-    class uge
+    class MadPlanlaegningViewVM
     {
-        public DateTime Ugenummer { get; set; }
     }
 }

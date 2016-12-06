@@ -22,6 +22,7 @@ namespace Faellesspisning
 
         }
 
+
         public void SetStandard()
         {
             

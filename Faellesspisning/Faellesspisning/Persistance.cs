@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace Faellesspisning
 {
-    class uge
+    class Persistance
     {
-        public DateTime Ugenummer { get; set; }
     }
 }

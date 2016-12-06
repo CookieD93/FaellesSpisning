@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace Faellesspisning
 {
-    class dag
+    class dag // : uge
     {
+        public string DagsNavn { get; set; }
+        public string Ret { get; set; }
+        public string ChefKok { get; set; }
+        public int ChefKokHusNr { get; set; }
+        public string Kokke { get; set; }
+        public string Opryddere { get; set; }
+        public double Udlæg { get; set; }
     }
 }
