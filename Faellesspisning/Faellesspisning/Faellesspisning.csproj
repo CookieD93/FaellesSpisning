@@ -96,7 +96,6 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Arrangement.cs" />
-    <Compile Include="Bolig.cs" />
     <Compile Include="dag.cs" />
     <Compile Include="Historik.cs" />
     <Compile Include="HistorikView.xaml.cs">
