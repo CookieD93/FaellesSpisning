@@ -9,14 +9,6 @@ namespace Faellesspisning
     class Bolig
     {
         public int BoligNr { get; set; }
-        public int[,] Standard { get; set; }
-
-        public Bolig(int boligNr)
-        {
-            BoligNr = boligNr;
-            Standard = new int[4,4];
-            
-        }
-
+       
     }
 }
