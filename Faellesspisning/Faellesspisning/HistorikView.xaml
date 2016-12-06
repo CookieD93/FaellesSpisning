@@ -24,6 +24,7 @@
                     <core:NavigateToPageAction TargetPage="Faellesspisning.MadPlanlaegningView"/>
                 </core:EventTriggerBehavior>
             </interactivity:Interaction.Behaviors>
+
         </Button>
         <Button x:Name="TilmeldingButton" Content="Tilmelding" HorizontalAlignment="Left" Height="100" Margin="325,-4,0,0" VerticalAlignment="Top" Width="315">
             <interactivity:Interaction.Behaviors>
