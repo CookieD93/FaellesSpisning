@@ -20,7 +20,7 @@ namespace Faellesspisning
 
         public HusSamling()
         {
-
+            HuseOC.
         }
         public static HusSamling GetHusSamling()
         { return _husSamling;}
