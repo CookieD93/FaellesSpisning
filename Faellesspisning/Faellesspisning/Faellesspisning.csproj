@@ -95,7 +95,10 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Arrangement.cs" />
     <Compile Include="Bolig.cs" />
+    <Compile Include="dag.cs" />
+    <Compile Include="Historik.cs" />
     <Compile Include="HistorikView.xaml.cs">
       <DependentUpon>HistorikView.xaml</DependentUpon>
     </Compile>
@@ -107,6 +110,7 @@
     <Compile Include="TilmedlingView.xaml.cs">
       <DependentUpon>TilmedlingView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="tilmelding.cs" />
     <Compile Include="TilmeldlingVM.cs" />
     <Compile Include="uge.cs" />
     <Compile Include="UgePlanView.xaml.cs">
