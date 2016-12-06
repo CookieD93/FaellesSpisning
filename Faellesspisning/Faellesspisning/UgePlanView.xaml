@@ -10,35 +10,42 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="53*"/>
             <RowDefinition Height="19*"/>
         </Grid.RowDefinitions>
-        <Grid HorizontalAlignment="Left" Height="100" Margin="-4,-4,0,0" VerticalAlignment="Top" Width="1284">
-            
+        <Grid HorizontalAlignment="Stretch" Height="100" VerticalAlignment="Top" MinWidth="1000">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="UgeplanButton" Content="Ugeplan" Grid.Column="0" MinWidth="250" HorizontalAlignment="Stretch" Height="100" VerticalAlignment="Top" IsEnabled="False"/>
+            <Button x:Name="HistorikButton" Content="Historik/Betaling" Grid.Column="1" MinWidth="250" HorizontalAlignment="Stretch" Height="100" VerticalAlignment="Top">
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Click">
+                        <core:NavigateToPageAction TargetPage="Faellesspisning.HistorikView"/>
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+            </Button>
+            <Button x:Name="MadplanButton" Content="Madplan" Grid.Column="2" MinWidth="250" HorizontalAlignment="Stretch" Height="100" VerticalAlignment="Top">
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Click">
+                        <core:NavigateToPageAction TargetPage="Faellesspisning.MadPlanlaegningView"/>
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+            </Button>
+            <Button x:Name="TilmeldingButton" Content="Tilmelding" Grid.Column="3" MinWidth="250" HorizontalAlignment="Stretch" Height="100" VerticalAlignment="Top">
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Click">
+                        <core:NavigateToPageAction TargetPage="Faellesspisning.TilmedlingView"/>
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+            </Button>
         </Grid>
-        <Button x:Name="UgeplanButton" Content="Ugeplan" HorizontalAlignment="Left" Height="100" Margin="10,-4,0,0" VerticalAlignment="Top" Width="315" IsEnabled="False"/>
-        <Button x:Name="HistorikButton" Content="Historik/Betaling" HorizontalAlignment="Left" Height="100" Margin="640,-4,0,0" VerticalAlignment="Top" Width="315">
-            <interactivity:Interaction.Behaviors>
-                <core:EventTriggerBehavior EventName="Click">
-                    <core:NavigateToPageAction TargetPage="Faellesspisning.HistorikView"/>
-                </core:EventTriggerBehavior>
-            </interactivity:Interaction.Behaviors>
-        </Button>
-        <Button x:Name="MadplanButton" Content="Madplan" HorizontalAlignment="Left" Height="100" Margin="955,-4,0,0" VerticalAlignment="Top" Width="315">
-            <interactivity:Interaction.Behaviors>
-                <core:EventTriggerBehavior EventName="Click">
-                    <core:NavigateToPageAction TargetPage="Faellesspisning.MadPlanlaegningView"/>
-                </core:EventTriggerBehavior>
-            </interactivity:Interaction.Behaviors>
-        </Button>
-        <Button x:Name="TilmeldingButton" Content="Tilmelding" HorizontalAlignment="Left" Height="100" Margin="325,-4,0,0" VerticalAlignment="Top" Width="315">
-            <interactivity:Interaction.Behaviors>
-                <core:EventTriggerBehavior EventName="Click">
-                    <core:NavigateToPageAction TargetPage="Faellesspisning.TilmedlingView"/>
-                </core:EventTriggerBehavior>
-            </interactivity:Interaction.Behaviors>
-        </Button>
+        
         <Grid HorizontalAlignment="Left" Height="605" Margin="0,101,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="1280"/>
 
 
