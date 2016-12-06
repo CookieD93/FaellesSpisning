@@ -9,45 +9,62 @@
     
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" MinWidth="1000">
         
         <Grid.RowDefinitions>
-            <RowDefinition Height="53*"/>
-            <RowDefinition Height="19*"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Grid HorizontalAlignment="Stretch" Height="100" VerticalAlignment="Top" MinWidth="1000">
+       
+        <Grid HorizontalAlignment="Stretch" Height="100" VerticalAlignment="Top" Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="UgeplanButton" Content="Ugeplan" Grid.Column="0" MinWidth="250" HorizontalAlignment="Stretch" Height="100" VerticalAlignment="Top" IsEnabled="False"/>
-            <Button x:Name="HistorikButton" Content="Historik/Betaling" Grid.Column="1" MinWidth="250" HorizontalAlignment="Stretch" Height="100" VerticalAlignment="Top">
-                <interactivity:Interaction.Behaviors>
-                    <core:EventTriggerBehavior EventName="Click">
-                        <core:NavigateToPageAction TargetPage="Faellesspisning.HistorikView"/>
-                    </core:EventTriggerBehavior>
-                </interactivity:Interaction.Behaviors>
-            </Button>
-            <Button x:Name="MadplanButton" Content="Madplan" Grid.Column="2" MinWidth="250" HorizontalAlignment="Stretch" Height="100" VerticalAlignment="Top">
-                <interactivity:Interaction.Behaviors>
-                    <core:EventTriggerBehavior EventName="Click">
-                        <core:NavigateToPageAction TargetPage="Faellesspisning.MadPlanlaegningView"/>
-                    </core:EventTriggerBehavior>
-                </interactivity:Interaction.Behaviors>
-            </Button>
-            <Button x:Name="TilmeldingButton" Content="Tilmelding" Grid.Column="3" MinWidth="250" HorizontalAlignment="Stretch" Height="100" VerticalAlignment="Top">
+            <Button x:Name="UgeplanButton" Content="Ugeplan" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsEnabled="False"/>
+            <Button x:Name="TilmeldingButton" Content="Tilmelding" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                 <interactivity:Interaction.Behaviors>
                     <core:EventTriggerBehavior EventName="Click">
                         <core:NavigateToPageAction TargetPage="Faellesspisning.TilmedlingView"/>
                     </core:EventTriggerBehavior>
                 </interactivity:Interaction.Behaviors>
             </Button>
+            <Button x:Name="HistorikButton" Content="Historik/Betaling" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Click">
+                        <core:NavigateToPageAction TargetPage="Faellesspisning.HistorikView"/>
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+            </Button>
+            <Button x:Name="MadplanButton" Content="Madplan" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Click">
+                        <core:NavigateToPageAction TargetPage="Faellesspisning.MadPlanlaegningView"/>
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+            </Button>
+
         </Grid>
-        
-        <Grid HorizontalAlignment="Left" Height="605" Margin="0,101,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="1280"/>
 
-
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+            <TextBlock FontSize="50" Margin="50 0 0 0" VerticalAlignment="Center" Grid.Column="0">Uge xx</TextBlock>
+            <Button Content="Næste uge" Grid.Column="1" Height="50" VerticalAlignment="Center" Width="200" HorizontalAlignment="Right" FontSize="20" Margin="0 0 50 0"></Button>
+            <Rectangle Width="Auto" Height="Auto" Fill="CornflowerBlue" Grid.Column="0" Grid.Row="1" Margin="50 25 25 25"/>
+            <Rectangle Width="Auto" Height="Auto" Fill="CornflowerBlue" Grid.Column="0" Grid.Row="2" Margin="50 25 25 25"/>
+            <Rectangle Width="Auto" Height="Auto" Fill="CornflowerBlue" Grid.Column="1" Grid.Row="1" Margin="25 25 50 25"/>
+            <Rectangle Width="Auto" Height="Auto" Fill="CornflowerBlue" Grid.Column="1" Grid.Row="2" Margin="25 25 50 25"/>
+        </Grid>
+            
     </Grid>
 </Page>
