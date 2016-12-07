@@ -21,6 +21,7 @@ namespace Faellesspisning
         public ObservableCollection<int> OCtirsdag { get; set; }
         public ObservableCollection<int> OConsdag { get; set; }
         public ObservableCollection<int> OCtorsdag { get; set; }
+        public RelayCommand LoadRelayCommand { get; set; }
 
         private ObservableCollection<int> DropdownHuse
         {
@@ -51,6 +52,7 @@ namespace Faellesspisning
             _dropdownHuse = new ObservableCollection<int>(Boligliste.Keys);
             TilmeldRelayCommand = new RelayCommand(Tilmeld);
             StandardRelayCommand = new RelayCommand(SetStandard);
+            LoadRelayCommand = new RelayCommand(Load);
 
            
 
@@ -79,7 +81,7 @@ namespace Faellesspisning
                 OConsdag.Add(temp.DaglistOns[i]);
                 OCtorsdag.Add(temp.DaglistTor[i]);
             }
-            
+            //Persistance.LoadFromJsonAsync("NæsteUge.json");
 
         }
         public void SetStandard()
@@ -89,8 +91,13 @@ namespace Faellesspisning
 
         public void Tilmeld()
         {
-           Persistance.SaveJson(Boligliste,"DenneUge.json");
+           //Persistance.SaveJson(Boligliste,"DenneUge.json");
+           Persistance.SaveJson(Boligliste, "NæsteUge.json");
 
+        }
+        public async void Load()
+        {
+           Boligliste = await Persistance.LoadFromJsonAsync("NæsteUge.json");
         }
 
         #region NotifyPropertyChanged

@@ -100,7 +100,8 @@
                     <ListView x:Name="listView4" Height="245" ItemsSource="{Binding OCtorsdag, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 </StackPanel>
             </Grid>
-            <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Command="{Binding StandardRelayCommand}" Margin="960,55,0,0" VerticalAlignment="Top"/>
+            <Button x:Name="button" Content="Save" HorizontalAlignment="Left" Command="{Binding StandardRelayCommand}" Margin="960,55,0,0" VerticalAlignment="Top"/>
+            <Button x:Name="button1" Content="Load" HorizontalAlignment="Left" Command="{Binding LoadRelayCommand}" Margin="785,66,0,0" VerticalAlignment="Top"/>
         </Grid>
 
     </Grid>
