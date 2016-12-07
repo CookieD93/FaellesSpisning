@@ -97,6 +97,7 @@
     </Compile>
     <Compile Include="Arrangement.cs" />
     <Compile Include="Bolig.cs" />
+    <Compile Include="Dato.cs" />
     <Compile Include="Dag.cs" />
     <Compile Include="Historik.cs" />
     <Compile Include="HistorikView.xaml.cs">
