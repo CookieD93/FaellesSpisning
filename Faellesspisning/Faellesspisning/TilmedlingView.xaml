@@ -58,7 +58,7 @@
                 <RowDefinition Height="100"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <ComboBox HorizontalAlignment="Left" Margin="50 0 0 0" Grid.Row="0" VerticalAlignment="Center" Width="160"/>
+            <ComboBox HorizontalAlignment="Left" Margin="50 0 0 0" Grid.Row="0" VerticalAlignment="Center" Width="160" ItemsSource="{Binding Boligliste.Keys}" SelectedItem="{Binding DropDownValg, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 <Grid Row="1" Margin="50">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="200"/>
@@ -84,14 +84,23 @@
                         <TextBlock Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 20 0" FontSize="25">Barn (0-2)</TextBlock>
                     </Grid>
                 <TextBlock  Grid.Column="1" Grid.Row="0" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center">Mandag</TextBlock>
-                <StackPanel Grid.Column="1" Grid.Row="1" Margin="10 10" Background="CadetBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                <StackPanel Grid.Column="1" Grid.Row="1" Margin="10 10" Background="CadetBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <ListView x:Name="listView1" Height="285" ItemsSource="{Binding OCmandag, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                </StackPanel>
                 <TextBlock  Grid.Column="2" Grid.Row="0" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center">Tirsdag</TextBlock>
-                <StackPanel Grid.Column="2" Grid.Row="1" Margin="10 10" Background="CadetBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                <StackPanel Grid.Column="2" Grid.Row="1" Margin="10 10" Background="CadetBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <ListView x:Name="listView2" Height="195" ItemsSource="{Binding OCtirsdag, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                </StackPanel>
                 <TextBlock  Grid.Column="3" Grid.Row="0" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center">Onsdag</TextBlock>
-                <StackPanel Grid.Column="3" Grid.Row="1" Margin="10 10" Background="CadetBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                <StackPanel Grid.Column="3" Grid.Row="1" Margin="10 10" Background="CadetBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <ListView x:Name="listView3" Height="250" ItemsSource="{Binding OConsdag, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Width="225"/>
+                </StackPanel>
                 <TextBlock  Grid.Column="4" Grid.Row="0" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center">Torsdag</TextBlock>
-                <StackPanel Grid.Column="4" Grid.Row="1" Margin="10 10" Background="CadetBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                <StackPanel Grid.Column="4" Grid.Row="1" Margin="10 10" Background="CadetBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <ListView x:Name="listView4" Height="245" ItemsSource="{Binding OCtorsdag, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                </StackPanel>
             </Grid>
+            <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Command="{Binding StandardRelayCommand}" Margin="960,55,0,0" VerticalAlignment="Top"/>
         </Grid>
 
     </Grid>
