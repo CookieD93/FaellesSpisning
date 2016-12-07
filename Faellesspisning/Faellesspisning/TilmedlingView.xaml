@@ -9,6 +9,9 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" MinWidth="1000">
+        <Grid.DataContext>
+            <local:TilmeldlingVm/>
+        </Grid.DataContext>
 
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>

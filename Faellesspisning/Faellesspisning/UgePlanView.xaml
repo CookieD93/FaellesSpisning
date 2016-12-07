@@ -10,7 +10,10 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" MinWidth="1000">
-        
+        <Grid.DataContext>
+            <local:TilmeldlingVm/>
+        </Grid.DataContext>
+
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
             <RowDefinition Height="*"/>
@@ -68,6 +71,7 @@
                         <Rectangle Width="Auto" Height="Auto" Fill="CadetBlue" Grid.Column="0" Grid.Row="2" Margin="50 25 25 25"/>
                         <Rectangle Width="Auto" Height="Auto" Fill="CadetBlue" Grid.Column="1" Grid.Row="1" Margin="25 25 50 25"/>
                         <Rectangle Width="Auto" Height="Auto" Fill="CadetBlue" Grid.Column="1" Grid.Row="2" Margin="25 25 50 25"/>
+                        <!--<Button x:Name="button" Content="Button" Command="{Binding StandardRelayCommand}" Grid.Column="1" HorizontalAlignment="Left" Margin="260,57,0,0" VerticalAlignment="Top"/>-->
                     </Grid>
                 </PivotItem>
                 <PivotItem Header="Næste Uge" >

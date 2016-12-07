@@ -14,6 +14,7 @@ namespace Faellesspisning
         private int _dropDownValg;
         public RelayCommand StandardRelayCommand { get; set; }
         public RelayCommand TilmeldRelayCommand { get; set; }
+        public Dictionary<int,Bolig> Boligliste { get; set; }
 
         public int DropDownValg
         {
@@ -27,6 +28,7 @@ namespace Faellesspisning
             StandardRelayCommand = new RelayCommand(SetStandard);
             TilmeldRelayCommand = new RelayCommand(Tilmeld);
 
+
         }
 
         public void GetView()
@@ -35,7 +37,9 @@ namespace Faellesspisning
         }
         public void SetStandard()
         {
-            Persistance.SaveJson(HusSamling.GetHusSamling().HuseOC,"Standard");
+           // HusSamling.GetHusSamling().HuseOC.Add(new Bolig(72));
+            
+            Persistance.SaveJson(HusSamling.GetHusSamling().HuseOC,"Standard.json");
         }
 
         public void Tilmeld()

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Faellesspisning
 {
-    class dag // : uge
+    class Dag // : uge
     {
         public string DagsNavn { get; set; }
         public string Ret { get; set; }
