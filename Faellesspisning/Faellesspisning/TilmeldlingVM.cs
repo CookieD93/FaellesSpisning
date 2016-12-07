@@ -27,7 +27,25 @@ namespace Faellesspisning
         {
             StandardRelayCommand = new RelayCommand(SetStandard);
             TilmeldRelayCommand = new RelayCommand(Tilmeld);
-
+            Bolig hus1 = new Bolig(74);
+            hus1.Standard[0, 0] = 0;
+            hus1.Standard[0, 1] = 0;
+            hus1.Standard[0, 2] = 0;
+            hus1.Standard[0, 3] = 0;
+            hus1.Standard[1, 0] = 0;
+            hus1.Standard[1, 1] = 0;
+            hus1.Standard[1, 2] = 0;
+            hus1.Standard[1, 3] = 0;
+            hus1.Standard[2, 0] = 0;
+            hus1.Standard[2, 1] = 0;
+            hus1.Standard[2, 2] = 0;
+            hus1.Standard[2, 3] = 0;
+            hus1.Standard[3, 0] = 0;
+            hus1.Standard[3, 1] = 0;
+            hus1.Standard[3, 2] = 0;
+            hus1.Standard[3, 3] = 0;
+            Boligliste.Add(74,new Bolig(74));
+            
 
         }
 
