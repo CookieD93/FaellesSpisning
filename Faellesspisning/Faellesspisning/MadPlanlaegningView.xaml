@@ -101,7 +101,7 @@
                                         <TextBox x:Name="textBox_UdlaegM" HorizontalAlignment="Stretch"  Margin="50,0,0,60" Grid.Row="1" TextWrapping="Wrap" PlaceholderText="Hvad er der købt for" VerticalAlignment="Stretch" Grid.Column="0"/>
                                         <TextBlock Name="KrM" Margin="5,0,0,0"  Text="Kr." VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="1" Grid.Column="1" FontSize="25" />
                                     </Grid>
-                                    <Button Name="GemMandag" MaxWidth="125" Grid.Row="2" Grid.Column="1" Margin="350,150,40,20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                                    <Button Name="GemMandag" MaxWidth="125" Grid.Row="2" Grid.Column="1" Margin="450,150,40,20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Content="Gem"/>
                                 </Grid>
                             </PivotItem>
                             <PivotItem Header="Tirsdag" >
@@ -142,7 +142,7 @@
                                         <TextBox x:Name="textBox_UdlaegTir" HorizontalAlignment="Stretch"  Margin="50,0,0,60" Grid.Row="1" TextWrapping="Wrap" PlaceholderText="Hvad er der købt for" VerticalAlignment="Stretch" Grid.Column="0"/>
                                         <TextBlock Name="KrTir" Margin="5,0,0,0"  Text="Kr." VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="1" Grid.Column="1" FontSize="25" />
                                     </Grid>
-                                    <Button Name="GemTirsdag" MaxWidth="125" Grid.Row="2" Grid.Column="1" Margin="350,150,40,20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                                    <Button Name="GemTirsdag" MaxWidth="125" Grid.Row="2" Grid.Column="1" Margin="450,150,40,20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Content="Gem"/>
                                 </Grid>
                             </PivotItem>
                             <PivotItem Header="Onsdag" >
@@ -183,7 +183,7 @@
                                         <TextBox x:Name="textBox_UdlaegO" HorizontalAlignment="Stretch"  Margin="50,0,0,60" Grid.Row="1" TextWrapping="Wrap" PlaceholderText="Hvad er der købt for" VerticalAlignment="Stretch" Grid.Column="0"/>
                                         <TextBlock Name="KrO" Margin="5,0,0,0"  Text="Kr." VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="1" Grid.Column="1" FontSize="25" />
                                     </Grid>
-                                    <Button Name="GemOnsdag" MaxWidth="125" Grid.Row="2" Grid.Column="1" Margin="350,150,40,20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                                    <Button Name="GemOnsdag" MaxWidth="125" Grid.Row="2" Grid.Column="1" Margin="450,150,40,20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Content="Gem"/>
                                 </Grid>
                             </PivotItem>
                             <PivotItem Header="Torsdag" >
@@ -224,7 +224,7 @@
                                         <TextBox x:Name="textBox_UdlaegTor" HorizontalAlignment="Stretch"  Margin="50,0,0,60" Grid.Row="1" TextWrapping="Wrap" PlaceholderText="Hvad er der købt for" VerticalAlignment="Stretch" Grid.Column="0"/>
                                         <TextBlock Name="KrTor" Margin="5,0,0,0"  Text="Kr." VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="1" Grid.Column="1" FontSize="25" />
                                     </Grid>
-                                    <Button Name="GemTorsdag" MaxWidth="125" Grid.Row="2" Grid.Column="1" Margin="350,150,40,20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                                    <Button Name="GemTorsdag" MaxWidth="125" Grid.Row="2" Grid.Column="1" Margin="450,150,40,20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Content="Gem"/>
                                 </Grid>
                             </PivotItem>
 
@@ -277,7 +277,7 @@
                                         <TextBox x:Name="textBox_UdlaegM2" HorizontalAlignment="Stretch"  Margin="50,0,0,60" Grid.Row="1" TextWrapping="Wrap" PlaceholderText="Hvad er der købt for" VerticalAlignment="Stretch" Grid.Column="0"/>
                                         <TextBlock Name="KrM2" Margin="5,0,0,0"  Text="Kr." VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="1" Grid.Column="1" FontSize="25" />
                                     </Grid>
-                                    <Button Name="GemMandag2" MaxWidth="125" Grid.Row="2" Grid.Column="1" Margin="350,150,40,20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                                    <Button Name="GemMandag2" MaxWidth="125" Grid.Row="2" Grid.Column="1" Margin="450,150,40,20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Content="Gem"/>
                                 </Grid>
                             </PivotItem>
                             <PivotItem Header="Tirsdag" >
@@ -318,7 +318,7 @@
                                         <TextBox x:Name="textBox_UdlaegTir2" HorizontalAlignment="Stretch"  Margin="50,0,0,60" Grid.Row="1" TextWrapping="Wrap" PlaceholderText="Hvad er der købt for" VerticalAlignment="Stretch" Grid.Column="0"/>
                                         <TextBlock Name="KrTir2" Margin="5,0,0,0"  Text="Kr." VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="1" Grid.Column="1" FontSize="25" />
                                     </Grid>
-                                    <Button Name="GemTirsdag2" MaxWidth="125" Grid.Row="2" Grid.Column="1" Margin="350,150,40,20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                                    <Button Name="GemTirsdag2" MaxWidth="125" Grid.Row="2" Grid.Column="1" Margin="450,150,40,20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Content="Gem"/>
                                 </Grid>
                             </PivotItem>
                             <PivotItem Header="Onsdag" >
@@ -359,7 +359,7 @@
                                         <TextBox x:Name="textBox_UdlaegO2" HorizontalAlignment="Stretch"  Margin="50,0,0,60" Grid.Row="1" TextWrapping="Wrap" PlaceholderText="Hvad er der købt for" VerticalAlignment="Stretch" Grid.Column="0"/>
                                         <TextBlock Name="KrO2" Margin="5,0,0,0"  Text="Kr." VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="1" Grid.Column="1" FontSize="25" />
                                     </Grid>
-                                    <Button Name="GemOnsdag2" MaxWidth="125" Grid.Row="2" Grid.Column="1" Margin="350,150,40,20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                                    <Button Name="GemOnsdag2" MaxWidth="125" Grid.Row="2" Grid.Column="1" Margin="450,150,40,20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Content="Gem"/>
                                 </Grid>
                             </PivotItem>
                             <PivotItem Header="Torsdag" >
@@ -400,7 +400,7 @@
                                         <TextBox x:Name="textBox_UdlaegTor2" HorizontalAlignment="Stretch"  Margin="50,0,0,60" Grid.Row="1" TextWrapping="Wrap" PlaceholderText="Hvad er der købt for" VerticalAlignment="Stretch" Grid.Column="0"/>
                                         <TextBlock Name="KrTor2" Margin="5,0,0,0"  Text="Kr." VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="1" Grid.Column="1" FontSize="25" />
                                     </Grid>
-                                    <Button Name="GemTorsdag2" MaxWidth="125" Grid.Row="2" Grid.Column="1" Margin="350,150,40,20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                                    <Button Name="GemTorsdag2" MaxWidth="125" Grid.Row="2" Grid.Column="1" Margin="450,150,40,20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Content="Gem"/>
                                 </Grid>
                             </PivotItem>
 
