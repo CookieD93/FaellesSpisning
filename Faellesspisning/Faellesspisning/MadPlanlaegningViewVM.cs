@@ -30,7 +30,7 @@ namespace Faellesspisning
             // }
             // catch (Exception FileNotFound)
             // {
-            //    
+            //    Hvis filen med det navn ikke findes:
             //    Lav et nyt Uge object med "Uge + getNextWeek"
             // }
         }
