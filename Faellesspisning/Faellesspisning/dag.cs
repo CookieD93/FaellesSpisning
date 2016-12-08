@@ -16,6 +16,7 @@ namespace Faellesspisning
         public string Kokke { get; set; }
         public string Opryddere { get; set; }
         public double Udlæg { get; set; }
+        public string Note { get; set; }
 
         public Dag(string dagsNavn, int ugenummer)
         {

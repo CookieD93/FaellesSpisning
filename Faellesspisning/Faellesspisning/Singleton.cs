@@ -8,12 +8,17 @@ namespace Faellesspisning
 {
     class Singleton
     {
-        public Uge TempUge { get; set; }
-
         private static Singleton _instance = new Singleton();
-        public Singleton()
+
+        public Uge TempUge { get; set; }
+        public Dictionary<string,Object> DenneUge { get; set; }
+        //public Dictionary<string,Object> NaesteUge { get; set; }
+
+        private Singleton()
         {
-            
+            //DenneUge["uge"]= new Uge();
+            DenneUge = new Dictionary<string, object>();
+            //NaesteUge= new Dictionary<string, object>();
         }
 
         public static Singleton GetInstance()
@@ -23,7 +28,19 @@ namespace Faellesspisning
 
         public void nyUge()
         {
-                Uge ugeX = new Uge();
+            
+            //Persistance.SaveJson(DenneUge,"Uge"+DenneUge.);
+            if (DenneUge != null)
+            {
+                DenneUge.Clear();
+            }
+            //DenneUge = NaesteUge;
+            //if (NaesteUge != null)
+            //{
+            //    NaesteUge.Clear();
+            //}
+            Uge ugeX = new Uge();
+            DenneUge.Add("uge",ugeX);
         }
     }
 }

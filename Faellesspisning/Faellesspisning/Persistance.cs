@@ -24,12 +24,12 @@ namespace Faellesspisning
            
         }
 
-        public static async Task<Dictionary<int,Bolig>> LoadFromJsonAsync(string filenameLoad)
+        public static async Task<Dictionary<string,Object>> LoadFromJsonAsync(string filenameLoad)
         {
             string personsJsonString = await DeSerializeFileAsync(filenameLoad);
             return
-                (Dictionary<int,Bolig>)
-                JsonConvert.DeserializeObject(personsJsonString, typeof(Dictionary<int,Bolig>));
+                (Dictionary<string,Object>)
+                JsonConvert.DeserializeObject(personsJsonString, typeof(Dictionary<string,Object>));
         }
 
 
