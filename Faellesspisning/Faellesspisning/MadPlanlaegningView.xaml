@@ -24,7 +24,7 @@
             <Button x:Name="UgeplanButton" Content="Ugeplan" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
                 <interactivity:Interaction.Behaviors>
                     <core:EventTriggerBehavior EventName="Click">
-                        <core:NavigateToPageAction TargetPage="Faellesspisning.UgePlanView"/>
+                        <core:NavigateToPageAction TargetPage="Faellesspisning.MainPage"/>
                     </core:EventTriggerBehavior>
                 </interactivity:Interaction.Behaviors>
             </Button>
@@ -52,17 +52,369 @@
 
         </Grid>
 
-        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1" MinWidth="1000">
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1" MinWidth="1000" MinHeight="590">
+            <Pivot>
+                <PivotItem Header="Denne Uge">
 
-            <Grid.RowDefinitions>
-                <RowDefinition Height="100"/>
-                <RowDefinition Height="2*"/>
-                
-            </Grid.RowDefinitions>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="9*"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="Uge Nr." FontSize="30" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="50,0,34,10" Grid.Row="0" Height="auto" Width="auto"/>
+                        <Pivot Grid.Row="1">
+                            <PivotItem Header="Mandag" >
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="1.25*"/>
+                                        <RowDefinition Height="2*"/>
+                                        <RowDefinition Height="3*"/>
 
+
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock x:Name="textBlock_RetM" FontSize="24" HorizontalAlignment="Left" Height="auto" Margin="50,0,0,0" TextWrapping="Wrap" Text="Ret:" VerticalAlignment="Center" Width="Auto" Grid.Row="0"/>
+                                    <TextBlock x:Name="textBlock_ChefKokM" FontSize="24" HorizontalAlignment="Left" Height="auto" Margin="50,0,0,0" TextWrapping="Wrap" Text="Chef kok:" VerticalAlignment="center" Width="auto" Grid.Row="0" Grid.Column="1"/>
+                                    <TextBlock x:Name="textBlock_HjaelpeKokkeM" FontSize="24" HorizontalAlignment="Left" Height="auto" Margin="50,10,0,0" TextWrapping="Wrap" Text="Hjælpe kokke:" VerticalAlignment="Top" Width="auto" Grid.Row="1"/>
+                                    <TextBlock x:Name="textBlock_OpryddereM" FontSize="24" HorizontalAlignment="Left" Height="auto" Margin="50,10,0,0" TextWrapping="Wrap" Text="Opryddere:" VerticalAlignment="Top" Width="auto" Grid.Row="1" Grid.Column="1"/>
+                                    <TextBlock x:Name="textBlock_NoteM" FontSize="24" HorizontalAlignment="Left" Height="auto" Margin="50,10,0,0" TextWrapping="Wrap" Text="Note:" VerticalAlignment="Top" Width="auto" Grid.Row="2"/>
+
+                                    <TextBox x:Name="textBox_RetM" HorizontalAlignment="Stretch"  Margin="100,30,40,20" Grid.Row="0" TextWrapping="Wrap" PlaceholderText="Hvad skal der spises" VerticalAlignment="Stretch"/>
+                                    <TextBox x:Name="textBox_ChefKokM" HorizontalAlignment="Stretch"  Margin="155,30,40,20" Grid.Row="0" TextWrapping="Wrap" PlaceholderText="Hvem har ansvar for Køkkenet" VerticalAlignment="Stretch" Grid.Column="1"/>
+                                    <TextBox x:Name="textBox_HjaelpeKokkeM" HorizontalAlignment="Stretch"  Margin="50,47,40,20" Grid.Row="1" TextWrapping="Wrap" PlaceholderText="Hvem skal hjælpe med maden" VerticalAlignment="Stretch" />
+                                    <TextBox x:Name="textBox_OpryddereM" HorizontalAlignment="Stretch"  Margin="50,47,40,20" Grid.Row="1" TextWrapping="Wrap" PlaceholderText="Hvem skal rydder op" VerticalAlignment="Stretch" Grid.Column="1"/>
+                                    <TextBox x:Name="textBox_NoteM" HorizontalAlignment="Stretch"  Margin="50,47,40,20" Grid.Row="2" TextWrapping="Wrap" PlaceholderText="Note til retten evt. indkøbsliste" VerticalAlignment="Stretch" />
+                                    <Grid Grid.Row="2" Grid.Column="1" Margin="0,0,0,70" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="1*" />
+                                            <RowDefinition Height="2.3*" />
+
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition Width="70"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock x:Name="textBlock_UdlaegM" FontSize="24" HorizontalAlignment="Left" Height="32" Margin="50,10,0,0" TextWrapping="Wrap" Text="Udlæg:" VerticalAlignment="Top" Width="76" Grid.Row="0" Grid.Column="0"/>
+                                        <TextBox x:Name="textBox_UdlaegM" HorizontalAlignment="Stretch"  Margin="50,0,0,60" Grid.Row="1" TextWrapping="Wrap" PlaceholderText="Hvad er der købt for" VerticalAlignment="Stretch" Grid.Column="0"/>
+                                        <TextBlock Name="KrM" Margin="5,0,0,0"  Text="Kr." VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="1" Grid.Column="1" FontSize="25" />
+                                    </Grid>
+                                    <Button Name="GemMandag" MaxWidth="125" Grid.Row="2" Grid.Column="1" Margin="350,150,40,20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                                </Grid>
+                            </PivotItem>
+                            <PivotItem Header="Tirsdag" >
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="1.25*"/>
+                                        <RowDefinition Height="2*"/>
+                                        <RowDefinition Height="3*"/>
+
+
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock x:Name="textBlock_RetTir" FontSize="24" HorizontalAlignment="Left" Height="auto" Margin="50,0,0,0" TextWrapping="Wrap" Text="Ret:" VerticalAlignment="Center" Width="Auto" Grid.Row="0"/>
+                                    <TextBlock x:Name="textBlock_ChefKokTir" FontSize="24" HorizontalAlignment="Left" Height="auto" Margin="50,0,0,0" TextWrapping="Wrap" Text="Chef kok:" VerticalAlignment="center" Width="auto" Grid.Row="0" Grid.Column="1"/>
+                                    <TextBlock x:Name="textBlock_HjaelpeKokkeTir" FontSize="24" HorizontalAlignment="Left" Height="auto" Margin="50,10,0,0" TextWrapping="Wrap" Text="Hjælpe kokke:" VerticalAlignment="Top" Width="auto" Grid.Row="1"/>
+                                    <TextBlock x:Name="textBlock_OpryddereTir" FontSize="24" HorizontalAlignment="Left" Height="auto" Margin="50,10,0,0" TextWrapping="Wrap" Text="Opryddere:" VerticalAlignment="Top" Width="auto" Grid.Row="1" Grid.Column="1"/>
+                                    <TextBlock x:Name="textBlock_NoteTir" FontSize="24" HorizontalAlignment="Left" Height="auto" Margin="50,10,0,0" TextWrapping="Wrap" Text="Note:" VerticalAlignment="Top" Width="auto" Grid.Row="2"/>
+
+                                    <TextBox x:Name="textBox_RetTir" HorizontalAlignment="Stretch"  Margin="100,30,40,20" Grid.Row="0" TextWrapping="Wrap" PlaceholderText="Hvad skal der spises" VerticalAlignment="Stretch"/>
+                                    <TextBox x:Name="textBox_ChefKokTir" HorizontalAlignment="Stretch"  Margin="155,30,40,20" Grid.Row="0" TextWrapping="Wrap" PlaceholderText="Hvem har ansvar for Køkkenet" VerticalAlignment="Stretch" Grid.Column="1"/>
+                                    <TextBox x:Name="textBox_HjaelpeKokkeTir" HorizontalAlignment="Stretch"  Margin="50,47,40,20" Grid.Row="1" TextWrapping="Wrap" PlaceholderText="Hvem skal hjælpe med maden" VerticalAlignment="Stretch" />
+                                    <TextBox x:Name="textBox_OpryddereTir" HorizontalAlignment="Stretch"  Margin="50,47,40,20" Grid.Row="1" TextWrapping="Wrap" PlaceholderText="Hvem skal rydder op" VerticalAlignment="Stretch" Grid.Column="1"/>
+                                    <TextBox x:Name="textBox_NoteTir" HorizontalAlignment="Stretch"  Margin="50,47,40,20" Grid.Row="2" TextWrapping="Wrap" PlaceholderText="Note til retten evt. indkøbsliste" VerticalAlignment="Stretch" />
+                                    <Grid Grid.Row="2" Grid.Column="1" Margin="0,0,0,70" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="1*" />
+                                            <RowDefinition Height="2.3*" />
+
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition Width="70"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock x:Name="textBlock_UdlaegTir" FontSize="24" HorizontalAlignment="Left" Height="32" Margin="50,10,0,0" TextWrapping="Wrap" Text="Udlæg:" VerticalAlignment="Top" Width="76" Grid.Row="0" Grid.Column="0"/>
+                                        <TextBox x:Name="textBox_UdlaegTir" HorizontalAlignment="Stretch"  Margin="50,0,0,60" Grid.Row="1" TextWrapping="Wrap" PlaceholderText="Hvad er der købt for" VerticalAlignment="Stretch" Grid.Column="0"/>
+                                        <TextBlock Name="KrTir" Margin="5,0,0,0"  Text="Kr." VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="1" Grid.Column="1" FontSize="25" />
+                                    </Grid>
+                                    <Button Name="GemTirsdag" MaxWidth="125" Grid.Row="2" Grid.Column="1" Margin="350,150,40,20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                                </Grid>
+                            </PivotItem>
+                            <PivotItem Header="Onsdag" >
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="1.25*"/>
+                                        <RowDefinition Height="2*"/>
+                                        <RowDefinition Height="3*"/>
+
+
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock x:Name="textBlock_RetO" FontSize="24" HorizontalAlignment="Left" Height="auto" Margin="50,0,0,0" TextWrapping="Wrap" Text="Ret:" VerticalAlignment="Center" Width="Auto" Grid.Row="0"/>
+                                    <TextBlock x:Name="textBlock_ChefKokO" FontSize="24" HorizontalAlignment="Left" Height="auto" Margin="50,0,0,0" TextWrapping="Wrap" Text="Chef kok:" VerticalAlignment="center" Width="auto" Grid.Row="0" Grid.Column="1"/>
+                                    <TextBlock x:Name="textBlock_HjaelpeKokkeO" FontSize="24" HorizontalAlignment="Left" Height="auto" Margin="50,10,0,0" TextWrapping="Wrap" Text="Hjælpe kokke:" VerticalAlignment="Top" Width="auto" Grid.Row="1"/>
+                                    <TextBlock x:Name="textBlock_OpryddereO" FontSize="24" HorizontalAlignment="Left" Height="auto" Margin="50,10,0,0" TextWrapping="Wrap" Text="Opryddere:" VerticalAlignment="Top" Width="auto" Grid.Row="1" Grid.Column="1"/>
+                                    <TextBlock x:Name="textBlock_NoteO" FontSize="24" HorizontalAlignment="Left" Height="auto" Margin="50,10,0,0" TextWrapping="Wrap" Text="Note:" VerticalAlignment="Top" Width="auto" Grid.Row="2"/>
+
+                                    <TextBox x:Name="textBox_RetO" HorizontalAlignment="Stretch"  Margin="100,30,40,20" Grid.Row="0" TextWrapping="Wrap" PlaceholderText="Hvad skal der spises" VerticalAlignment="Stretch"/>
+                                    <TextBox x:Name="textBox_ChefKokO" HorizontalAlignment="Stretch"  Margin="155,30,40,20" Grid.Row="0" TextWrapping="Wrap" PlaceholderText="Hvem har ansvar for Køkkenet" VerticalAlignment="Stretch" Grid.Column="1"/>
+                                    <TextBox x:Name="textBox_HjaelpeKokkeO" HorizontalAlignment="Stretch"  Margin="50,47,40,20" Grid.Row="1" TextWrapping="Wrap" PlaceholderText="Hvem skal hjælpe med maden" VerticalAlignment="Stretch" />
+                                    <TextBox x:Name="textBox_OpryddereO" HorizontalAlignment="Stretch"  Margin="50,47,40,20" Grid.Row="1" TextWrapping="Wrap" PlaceholderText="Hvem skal rydder op" VerticalAlignment="Stretch" Grid.Column="1"/>
+                                    <TextBox x:Name="textBox_NoteO" HorizontalAlignment="Stretch"  Margin="50,47,40,20" Grid.Row="2" TextWrapping="Wrap" PlaceholderText="Note til retten evt. indkøbsliste" VerticalAlignment="Stretch" />
+                                    <Grid Grid.Row="2" Grid.Column="1" Margin="0,0,0,70" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="1*" />
+                                            <RowDefinition Height="2.3*" />
+
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition Width="70"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock x:Name="textBlock_UdlaegO" FontSize="24" HorizontalAlignment="Left" Height="32" Margin="50,10,0,0" TextWrapping="Wrap" Text="Udlæg:" VerticalAlignment="Top" Width="76" Grid.Row="0" Grid.Column="0"/>
+                                        <TextBox x:Name="textBox_UdlaegO" HorizontalAlignment="Stretch"  Margin="50,0,0,60" Grid.Row="1" TextWrapping="Wrap" PlaceholderText="Hvad er der købt for" VerticalAlignment="Stretch" Grid.Column="0"/>
+                                        <TextBlock Name="KrO" Margin="5,0,0,0"  Text="Kr." VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="1" Grid.Column="1" FontSize="25" />
+                                    </Grid>
+                                    <Button Name="GemOnsdag" MaxWidth="125" Grid.Row="2" Grid.Column="1" Margin="350,150,40,20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                                </Grid>
+                            </PivotItem>
+                            <PivotItem Header="Torsdag" >
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="1.25*"/>
+                                        <RowDefinition Height="2*"/>
+                                        <RowDefinition Height="3*"/>
+
+
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock x:Name="textBlock_RetTor" FontSize="24" HorizontalAlignment="Left" Height="auto" Margin="50,0,0,0" TextWrapping="Wrap" Text="Ret:" VerticalAlignment="Center" Width="Auto" Grid.Row="0"/>
+                                    <TextBlock x:Name="textBlock_ChefKokTor" FontSize="24" HorizontalAlignment="Left" Height="auto" Margin="50,0,0,0" TextWrapping="Wrap" Text="Chef kok:" VerticalAlignment="center" Width="auto" Grid.Row="0" Grid.Column="1"/>
+                                    <TextBlock x:Name="textBlock_HjaelpeKokkeTor" FontSize="24" HorizontalAlignment="Left" Height="auto" Margin="50,10,0,0" TextWrapping="Wrap" Text="Hjælpe kokke:" VerticalAlignment="Top" Width="auto" Grid.Row="1"/>
+                                    <TextBlock x:Name="textBlock_OpryddereTor" FontSize="24" HorizontalAlignment="Left" Height="auto" Margin="50,10,0,0" TextWrapping="Wrap" Text="Opryddere:" VerticalAlignment="Top" Width="auto" Grid.Row="1" Grid.Column="1"/>
+                                    <TextBlock x:Name="textBlock_NoteTor" FontSize="24" HorizontalAlignment="Left" Height="auto" Margin="50,10,0,0" TextWrapping="Wrap" Text="Note:" VerticalAlignment="Top" Width="auto" Grid.Row="2"/>
+
+                                    <TextBox x:Name="textBox_RetTor" HorizontalAlignment="Stretch"  Margin="100,30,40,20" Grid.Row="0" TextWrapping="Wrap" PlaceholderText="Hvad skal der spises" VerticalAlignment="Stretch"/>
+                                    <TextBox x:Name="textBox_ChefKokTor" HorizontalAlignment="Stretch"  Margin="155,30,40,20" Grid.Row="0" TextWrapping="Wrap" PlaceholderText="Hvem har ansvar for Køkkenet" VerticalAlignment="Stretch" Grid.Column="1"/>
+                                    <TextBox x:Name="textBox_HjaelpeKokkeTor" HorizontalAlignment="Stretch"  Margin="50,47,40,20" Grid.Row="1" TextWrapping="Wrap" PlaceholderText="Hvem skal hjælpe med maden" VerticalAlignment="Stretch" />
+                                    <TextBox x:Name="textBox_OpryddereTor" HorizontalAlignment="Stretch"  Margin="50,47,40,20" Grid.Row="1" TextWrapping="Wrap" PlaceholderText="Hvem skal rydder op" VerticalAlignment="Stretch" Grid.Column="1"/>
+                                    <TextBox x:Name="textBox_NoteTor" HorizontalAlignment="Stretch"  Margin="50,47,40,20" Grid.Row="2" TextWrapping="Wrap" PlaceholderText="Note til retten evt. indkøbsliste" VerticalAlignment="Stretch" />
+                                    <Grid Grid.Row="2" Grid.Column="1" Margin="0,0,0,70" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="1*" />
+                                            <RowDefinition Height="2.3*" />
+
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition Width="70"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock x:Name="textBlock_UdlaegTor" FontSize="24" HorizontalAlignment="Left" Height="32" Margin="50,10,0,0" TextWrapping="Wrap" Text="Udlæg:" VerticalAlignment="Top" Width="76" Grid.Row="0" Grid.Column="0"/>
+                                        <TextBox x:Name="textBox_UdlaegTor" HorizontalAlignment="Stretch"  Margin="50,0,0,60" Grid.Row="1" TextWrapping="Wrap" PlaceholderText="Hvad er der købt for" VerticalAlignment="Stretch" Grid.Column="0"/>
+                                        <TextBlock Name="KrTor" Margin="5,0,0,0"  Text="Kr." VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="1" Grid.Column="1" FontSize="25" />
+                                    </Grid>
+                                    <Button Name="GemTorsdag" MaxWidth="125" Grid.Row="2" Grid.Column="1" Margin="350,150,40,20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                                </Grid>
+                            </PivotItem>
+
+                        </Pivot>
+                    </Grid>
+                </PivotItem>
+                <PivotItem Header="Næste Uge">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="9*"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="Uge Nr." FontSize="30" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="50,0,34,10" Grid.Row="0" Height="auto" Width="auto"/>
+                        <Pivot Grid.Row="1">
+                            <PivotItem Header="Mandag" >
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="1.25*"/>
+                                        <RowDefinition Height="2*"/>
+                                        <RowDefinition Height="3*"/>
+
+
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock x:Name="textBlock_RetM2" FontSize="24" HorizontalAlignment="Left" Height="auto" Margin="50,0,0,0" TextWrapping="Wrap" Text="Ret:" VerticalAlignment="Center" Width="Auto" Grid.Row="0"/>
+                                    <TextBlock x:Name="textBlock_ChefKokM2" FontSize="24" HorizontalAlignment="Left" Height="auto" Margin="50,0,0,0" TextWrapping="Wrap" Text="Chef kok:" VerticalAlignment="center" Width="auto" Grid.Row="0" Grid.Column="1"/>
+                                    <TextBlock x:Name="textBlock_HjaelpeKokkeM2" FontSize="24" HorizontalAlignment="Left" Height="auto" Margin="50,10,0,0" TextWrapping="Wrap" Text="Hjælpe kokke:" VerticalAlignment="Top" Width="auto" Grid.Row="1"/>
+                                    <TextBlock x:Name="textBlock_OpryddereM2" FontSize="24" HorizontalAlignment="Left" Height="auto" Margin="50,10,0,0" TextWrapping="Wrap" Text="Opryddere:" VerticalAlignment="Top" Width="auto" Grid.Row="1" Grid.Column="1"/>
+                                    <TextBlock x:Name="textBlock_NoteM2" FontSize="24" HorizontalAlignment="Left" Height="auto" Margin="50,10,0,0" TextWrapping="Wrap" Text="Note:" VerticalAlignment="Top" Width="auto" Grid.Row="2"/>
+
+                                    <TextBox x:Name="textBox_RetM2" HorizontalAlignment="Stretch"  Margin="100,30,40,20" Grid.Row="0" TextWrapping="Wrap" PlaceholderText="Hvad skal der spises" VerticalAlignment="Stretch"/>
+                                    <TextBox x:Name="textBox_ChefKokM2" HorizontalAlignment="Stretch"  Margin="155,30,40,20" Grid.Row="0" TextWrapping="Wrap" PlaceholderText="Hvem har ansvar for Køkkenet" VerticalAlignment="Stretch" Grid.Column="1"/>
+                                    <TextBox x:Name="textBox_HjaelpeKokkeM2" HorizontalAlignment="Stretch"  Margin="50,47,40,20" Grid.Row="1" TextWrapping="Wrap" PlaceholderText="Hvem skal hjælpe med maden" VerticalAlignment="Stretch" />
+                                    <TextBox x:Name="textBox_OpryddereM2" HorizontalAlignment="Stretch"  Margin="50,47,40,20" Grid.Row="1" TextWrapping="Wrap" PlaceholderText="Hvem skal rydder op" VerticalAlignment="Stretch" Grid.Column="1"/>
+                                    <TextBox x:Name="textBox_NoteM2" HorizontalAlignment="Stretch"  Margin="50,47,40,20" Grid.Row="2" TextWrapping="Wrap" PlaceholderText="Note til retten evt. indkøbsliste" VerticalAlignment="Stretch" />
+                                    <Grid Grid.Row="2" Grid.Column="1" Margin="0,0,0,70" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="1*" />
+                                            <RowDefinition Height="2.3*" />
+
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition Width="70"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock x:Name="textBlock_UdlaegM2" FontSize="24" HorizontalAlignment="Left" Height="32" Margin="50,10,0,0" TextWrapping="Wrap" Text="Udlæg:" VerticalAlignment="Top" Width="76" Grid.Row="0" Grid.Column="0"/>
+                                        <TextBox x:Name="textBox_UdlaegM2" HorizontalAlignment="Stretch"  Margin="50,0,0,60" Grid.Row="1" TextWrapping="Wrap" PlaceholderText="Hvad er der købt for" VerticalAlignment="Stretch" Grid.Column="0"/>
+                                        <TextBlock Name="KrM2" Margin="5,0,0,0"  Text="Kr." VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="1" Grid.Column="1" FontSize="25" />
+                                    </Grid>
+                                    <Button Name="GemMandag2" MaxWidth="125" Grid.Row="2" Grid.Column="1" Margin="350,150,40,20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                                </Grid>
+                            </PivotItem>
+                            <PivotItem Header="Tirsdag" >
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="1.25*"/>
+                                        <RowDefinition Height="2*"/>
+                                        <RowDefinition Height="3*"/>
+
+
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock x:Name="textBlock_RetTir2" FontSize="24" HorizontalAlignment="Left" Height="auto" Margin="50,0,0,0" TextWrapping="Wrap" Text="Ret:" VerticalAlignment="Center" Width="Auto" Grid.Row="0"/>
+                                    <TextBlock x:Name="textBlock_ChefKokTir2" FontSize="24" HorizontalAlignment="Left" Height="auto" Margin="50,0,0,0" TextWrapping="Wrap" Text="Chef kok:" VerticalAlignment="center" Width="auto" Grid.Row="0" Grid.Column="1"/>
+                                    <TextBlock x:Name="textBlock_HjaelpeKokkeTir2" FontSize="24" HorizontalAlignment="Left" Height="auto" Margin="50,10,0,0" TextWrapping="Wrap" Text="Hjælpe kokke:" VerticalAlignment="Top" Width="auto" Grid.Row="1"/>
+                                    <TextBlock x:Name="textBlock_OpryddereTir2" FontSize="24" HorizontalAlignment="Left" Height="auto" Margin="50,10,0,0" TextWrapping="Wrap" Text="Opryddere:" VerticalAlignment="Top" Width="auto" Grid.Row="1" Grid.Column="1"/>
+                                    <TextBlock x:Name="textBlock_NoteTir2" FontSize="24" HorizontalAlignment="Left" Height="auto" Margin="50,10,0,0" TextWrapping="Wrap" Text="Note:" VerticalAlignment="Top" Width="auto" Grid.Row="2"/>
+
+                                    <TextBox x:Name="textBox_RetTir2" HorizontalAlignment="Stretch"  Margin="100,30,40,20" Grid.Row="0" TextWrapping="Wrap" PlaceholderText="Hvad skal der spises" VerticalAlignment="Stretch"/>
+                                    <TextBox x:Name="textBox_ChefKokTir2" HorizontalAlignment="Stretch"  Margin="155,30,40,20" Grid.Row="0" TextWrapping="Wrap" PlaceholderText="Hvem har ansvar for Køkkenet" VerticalAlignment="Stretch" Grid.Column="1"/>
+                                    <TextBox x:Name="textBox_HjaelpeKokkeTir2" HorizontalAlignment="Stretch"  Margin="50,47,40,20" Grid.Row="1" TextWrapping="Wrap" PlaceholderText="Hvem skal hjælpe med maden" VerticalAlignment="Stretch" />
+                                    <TextBox x:Name="textBox_OpryddereTir2" HorizontalAlignment="Stretch"  Margin="50,47,40,20" Grid.Row="1" TextWrapping="Wrap" PlaceholderText="Hvem skal rydder op" VerticalAlignment="Stretch" Grid.Column="1"/>
+                                    <TextBox x:Name="textBox_NoteTir2" HorizontalAlignment="Stretch"  Margin="50,47,40,20" Grid.Row="2" TextWrapping="Wrap" PlaceholderText="Note til retten evt. indkøbsliste" VerticalAlignment="Stretch" />
+                                    <Grid Grid.Row="2" Grid.Column="1" Margin="0,0,0,70" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="1*" />
+                                            <RowDefinition Height="2.3*" />
+
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition Width="70"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock x:Name="textBlock_UdlaegTir2" FontSize="24" HorizontalAlignment="Left" Height="32" Margin="50,10,0,0" TextWrapping="Wrap" Text="Udlæg:" VerticalAlignment="Top" Width="76" Grid.Row="0" Grid.Column="0"/>
+                                        <TextBox x:Name="textBox_UdlaegTir2" HorizontalAlignment="Stretch"  Margin="50,0,0,60" Grid.Row="1" TextWrapping="Wrap" PlaceholderText="Hvad er der købt for" VerticalAlignment="Stretch" Grid.Column="0"/>
+                                        <TextBlock Name="KrTir2" Margin="5,0,0,0"  Text="Kr." VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="1" Grid.Column="1" FontSize="25" />
+                                    </Grid>
+                                    <Button Name="GemTirsdag2" MaxWidth="125" Grid.Row="2" Grid.Column="1" Margin="350,150,40,20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                                </Grid>
+                            </PivotItem>
+                            <PivotItem Header="Onsdag" >
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="1.25*"/>
+                                        <RowDefinition Height="2*"/>
+                                        <RowDefinition Height="3*"/>
+
+
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock x:Name="textBlock_RetO2" FontSize="24" HorizontalAlignment="Left" Height="auto" Margin="50,0,0,0" TextWrapping="Wrap" Text="Ret:" VerticalAlignment="Center" Width="Auto" Grid.Row="0"/>
+                                    <TextBlock x:Name="textBlock_ChefKokO2" FontSize="24" HorizontalAlignment="Left" Height="auto" Margin="50,0,0,0" TextWrapping="Wrap" Text="Chef kok:" VerticalAlignment="center" Width="auto" Grid.Row="0" Grid.Column="1"/>
+                                    <TextBlock x:Name="textBlock_HjaelpeKokkeO2" FontSize="24" HorizontalAlignment="Left" Height="auto" Margin="50,10,0,0" TextWrapping="Wrap" Text="Hjælpe kokke:" VerticalAlignment="Top" Width="auto" Grid.Row="1"/>
+                                    <TextBlock x:Name="textBlock_OpryddereO2" FontSize="24" HorizontalAlignment="Left" Height="auto" Margin="50,10,0,0" TextWrapping="Wrap" Text="Opryddere:" VerticalAlignment="Top" Width="auto" Grid.Row="1" Grid.Column="1"/>
+                                    <TextBlock x:Name="textBlock_NoteO2" FontSize="24" HorizontalAlignment="Left" Height="auto" Margin="50,10,0,0" TextWrapping="Wrap" Text="Note:" VerticalAlignment="Top" Width="auto" Grid.Row="2"/>
+
+                                    <TextBox x:Name="textBox_RetO2" HorizontalAlignment="Stretch"  Margin="100,30,40,20" Grid.Row="0" TextWrapping="Wrap" PlaceholderText="Hvad skal der spises" VerticalAlignment="Stretch"/>
+                                    <TextBox x:Name="textBox_ChefKokO2" HorizontalAlignment="Stretch"  Margin="155,30,40,20" Grid.Row="0" TextWrapping="Wrap" PlaceholderText="Hvem har ansvar for Køkkenet" VerticalAlignment="Stretch" Grid.Column="1"/>
+                                    <TextBox x:Name="textBox_HjaelpeKokkeO2" HorizontalAlignment="Stretch"  Margin="50,47,40,20" Grid.Row="1" TextWrapping="Wrap" PlaceholderText="Hvem skal hjælpe med maden" VerticalAlignment="Stretch" />
+                                    <TextBox x:Name="textBox_OpryddereO2" HorizontalAlignment="Stretch"  Margin="50,47,40,20" Grid.Row="1" TextWrapping="Wrap" PlaceholderText="Hvem skal rydder op" VerticalAlignment="Stretch" Grid.Column="1"/>
+                                    <TextBox x:Name="textBox_NoteO2" HorizontalAlignment="Stretch"  Margin="50,47,40,20" Grid.Row="2" TextWrapping="Wrap" PlaceholderText="Note til retten evt. indkøbsliste" VerticalAlignment="Stretch" />
+                                    <Grid Grid.Row="2" Grid.Column="1" Margin="0,0,0,70" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="1*" />
+                                            <RowDefinition Height="2.3*" />
+
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition Width="70"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock x:Name="textBlock_UdlaegO2" FontSize="24" HorizontalAlignment="Left" Height="32" Margin="50,10,0,0" TextWrapping="Wrap" Text="Udlæg:" VerticalAlignment="Top" Width="76" Grid.Row="0" Grid.Column="0"/>
+                                        <TextBox x:Name="textBox_UdlaegO2" HorizontalAlignment="Stretch"  Margin="50,0,0,60" Grid.Row="1" TextWrapping="Wrap" PlaceholderText="Hvad er der købt for" VerticalAlignment="Stretch" Grid.Column="0"/>
+                                        <TextBlock Name="KrO2" Margin="5,0,0,0"  Text="Kr." VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="1" Grid.Column="1" FontSize="25" />
+                                    </Grid>
+                                    <Button Name="GemOnsdag2" MaxWidth="125" Grid.Row="2" Grid.Column="1" Margin="350,150,40,20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                                </Grid>
+                            </PivotItem>
+                            <PivotItem Header="Torsdag" >
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="1.25*"/>
+                                        <RowDefinition Height="2*"/>
+                                        <RowDefinition Height="3*"/>
+
+
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock x:Name="textBlock_RetTor2" FontSize="24" HorizontalAlignment="Left" Height="auto" Margin="50,0,0,0" TextWrapping="Wrap" Text="Ret:" VerticalAlignment="Center" Width="Auto" Grid.Row="0"/>
+                                    <TextBlock x:Name="textBlock_ChefKokTor2" FontSize="24" HorizontalAlignment="Left" Height="auto" Margin="50,0,0,0" TextWrapping="Wrap" Text="Chef kok:" VerticalAlignment="center" Width="auto" Grid.Row="0" Grid.Column="1"/>
+                                    <TextBlock x:Name="textBlock_HjaelpeKokkeTor2" FontSize="24" HorizontalAlignment="Left" Height="auto" Margin="50,10,0,0" TextWrapping="Wrap" Text="Hjælpe kokke:" VerticalAlignment="Top" Width="auto" Grid.Row="1"/>
+                                    <TextBlock x:Name="textBlock_OpryddereTor2" FontSize="24" HorizontalAlignment="Left" Height="auto" Margin="50,10,0,0" TextWrapping="Wrap" Text="Opryddere:" VerticalAlignment="Top" Width="auto" Grid.Row="1" Grid.Column="1"/>
+                                    <TextBlock x:Name="textBlock_NoteTor2" FontSize="24" HorizontalAlignment="Left" Height="auto" Margin="50,10,0,0" TextWrapping="Wrap" Text="Note:" VerticalAlignment="Top" Width="auto" Grid.Row="2"/>
+
+                                    <TextBox x:Name="textBox_RetTor2" HorizontalAlignment="Stretch"  Margin="100,30,40,20" Grid.Row="0" TextWrapping="Wrap" PlaceholderText="Hvad skal der spises" VerticalAlignment="Stretch"/>
+                                    <TextBox x:Name="textBox_ChefKokTor2" HorizontalAlignment="Stretch"  Margin="155,30,40,20" Grid.Row="0" TextWrapping="Wrap" PlaceholderText="Hvem har ansvar for Køkkenet" VerticalAlignment="Stretch" Grid.Column="1"/>
+                                    <TextBox x:Name="textBox_HjaelpeKokkeTor2" HorizontalAlignment="Stretch"  Margin="50,47,40,20" Grid.Row="1" TextWrapping="Wrap" PlaceholderText="Hvem skal hjælpe med maden" VerticalAlignment="Stretch" />
+                                    <TextBox x:Name="textBox_OpryddereTor2" HorizontalAlignment="Stretch"  Margin="50,47,40,20" Grid.Row="1" TextWrapping="Wrap" PlaceholderText="Hvem skal rydder op" VerticalAlignment="Stretch" Grid.Column="1"/>
+                                    <TextBox x:Name="textBox_NoteTor2" HorizontalAlignment="Stretch"  Margin="50,47,40,20" Grid.Row="2" TextWrapping="Wrap" PlaceholderText="Note til retten evt. indkøbsliste" VerticalAlignment="Stretch" />
+                                    <Grid Grid.Row="2" Grid.Column="1" Margin="0,0,0,70" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="1*" />
+                                            <RowDefinition Height="2.3*" />
+
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition Width="70"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock x:Name="textBlock_UdlaegTor2" FontSize="24" HorizontalAlignment="Left" Height="32" Margin="50,10,0,0" TextWrapping="Wrap" Text="Udlæg:" VerticalAlignment="Top" Width="76" Grid.Row="0" Grid.Column="0"/>
+                                        <TextBox x:Name="textBox_UdlaegTor2" HorizontalAlignment="Stretch"  Margin="50,0,0,60" Grid.Row="1" TextWrapping="Wrap" PlaceholderText="Hvad er der købt for" VerticalAlignment="Stretch" Grid.Column="0"/>
+                                        <TextBlock Name="KrTor2" Margin="5,0,0,0"  Text="Kr." VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="1" Grid.Column="1" FontSize="25" />
+                                    </Grid>
+                                    <Button Name="GemTorsdag2" MaxWidth="125" Grid.Row="2" Grid.Column="1" Margin="350,150,40,20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                                </Grid>
+                            </PivotItem>
+
+                        </Pivot>
+                    </Grid>
+                </PivotItem>
+                            <PivotItem Header="Sær Arrangement">"hugabuka"</PivotItem>
+
+                        </Pivot>
+                    </Grid>
+            
         </Grid>
-        
 
 
-    </Grid>
+
+    
 </Page>

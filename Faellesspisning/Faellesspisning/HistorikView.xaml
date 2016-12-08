@@ -24,7 +24,7 @@
             <Button x:Name="UgeplanButton" Content="Ugeplan" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
                 <interactivity:Interaction.Behaviors>
                     <core:EventTriggerBehavior EventName="Click">
-                        <core:NavigateToPageAction TargetPage="Faellesspisning.UgePlanView"/>
+                        <core:NavigateToPageAction TargetPage="Faellesspisning.MainPage"/>
                     </core:EventTriggerBehavior>
                 </interactivity:Interaction.Behaviors>
             </Button>
