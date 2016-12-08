@@ -25,8 +25,7 @@ namespace Faellesspisning
             }
             catch (FileNotFoundException)
             {
-                
-                Uge ugeX = new Uge();
+                Singleton.GetInstance().nyUge();
             }
         }
 

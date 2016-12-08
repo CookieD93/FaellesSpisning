@@ -8,5 +8,22 @@ namespace Faellesspisning
 {
     class Singleton
     {
+        public Uge TempUge { get; set; }
+
+        private static Singleton _instance = new Singleton();
+        public Singleton()
+        {
+            
+        }
+
+        public static Singleton GetInstance()
+        {
+            return _instance;
+        }
+
+        public void nyUge()
+        {
+                Uge ugeX = new Uge();
+        }
     }
 }
