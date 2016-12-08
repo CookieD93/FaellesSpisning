@@ -26,10 +26,10 @@ namespace Faellesspisning
 
         public static async Task<Dictionary<string,Object>> LoadFromJsonAsync(string filenameLoad)
         {
-            string personsJsonString = await DeSerializeFileAsync(filenameLoad);
+            string dictJsonString = await DeSerializeFileAsync(filenameLoad);
             return
                 (Dictionary<string,Object>)
-                JsonConvert.DeserializeObject(personsJsonString, typeof(Dictionary<string,Object>));
+                JsonConvert.DeserializeObject(dictJsonString, typeof(Dictionary<string,Object>));
         }
 
 

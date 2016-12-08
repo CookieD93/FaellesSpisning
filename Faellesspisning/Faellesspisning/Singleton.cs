@@ -41,6 +41,8 @@ namespace Faellesspisning
             //}
             Uge ugeX = new Uge();
             DenneUge.Add("uge",ugeX);
+            DenneUge.Add("Temp", TempUge);
+            Persistance.SaveJson(DenneUge, "Uge" + Dato.GetDenneUge() + ".json");
         }
     }
 }
