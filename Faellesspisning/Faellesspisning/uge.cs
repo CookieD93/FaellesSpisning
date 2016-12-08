@@ -21,6 +21,7 @@ namespace Faellesspisning
         {
             //Psuedo kode
             //Ugenummer = GetWeek;
+            IntUgenummer = Dato.GetNextUge();
 
             Dag mandag = new Dag("Mandag", IntUgenummer);
             Dag tirsdag = new Dag("Tirsdag", IntUgenummer);

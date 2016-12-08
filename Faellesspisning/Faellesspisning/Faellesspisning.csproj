@@ -112,6 +112,7 @@
     <Compile Include="Persistance.cs" />
     <Compile Include="RelayArgCommand.cs" />
     <Compile Include="RelayCommand.cs" />
+    <Compile Include="Singleton.cs" />
     <Compile Include="TilmedlingView.xaml.cs">
       <DependentUpon>TilmedlingView.xaml</DependentUpon>
     </Compile>
