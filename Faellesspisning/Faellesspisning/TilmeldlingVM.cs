@@ -84,12 +84,12 @@ namespace Faellesspisning
         }
         public void SetStandard()
         {
-           Persistance.SaveJson(Boligliste,"Standard.json");
+           Persistance.SaveJson(Boligliste,"StandardValg.json");
         }
 
         public void Tilmeld()
         {
-           Persistance.SaveJson(Boligliste,"DenneUge.json");
+           Persistance.SaveJson(Boligliste,"Uge"+Dato.GetDenneUge()+".Json");
 
         }
 
