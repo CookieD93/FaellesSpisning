@@ -12,11 +12,12 @@ namespace Faellesspisning
 {
     class TilmeldlingVm : INotifyPropertyChanged
     {
+       // private Dictionary<int, Bolig> tempListe;
         private int _dropDownValg;
         private readonly ObservableCollection<int> _dropdownHuse;
         public RelayCommand StandardRelayCommand { get; set; }
         public RelayCommand TilmeldRelayCommand { get; set; }
-        public Dictionary<int,Bolig> Boligliste { get; set; }
+        //public Dictionary<int,Bolig> Boligliste { get; set; }
         public ObservableCollection<int> OCmandag { get; set; }
         public ObservableCollection<int> OCtirsdag { get; set; }
         public ObservableCollection<int> OConsdag { get; set; }
@@ -38,22 +39,26 @@ namespace Faellesspisning
         {
 
             // Denne skal loades fra filen hvor boliger er gemt
-            Boligliste=new Dictionary<int, Bolig>();
+            //Boligliste=new Dictionary<int, Bolig>();
             
             // Denne skal sættes ind et sted hvor den skal køres én gang, og gemmes i en json fil.
             // ==============================================================
-            for (int i = 74; i < 97; i++)
-            {
-                Boligliste.Add(i, new Bolig(i));
-            }
+            //for (int i = 74; i < 97; i++)
+            //{
+            //    Singleton.GetInstance().Boligliste.Add(i, new Bolig(i));
+            //}
             // ==============================================================
 
-            _dropdownHuse = new ObservableCollection<int>(Boligliste.Keys);
+            _dropdownHuse = new ObservableCollection<int>(Singleton.GetInstance().Boligliste.Keys);
             TilmeldRelayCommand = new RelayCommand(Tilmeld);
             StandardRelayCommand = new RelayCommand(SetStandard);
-
-           
-
+            //tempListe = new Dictionary<int,Bolig>();
+            //for (int i = 0; i < 22; i++)
+            //{
+            //    tempListe.Add(i,new Bolig(i));
+            //}
+            //Persistance.SaveJson(tempListe,"templiste.json");
+                
             OCmandag = new ObservableCollection<int>();
             OCtirsdag = new ObservableCollection<int>();  
             OConsdag = new ObservableCollection<int>();
@@ -67,11 +72,12 @@ namespace Faellesspisning
 
         public void GetView()
         {
+
             OCmandag.Clear();
             OCtirsdag.Clear();
             OConsdag.Clear();
             OCtorsdag.Clear();
-            Bolig temp = Boligliste[DropDownValg];
+            Bolig temp = Singleton.GetInstance().Boligliste[DropDownValg];
             for (int i = 0; i < 4; i++)
             {
                 OCmandag.Add(temp.DaglistMan[i]);
@@ -84,12 +90,12 @@ namespace Faellesspisning
         }
         public void SetStandard()
         {
-           Persistance.SaveJson(Boligliste,"StandardValg.json");
+           Persistance.SaveJson(Singleton.GetInstance().Boligliste,"StandardValg.json");
         }
 
         public void Tilmeld()
         {
-           Persistance.SaveJson(Boligliste,"Uge"+Dato.GetDenneUge()+".Json");
+           Persistance.SaveJson(Singleton.GetInstance().Boligliste,"Uge"+Dato.GetDenneUge()+".Json");
 
         }
 

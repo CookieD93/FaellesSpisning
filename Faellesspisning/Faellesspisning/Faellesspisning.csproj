@@ -99,6 +99,7 @@
     <Compile Include="Bolig.cs" />
     <Compile Include="Dato.cs" />
     <Compile Include="Dag.cs" />
+    <Compile Include="Gem.cs" />
     <Compile Include="Historik.cs" />
     <Compile Include="HistorikView.xaml.cs">
       <DependentUpon>HistorikView.xaml</DependentUpon>
@@ -110,6 +111,7 @@
     </Compile>
     <Compile Include="MadPlanlaegningViewVM.cs" />
     <Compile Include="Persistance.cs" />
+    <Compile Include="Properties\Annotations2.cs" />
     <Compile Include="RelayArgCommand.cs" />
     <Compile Include="RelayCommand.cs" />
     <Compile Include="Singleton.cs" />

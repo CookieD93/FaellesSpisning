@@ -29,7 +29,43 @@
               <referencedTypeMoniker Id="a01c54da-1098-4591-87cd-fdbc83384282" LastKnownName="Integer" />
             </type_NamedElement>
           </property>
+          <property Id="39647cda-660f-49f8-8a15-877814a05ae1" name="DaglistMan" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="44400079-26b0-4d11-8950-f32c3eda422c" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="d21fd834-0a5e-4407-b251-f47a6e83a866" LastKnownName="List&lt;int&gt;" />
+            </type_NamedElement>
+          </property>
+          <property Id="09a46dc6-e89e-4899-b9a6-a3b70b34feea" name="DaglistTir" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="26befec5-3601-4cd4-80b4-edc5c8d95cbd" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="4fea8edb-dd41-4df8-a3a1-114eebcc6387" LastKnownName="List&lt;int&gt;" />
+            </type_NamedElement>
+          </property>
+          <property Id="c34c5090-d8a1-4b3e-a3fe-04bcc32a666f" name="DaglistOns" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="52503d1a-0aa0-4478-8239-ffaa1947622a" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="08aaf669-c4fb-48dc-9ba2-35defa71b3ee" LastKnownName="List&lt;int&gt;" />
+            </type_NamedElement>
+          </property>
+          <property Id="67c523bb-a33e-47c2-9c82-22417719dc9a" name="DaglistTor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4c5c390c-9f80-4cf3-8f9e-4f96cf759bd0" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="cace3cf4-b28d-4474-948d-249d15381a3e" LastKnownName="List&lt;int&gt;" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="606f9b2a-6d8a-4659-b3b0-8f31bba5add8" name="Bolig" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="150d767c-c2f0-4e7f-9731-b5fc21f9f215" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b839f464-7c09-4652-9a97-e9dfc911d2e6" name="int boligNr" direction="In" isUnique="false">
+                  <elementDefinition Id="ea13d492-959f-46ba-9389-575b2f8997b0" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
@@ -67,6 +103,11 @@
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="621c84f5-f2fa-4b65-b44a-86feb9cdcd04" name="Arrangement" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="22be55e8-fe9e-46eb-a058-b267510d8e27" />
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
@@ -80,22 +121,27 @@
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="909bcc02-eb94-4186-ab79-d9782fb612fd" name="Tilmelding" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="495fc274-5d3d-4a3d-bbb7-9cba2535b79b" />
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <class Id="f6aad089-95e6-49dd-b9d3-1ab4baa5608c" name="Dagsplan" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="f6aad089-95e6-49dd-b9d3-1ab4baa5608c" name="Dag" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="820625e7-1ced-4d23-8ad1-ad86b9a297e5" />
         <targetEnds>
-          <association Id="2c51e1e8-54b5-47a1-8133-a8bc5269d5ca" isDerived="false" sourceEndRoleName="Dagsplan" targetEndRoleName="Ugeplan" isLeaf="false" isAbstract="false">
-            <classMoniker Id="c63af81e-9875-4846-b7a0-77b4f09b3b70" LastKnownName="Ugeplan" />
+          <association Id="2c51e1e8-54b5-47a1-8133-a8bc5269d5ca" isDerived="false" sourceEndRoleName="Dag" targetEndRoleName="Uge" isLeaf="false" isAbstract="false">
+            <classMoniker Id="c63af81e-9875-4846-b7a0-77b4f09b3b70" LastKnownName="Uge" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
-                <memberEnd Id="9c759eaa-c8c8-412a-9df6-ba3b69136ca3" name="Dagsplan" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                <memberEnd Id="9c759eaa-c8c8-412a-9df6-ba3b69136ca3" name="Dag" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
                   <elementDefinition Id="bcf7f32b-1615-4f00-a859-f5b0a602741f" />
                 </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
-                <memberEnd Id="5026e59e-d1d6-4a19-bb1c-2a81ded8f7b5" name="Ugeplan" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <memberEnd Id="5026e59e-d1d6-4a19-bb1c-2a81ded8f7b5" name="Uge" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="f17231dd-3612-49e7-b02a-912801db14b5" />
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -104,7 +150,7 @@
           </association>
         </targetEnds>
         <ownedAttributesInternal>
-          <property Id="2958ba91-e00b-4ac1-acfd-77f6d08652f5" name="DagsNavne" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="2958ba91-e00b-4ac1-acfd-77f6d08652f5" name="DagsNavn" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="047c7968-81fe-48b2-94f6-82b75e14628f" />
             <type_NamedElement>
               <referencedTypeMoniker Id="b90c7734-a3db-49a5-b83f-29202c8b35c9" LastKnownName="String" />
@@ -140,39 +186,62 @@
               <referencedTypeMoniker Id="15b6688e-b121-46a3-9300-d7a92df518f1" LastKnownName="String" />
             </type_NamedElement>
           </property>
-          <property Id="99c9ee2b-03eb-4e7b-82f4-10f2b8ae0f06" name="Udlaeg" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="99c9ee2b-03eb-4e7b-82f4-10f2b8ae0f06" name="Udlæg" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="443d63b8-eb22-4826-b458-60a3746202f4" />
             <type_NamedElement>
               <referencedTypeMoniker Id="dd35729a-436c-4a75-bf54-4e90da90ce8e" LastKnownName="Double" />
             </type_NamedElement>
           </property>
+          <property Id="d14080fe-0beb-4838-a5c0-640be6117018" name="Ugenummer" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="28e97734-3848-4d0d-9a7f-827825eced15" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="365c3158-4945-4196-adcd-d6ebf0849ffa" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
-      </class>
-    </logicalClassDesignerModelHasTypes>
-    <logicalClassDesignerModelHasTypes>
-      <class Id="f8377823-57ac-446f-9333-70c3bf678963" name="Dag" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <elementDefinition Id="4f6c0f5b-54ba-4b46-aa9b-3b5db406d305" />
+        <ownedOperationsInternal>
+          <operation Id="ff9ff77b-e5a1-496b-abd9-c8d51461263d" name="Dag" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2d066c49-cacd-4a9b-bc3b-91f98ff0c597" />
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
       <class Id="10d8d407-c5f7-4160-a292-ce14dd5cbaf8" name="Historik" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="b214092b-dde5-4dca-a0de-75c76088a9b7" />
+        <ownedOperationsInternal>
+          <operation Id="77697fc7-c24e-4598-81c2-de7fd441123f" name="Historik" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="98aa8ae8-e8a0-4b94-af37-1cced523e0df" />
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <class Id="c63af81e-9875-4846-b7a0-77b4f09b3b70" name="Ugeplan" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="c63af81e-9875-4846-b7a0-77b4f09b3b70" name="Uge" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="5c6bb956-73db-44cc-a482-ae9e15ee5f44" />
         <ownedAttributesInternal>
-          <property Id="cfe488bb-a372-4c3b-835a-76ddfe310d27" name="Ugenummer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="c437599f-a3b1-4baa-be94-a95ef14d9756" />
+          <property Id="87b9489b-b7b0-47b1-94ae-42471b4d8679" name="DtUgenummer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="5f25bedf-8d81-4685-a750-e417f93d16b5" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="f5990739-a7e2-4fc2-8eb6-05753f3496bf" LastKnownName="DateTime" />
+              <referencedTypeMoniker Id="01233a61-4ff3-44ad-a217-c636350b5c28" LastKnownName="DateTime" />
+            </type_NamedElement>
+          </property>
+          <property Id="92aa2148-e25e-44e1-a8d0-966ae6bd69cf" name="IntUgenummer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d20d07bc-14c6-4d06-a77b-09666b8c2171" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="4a8b31c2-99e6-41d0-ae9f-22fc0c183818" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+          <property Id="773504be-835c-47cb-bc1b-aa81c3a82a63" name="StrUgenummer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c8888776-8a69-49f5-b667-0f587f1613f0" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="4ed86b72-b7e9-4430-825f-59698a4667d3" LastKnownName="String" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
-          <operation Id="6857fd37-8ee6-4906-bc60-5e6f388f1481" name="Uge" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="71cc0126-959c-4ba5-b305-08a3f4e3a06f" />
+          <operation Id="74bb9cfb-71ca-4237-86a9-9e49d42c4bb6" name="Uge" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5decf546-a812-4e2d-b183-304861f02091" />
           </operation>
         </ownedOperationsInternal>
       </class>
@@ -213,11 +282,6 @@
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="f5990739-a7e2-4fc2-8eb6-05753f3496bf" name="DateTime" isAbstract="false" isLeaf="false" cachedFullName="DateTime">
-        <elementDefinition Id="44e183cf-3fad-47a1-a65a-6d808894a334" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
       <referencedType Id="b90c7734-a3db-49a5-b83f-29202c8b35c9" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
         <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
       </referencedType>
@@ -250,6 +314,169 @@
     <packageHasNamedElement>
       <referencedType Id="dd35729a-436c-4a75-bf54-4e90da90ce8e" name="Double" isAbstract="false" isLeaf="false" cachedFullName="Double">
         <elementDefinition Id="fbfd7ade-9e78-4f16-a834-ae73c1845a18" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="8ed7422c-93fa-4de3-94e8-788e2f5368c1" name="HusSamling" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="fdad44f7-c955-4689-b2f6-c2beffe6283b" />
+        <ownedAttributesInternal>
+          <property Id="9266aed0-e409-4eee-84df-91f625381029" name="_husSamling" visibility="Private" isLeaf="false" isStatic="true" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="57389bc8-8bd1-45a9-ab7c-ab169c0fd17f" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="6282016f-8440-4f83-a7b6-3c9b6107bbe7" LastKnownName="HusSamling" />
+            </type_NamedElement>
+          </property>
+          <property Id="81ae95ef-fc15-4edc-be04-54c07286a311" name="_huseOc" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="6852acbe-b42a-4f1b-9b04-616adea9fbb4" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="28b2e15c-2033-45f9-bac8-de594e816665" LastKnownName="ObservableCollection&lt;Bolig&gt;" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="2b31b52f-410b-4cc3-9fe5-cf4f3c7710d8" name="GetHusSamling" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="383e374e-47f4-441b-9b3e-e85f5f1de7a5" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="3836a321-6fee-4ef8-8d07-c0a4fa0fe040" direction="Return">
+                  <elementDefinition Id="4c8dddfa-81ac-4767-a072-6599074277ed" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b7c37cbc-55ab-4404-9ffd-8f3b371b9aa5" LastKnownName="HusSamling" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="d21fd834-0a5e-4407-b251-f47a6e83a866" name="List&lt;int&gt;" isAbstract="false" isLeaf="false" cachedFullName="List&lt;int&gt;">
+        <elementDefinition Id="de9c5669-5292-4c0f-93b1-23007a5eb4b7" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="4fea8edb-dd41-4df8-a3a1-114eebcc6387" name="List&lt;int&gt;" isAbstract="false" isLeaf="false" cachedFullName="List&lt;int&gt;">
+        <elementDefinition Id="de9c5669-5292-4c0f-93b1-23007a5eb4b7" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="08aaf669-c4fb-48dc-9ba2-35defa71b3ee" name="List&lt;int&gt;" isAbstract="false" isLeaf="false" cachedFullName="List&lt;int&gt;">
+        <elementDefinition Id="de9c5669-5292-4c0f-93b1-23007a5eb4b7" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="cace3cf4-b28d-4474-948d-249d15381a3e" name="List&lt;int&gt;" isAbstract="false" isLeaf="false" cachedFullName="List&lt;int&gt;">
+        <elementDefinition Id="de9c5669-5292-4c0f-93b1-23007a5eb4b7" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="365c3158-4945-4196-adcd-d6ebf0849ffa" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="328861ff-fc2c-4b97-960b-6e99bbea534c" name="Dato" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d3e6aa3b-81ff-4097-920a-d68f5fc02884" />
+        <ownedAttributesInternal>
+          <property Id="0e243b88-31a9-4573-95c7-043ab483f8e4" name="Attribute1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7063bede-6c5d-4fb3-89c5-4711c0e00df0" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="ff25105a-c7c1-42ef-be9c-49387537be82" name="UgeNr" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f2c1478d-2a2b-416b-901a-26fe5b32f7b1" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="516f2ebb-2fce-447f-b3bd-37db81718578" name="uge" direction="In">
+                  <elementDefinition Id="73557ce7-0081-4146-8f01-03eb7753454b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a01c54da-1098-4591-87cd-fdbc83384282" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="280f8a9b-d60e-476a-a8c9-1050a8e7601f" direction="Return">
+                  <elementDefinition Id="a881a269-c2bc-4670-a7a2-1976bfe74dd9" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="1ecab1f9-9909-4626-addf-04b80d871b31" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="94a5fafd-5d00-42e9-9a5b-c5dd143a30ad" name="GetDenneUge" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c4c67287-d9b1-437a-a75c-74a1b54a4c50" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="86158cbd-bc6a-4280-9d86-1cfd7dc9bf88" direction="Return">
+                  <elementDefinition Id="7e47eb84-9b66-43bb-91b9-29e810639720" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a24ddd9d-09f4-453e-98bf-c8a8bf6f1cf5" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="cb4ba105-a2cb-472e-b493-ee8f9feceab4" name="GetNextUge" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b7c14b62-cd27-4305-87cb-a0ef01c9d9fa" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="4c81bd61-a93f-4e17-88fe-5ab8a635bad9" direction="Return" isUnique="false">
+                  <elementDefinition Id="7ad36ea2-1de3-4a62-ae2c-620dc2cb0881" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="bf7a5814-7c6f-4e3d-a717-9254fcca119d" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="1ecab1f9-9909-4626-addf-04b80d871b31" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="bf7a5814-7c6f-4e3d-a717-9254fcca119d" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="a24ddd9d-09f4-453e-98bf-c8a8bf6f1cf5" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="6282016f-8440-4f83-a7b6-3c9b6107bbe7" name="HusSamling" isAbstract="false" isLeaf="false" cachedFullName="Diagrammer::HusSamling">
+        <elementDefinition Id="fdad44f7-c955-4689-b2f6-c2beffe6283b" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="28b2e15c-2033-45f9-bac8-de594e816665" name="ObservableCollection&lt;Bolig&gt;" isAbstract="false" isLeaf="false" cachedFullName="ObservableCollection&lt;Bolig&gt;">
+        <elementDefinition Id="9cbb7788-3dc2-43a6-858a-6766c0057c25" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="b7c37cbc-55ab-4404-9ffd-8f3b371b9aa5" name="HusSamling" isAbstract="false" isLeaf="false" cachedFullName="Diagrammer::HusSamling">
+        <elementDefinition Id="fdad44f7-c955-4689-b2f6-c2beffe6283b" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="01233a61-4ff3-44ad-a217-c636350b5c28" name="DateTime" isAbstract="false" isLeaf="false" cachedFullName="DateTime">
+        <elementDefinition Id="44e183cf-3fad-47a1-a65a-6d808894a334" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="4a8b31c2-99e6-41d0-ae9f-22fc0c183818" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="4ed86b72-b7e9-4430-825f-59698a4667d3" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>
