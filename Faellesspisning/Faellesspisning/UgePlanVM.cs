@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -17,11 +17,11 @@ namespace Faellesspisning
             CheckNewWeek();
         }
 
-        private async void CheckNewWeek()
+        private void CheckNewWeek()
         {
             try
             {
-                await Persistance.LoadFromJsonAsync("Uge" + Dato.GetDenneUge() + ".json");
+                Persistance.LoadFromJsonAsync("Uge" + Dato.GetDenneUge() + ".json");
             }
             catch (FileNotFoundException)
             {
