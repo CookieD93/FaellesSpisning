@@ -28,7 +28,6 @@ namespace Faellesspisning
             Kokke = "";
             Opryddere = "";
             Udlæg = 0.0;
-            Note = "";
         }
         
     }
