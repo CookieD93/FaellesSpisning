@@ -13,8 +13,8 @@ namespace Faellesspisning
     class TilmeldlingVm : INotifyPropertyChanged
     {
        // private Dictionary<int, Bolig> tempListe;
-        private int _dropDownValg;
-        private readonly ObservableCollection<int> _dropdownHuse;
+        private int _dropDownValg=72;
+       // private readonly ObservableCollection<int> _dropdownHuse;
         public RelayCommand StandardRelayCommand { get; set; }
         public RelayCommand TilmeldRelayCommand { get; set; }
         //public Dictionary<int,Bolig> Boligliste { get; set; }
@@ -23,10 +23,10 @@ namespace Faellesspisning
         public ObservableCollection<int> OConsdag { get; set; }
         public ObservableCollection<int> OCtorsdag { get; set; }
 
-        private ObservableCollection<int> DropdownHuse
-        {
-            get { return _dropdownHuse; }
-        }
+        public ObservableCollection<int> DropdownHuse { get; set; }
+        //{
+        //    get { return _dropdownHuse; }
+        //}
 
         public int DropDownValg
         {
@@ -49,7 +49,7 @@ namespace Faellesspisning
             //}
             // ==============================================================
 
-            _dropdownHuse = new ObservableCollection<int>(Singleton.GetInstance().Boligliste.Keys);
+            DropdownHuse = new ObservableCollection<int>(Singleton.GetInstance().Boligliste.Keys);
             TilmeldRelayCommand = new RelayCommand(Tilmeld);
             StandardRelayCommand = new RelayCommand(SetStandard);
             //tempListe = new Dictionary<int,Bolig>();
@@ -63,7 +63,7 @@ namespace Faellesspisning
             OCtirsdag = new ObservableCollection<int>();  
             OConsdag = new ObservableCollection<int>();
             OCtorsdag = new ObservableCollection<int>();        
-            
+            GetView();
             // foreach list in lists
             // udfold dagene
             // foreach dag i dagene

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
@@ -54,7 +55,7 @@ namespace Faellesspisning
             catch (FileNotFoundException)
             {
                 
-                throw new ArgumentException("Standard filen findes ikke (endnu), Den ligger i Repo mappen.");
+                throw new NotImplementedException("Standard filen findes ikke(endnu), Den ligger i Repo mappen. \n Den skal ind og ligge i % appdata % mappen");
             }
             Boligliste = TempListe;
            // DenneUge.Add("uge",ugeX);

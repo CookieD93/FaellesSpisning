@@ -227,7 +227,7 @@
                     Grid.Row="0"
                     VerticalAlignment="Center"
                     Width="160"
-                    ItemsSource="{Binding Boligliste.Keys}"
+                    ItemsSource="{Binding DropdownHuse}"
                     SelectedItem="{Binding DropDownValg, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                  />
 
