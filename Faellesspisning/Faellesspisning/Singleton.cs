@@ -54,7 +54,7 @@ namespace Faellesspisning
             catch (FileNotFoundException)
             {
                 
-                throw new ArgumentException("Standard filen findes ikke (endnu)");
+                throw new ArgumentException("Standard filen findes ikke (endnu), Den ligger i Repo mappen.");
             }
             Boligliste = TempListe;
            // DenneUge.Add("uge",ugeX);
