@@ -40,12 +40,14 @@ namespace Faellesspisning
 
             try
             {
-                Dictionary<string, Object> Banan = await Persistance.LoadFromJsonAsync("Uge" + Dato.GetDenneUge()+ ".json");
-                Singleton.GetInstance().DenneUge = Banan;
+                Gem Banan = await Persistance.LoadGemFromJsonAsync("Uge" + Dato.GetDenneUge()+ ".json");
+                Gem hentet = new Gem();
+                hentet = Banan;
+                hentet.exportFraGem();
             }
             catch (FileNotFoundException)
             {
-                Singleton.GetInstance().nyUge();
+                await Singleton.GetInstance().nyUge();
             }
         }
 

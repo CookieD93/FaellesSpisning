@@ -77,8 +77,8 @@ namespace Faellesspisning
 
         public MadPlanlaegningViewVM()
         {
-            _uge = (Uge)Singleton.GetInstance().DenneUge["uge"];
-            
+            _uge = Singleton.GetInstance().TempUge;
+
             // Psuedo kode:
             // 1. Hvis der ikke er en fil med navnet uge+(getWeek).json så skal der oprettes et object der hedder Uge+(getWeek).
             //      Findes filen, skal denne loades ind i UgePlanlægnings Viewet

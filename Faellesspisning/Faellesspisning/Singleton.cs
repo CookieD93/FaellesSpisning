@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace Faellesspisning
 {
@@ -11,13 +13,17 @@ namespace Faellesspisning
         private static Singleton _instance = new Singleton();
 
         public Uge TempUge { get; set; }
-        public Dictionary<string,Object> DenneUge { get; set; }
+        public Dictionary<int, Bolig> TempListe { get; set; }
+        public Dictionary<string, Object> DenneUge { get; set; }
+        public Dictionary<int, Bolig> Boligliste { get; set; }
         //public Dictionary<string,Object> NaesteUge { get; set; }
 
         private Singleton()
         {
+
             //DenneUge["uge"]= new Uge();
             DenneUge = new Dictionary<string, object>();
+
             //NaesteUge= new Dictionary<string, object>();
         }
 
@@ -26,10 +32,9 @@ namespace Faellesspisning
             return _instance;
         }
 
-        public void nyUge()
+        public async Task nyUge()
         {
-            
-            //Persistance.SaveJson(DenneUge,"Uge"+DenneUge.);
+
             if (DenneUge != null)
             {
                 DenneUge.Clear();
@@ -40,7 +45,31 @@ namespace Faellesspisning
             //    NaesteUge.Clear();
             //}
             Uge ugeX = new Uge();
-            DenneUge.Add("uge",ugeX);
+            TempUge = ugeX;
+            try
+            {
+                await Standardido();
+
+            }
+            catch (FileNotFoundException)
+            {
+                
+                throw new ArgumentException("Standard filen findes ikke (endnu)");
+            }
+            Boligliste = TempListe;
+           // DenneUge.Add("uge",ugeX);
+            Gem gem = new Gem();
+           // gem.importTilGem();
+            Persistance.SaveJson(gem, "Uge" + Dato.GetDenneUge() + ".json");
+
+
+        }
+
+        private async Task Standardido()
+        {
+            
+            TempListe = await Persistance.LoadStandardFromJsonAsync("Standard.json");
+            
         }
     }
 }
