@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Faellesspisning
 {
-    class dag // : uge
+    class Dag //: Uge
     {
+        public int Ugenummer { get; set; }
         public string DagsNavn { get; set; }
         public string Ret { get; set; }
         public string ChefKok { get; set; }
@@ -15,5 +16,18 @@ namespace Faellesspisning
         public string Kokke { get; set; }
         public string Opryddere { get; set; }
         public double Udlæg { get; set; }
+
+        public Dag(string dagsNavn, int ugenummer)
+        {
+            Ugenummer = ugenummer;
+            DagsNavn = dagsNavn;
+            Ret = "";
+            ChefKok = "";
+            ChefKokHusNr = 0;
+            Kokke = "";
+            Opryddere = "";
+            Udlæg = 0.0;
+        }
+        
     }
 }

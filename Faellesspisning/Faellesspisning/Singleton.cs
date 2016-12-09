@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Faellesspisning
 {
-    class Tilmelding
+    class Singleton
     {
     }
 }
