@@ -17,11 +17,11 @@ namespace Faellesspisning
             CheckNewWeek();
         }
 
-        private void CheckNewWeek()
+        private async void CheckNewWeek()
         {
             try
             {
-                Persistance.LoadFromJsonAsync("Uge" + Dato.GetDenneUge() + ".json");
+                await Persistance.LoadFromJsonAsync("Uge" + Dato.GetDenneUge() + ".json");
             }
             catch (FileNotFoundException)
             {
