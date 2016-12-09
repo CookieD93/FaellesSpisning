@@ -1501,7 +1501,95 @@
                 LastKnownLocation="Diagrammer.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="44400079-26b0-4d11-8950-f32c3eda422c"
+            name="DaglistMan"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="de9c5669-5292-4c0f-93b1-23007a5eb4b7"
+                LastKnownName="List&lt;int&gt;"
+                LastKnownLocation="Diagrammer.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="26befec5-3601-4cd4-80b4-edc5c8d95cbd"
+            name="DaglistTir"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="de9c5669-5292-4c0f-93b1-23007a5eb4b7"
+                LastKnownName="List&lt;int&gt;"
+                LastKnownLocation="Diagrammer.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="52503d1a-0aa0-4478-8239-ffaa1947622a"
+            name="DaglistOns"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="de9c5669-5292-4c0f-93b1-23007a5eb4b7"
+                LastKnownName="List&lt;int&gt;"
+                LastKnownLocation="Diagrammer.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="4c5c390c-9f80-4cf3-8f9e-4f96cf759bd0"
+            name="DaglistTor"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="de9c5669-5292-4c0f-93b1-23007a5eb4b7"
+                LastKnownName="List&lt;int&gt;"
+                LastKnownLocation="Diagrammer.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="150d767c-c2f0-4e7f-9731-b5fc21f9f215"
+            name="Bolig"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ea13d492-959f-46ba-9389-575b2f8997b0"
+                  name="int boligNr"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -1598,6 +1686,16 @@
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="22be55e8-fe9e-46eb-a058-b267510d8e27"
+            name="Arrangement"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -1626,12 +1724,22 @@
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="495fc274-5d3d-4a3d-bbb7-9cba2535b79b"
+            name="Tilmelding"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
         Id="820625e7-1ced-4d23-8ad1-ad86b9a297e5"
-        name="Dagsplan"
+        name="Dag"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -1639,19 +1747,19 @@
           <association
             Id="4b63f318-03bf-40ae-8df8-bfbec97bb663"
             isDerived="false"
-            sourceEndRoleName="Dagsplan"
-            targetEndRoleName="Ugeplan"
+            sourceEndRoleName="Dag"
+            targetEndRoleName="Uge"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
               Id="5c6bb956-73db-44cc-a482-ae9e15ee5f44"
-              LastKnownName="Ugeplan"
+              LastKnownName="Uge"
               LastKnownLocation="Diagrammer.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="bcf7f32b-1615-4f00-a859-f5b0a602741f"
-                  name="Dagsplan"
+                  name="Dag"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -1664,7 +1772,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="f17231dd-3612-49e7-b02a-912801db14b5"
-                  name="Ugeplan"
+                  name="Uge"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -1679,7 +1787,7 @@
         <ownedAttributesInternal>
           <property
             Id="047c7968-81fe-48b2-94f6-82b75e14628f"
-            name="DagsNavne"
+            name="DagsNavn"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -1781,7 +1889,7 @@
           </property>
           <property
             Id="443d63b8-eb22-4826-b458-60a3746202f4"
-            name="Udlaeg"
+            name="Udlæg"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -1796,7 +1904,35 @@
                 LastKnownLocation="Diagrammer.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="28e97734-3848-4d0d-9a7f-827825eced15"
+            name="Ugenummer"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="Diagrammer.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="2d066c49-cacd-4a9b-bc3b-91f98ff0c597"
+            name="Dag"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -1813,19 +1949,30 @@
         name="Historik"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false" />
+        isActiveClass="false">
+        <ownedOperationsInternal>
+          <operation
+            Id="98aa8ae8-e8a0-4b94-af37-1cced523e0df"
+            name="Historik"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
         Id="5c6bb956-73db-44cc-a482-ae9e15ee5f44"
-        name="Ugeplan"
+        name="Uge"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
         <ownedAttributesInternal>
           <property
-            Id="c437599f-a3b1-4baa-be94-a95ef14d9756"
-            name="Ugenummer"
+            Id="5f25bedf-8d81-4685-a750-e417f93d16b5"
+            name="DtUgenummer"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -1840,10 +1987,44 @@
                 LastKnownLocation="Diagrammer.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="d20d07bc-14c6-4d06-a77b-09666b8c2171"
+            name="IntUgenummer"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="Diagrammer.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="c8888776-8a69-49f5-b667-0f587f1613f0"
+            name="StrUgenummer"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Diagrammer.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="71cc0126-959c-4ba5-b305-08a3f4e3a06f"
+            Id="5decf546-a812-4e2d-b183-304861f02091"
             name="Uge"
             isLeaf="false"
             isStatic="false"
@@ -1932,6 +2113,319 @@
       <executionEvent
         Id="2c5657f5-5693-4de6-ad1e-15053dcf252a"
         name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="fdad44f7-c955-4689-b2f6-c2beffe6283b"
+        name="HusSamling"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="57389bc8-8bd1-45a9-ab7c-ab169c0fd17f"
+            name="_husSamling"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="fdad44f7-c955-4689-b2f6-c2beffe6283b"
+                LastKnownName="HusSamling"
+                LastKnownLocation="Diagrammer.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="6852acbe-b42a-4f1b-9b04-616adea9fbb4"
+            name="_huseOc"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="9cbb7788-3dc2-43a6-858a-6766c0057c25"
+                LastKnownName="ObservableCollection&lt;Bolig&gt;"
+                LastKnownLocation="Diagrammer.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="383e374e-47f4-441b-9b3e-e85f5f1de7a5"
+            name="GetHusSamling"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4c8dddfa-81ac-4767-a072-6599074277ed"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="fdad44f7-c955-4689-b2f6-c2beffe6283b"
+                      LastKnownName="HusSamling"
+                      LastKnownLocation="Diagrammer.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="f5800434-79ad-4194-b562-1d2776ea58a0"
+        name="Class11"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="285168bb-42c6-45bd-ba6a-11640e0695bb"
+        name="Class12"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="b8ba0730-87d9-4279-a32a-9e1c340dc3a2"
+        name="Tilmelding"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="911fc487-a4c7-40ef-a20e-df3b97f3b128"
+        name="Class14"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="ec5e5bdd-f712-4d60-8a05-df7a6f1a4610"
+        name="Class15"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="426d2b05-fa44-4db5-8f9a-3edc6db95fd9"
+        name="Class16"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="3e76a548-b7b8-4e1f-a731-4f28373d10b6"
+        name="Uge"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="14a1d01a-9039-4e7c-81a0-18f432ab7a68"
+            name="DtUgenummer"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="44e183cf-3fad-47a1-a65a-6d808894a334"
+                LastKnownName="DateTime"
+                LastKnownLocation="Diagrammer.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="6b3efafe-c53c-46f4-95a8-15028bf7947f"
+            name="StrUgenummer"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Diagrammer.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="04a4fe94-f0f1-4c2b-a839-7417bda8be76"
+            name="IntUgenummer"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="Diagrammer.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="2ee89111-2a9b-486a-a2e5-05269c19340c"
+            name="Uge"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="de9c5669-5292-4c0f-93b1-23007a5eb4b7"
+        name="List&lt;int&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d3e6aa3b-81ff-4097-920a-d68f5fc02884"
+        name="Dato"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="7063bede-6c5d-4fb3-89c5-4711c0e00df0"
+            name="Attribute1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="f2c1478d-2a2b-416b-901a-26fe5b32f7b1"
+            name="UgeNr"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="73557ce7-0081-4146-8f01-03eb7753454b"
+                  name="uge"
+                  direction="In">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="Diagrammer.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a881a269-c2bc-4670-a7a2-1976bfe74dd9"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="Diagrammer.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="c4c67287-d9b1-437a-a75c-74a1b54a4c50"
+            name="GetDenneUge"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7e47eb84-9b66-43bb-91b9-29e810639720"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="Diagrammer.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="b7c14b62-cd27-4305-87cb-a0ef01c9d9fa"
+            name="GetNextUge"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7ad36ea2-1de3-4a62-ae2c-620dc2cb0881"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="Diagrammer.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="9cbb7788-3dc2-43a6-858a-6766c0057c25"
+        name="ObservableCollection&lt;Bolig&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="103efe2a-8d70-4b47-bfb9-67c53a6a3f1a"
+        name="string" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
