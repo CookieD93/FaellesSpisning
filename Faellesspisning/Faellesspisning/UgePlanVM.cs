@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection.Metadata;
-using System.ServiceModel.Channels;
 using System.Text;
 using System.Threading.Tasks;
-using Windows.UI.Popups;
 
 namespace Faellesspisning
 {
@@ -27,7 +25,6 @@ namespace Faellesspisning
             set { _ugeNr = value; }
         }
 
-
         // En constructer der laver et nyt object af en klassen Uge
         // Denne skal så hente alle data fra Bolig klassen, og gemme det i List/Dictionary/OC
         // Dette Uge object skal enten automatisk oprettes ved begyndelsen på en ny uge[1], eller ved en "manuel" knap på UgePlanLægnings View
@@ -36,21 +33,21 @@ namespace Faellesspisning
             CheckNewWeek();
             
         }
-        //skal finde en måde at få singleton til at starte op med programmet (det kører ikke i starten og det giver en fejl fordi at der ingen dicts bliver lavet)
+
         private async void CheckNewWeek()
         {
             //Dictionary<string,Object> DenneUge = await Persistance.LoadFromJsonAsync("Uge" + Dato.GetDenneUge() + ".json");
 
             try
             {
-                Dictionary<string, Object> Banan = await Persistance.LoadFromJsonAsync("Uge" + Dato.GetDenneUge()+ ".json");
-                //Singleton.GetInstance().DenneUge = Banan;
+                Gem Banan = await Persistance.LoadGemFromJsonAsync("Uge" + Dato.GetDenneUge()+ ".json");
+                Gem hentet = new Gem();
+                hentet = Banan;
+                hentet.exportFraGem();
             }
             catch (FileNotFoundException)
             {
-                
-                Singleton.GetInstance().nyUge();
-                
+                await Singleton.GetInstance().nyUge();
             }
         }
 
