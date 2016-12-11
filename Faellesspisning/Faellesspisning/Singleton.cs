@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
@@ -14,7 +15,7 @@ namespace Faellesspisning
 
         public Uge TempUge { get; set; }
         public Dictionary<int, Bolig> TempListe { get; set; }
-        public Dictionary<string, Object> DenneUge { get; set; }
+        //public Dictionary<string, Object> DenneUge { get; set; }
         public Dictionary<int, Bolig> Boligliste { get; set; }
         //public Dictionary<string,Object> NaesteUge { get; set; }
 
@@ -22,7 +23,7 @@ namespace Faellesspisning
         {
 
             //DenneUge["uge"]= new Uge();
-            DenneUge = new Dictionary<string, object>();
+            //DenneUge = new Dictionary<string, object>();
 
             //NaesteUge= new Dictionary<string, object>();
         }
@@ -35,10 +36,10 @@ namespace Faellesspisning
         public async Task nyUge()
         {
 
-            if (DenneUge != null)
-            {
-                DenneUge.Clear();
-            }
+            //if (DenneUge != null)
+            //{
+            //    DenneUge.Clear();
+            //}
             //DenneUge = NaesteUge;
             //if (NaesteUge != null)
             //{
@@ -54,7 +55,7 @@ namespace Faellesspisning
             catch (FileNotFoundException)
             {
                 
-                throw new ArgumentException("Standard filen findes ikke (endnu)");
+                throw new NotImplementedException("Standard filen findes ikke(endnu), Den ligger i Repo mappen. \n Den skal ind og ligge i % appdata % mappen");
             }
             Boligliste = TempListe;
            // DenneUge.Add("uge",ugeX);
