@@ -311,9 +311,9 @@
 
                 <!--<Button x:Name="button" Content="Save" HorizontalAlignment="Left" Command="{Binding StandardRelayCommand}" Margin="960,55,0,0" VerticalAlignment="Top"/>-->
                 <!-- <Button x:Name="button1" Content="Load" HorizontalAlignment="Left" Command="{Binding LoadRelayCommand}" Margin="785,66,0,0" VerticalAlignment="Top"/>-->
-                <Button Grid.Row="2" Content="Gem Standard" HorizontalAlignment="Right" Margin="0 0 350 0"></Button>
+                <Button Grid.Row="2" Content="Gem Standard" HorizontalAlignment="Right" Command="{Binding StandardRelayCommand}" Margin="0 0 350 0"></Button>
 
-                <Button Grid.Row="2" Content="Gem Tilmeldte for næste uge" HorizontalAlignment="Right" Margin="0 0 50 0"></Button>
+                <Button Grid.Row="2" Content="Gem Tilmeldte for næste uge" HorizontalAlignment="Right" Command="{Binding TilmeldRelayCommand}" Margin="0 0 50 0"></Button>
             </Grid>
         </ScrollViewer>
         <!-- Content Grid End -->

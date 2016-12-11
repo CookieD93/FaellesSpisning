@@ -34,7 +34,7 @@ namespace Faellesspisning
             set { _dropDownValg = value;OnPropertyChanged();GetView(); }
         }
 
-
+        
         public TilmeldlingVm()
         {
 
@@ -68,6 +68,7 @@ namespace Faellesspisning
             // udfold dagene
             // foreach dag i dagene
             // udfold v/b/b/b
+            
         }
 
         public void GetView()
@@ -88,14 +89,38 @@ namespace Faellesspisning
             
 
         }
-        public void SetStandard()
+        //Indtil videre bliver OC's ikke ændret når man ændrer i appen.
+        //fejl fundet, OC's er ints og textboxes i UI prøver at gemme som string. <--- need work around
+        public async void SetStandard() 
         {
-           Persistance.SaveJson(Singleton.GetInstance().Boligliste,"StandardValg.json");
+            OCmandag[0] = 1534; //Test ændring, kan slettes når UI'et opdaterer collections.
+            
+           await OCTilDagList();
+           Persistance.SaveJson(Singleton.GetInstance().Boligliste,"Standard.json");
+            Tilmeld();
         }
 
-        public void Tilmeld()
+        public async void Tilmeld()
         {
-           Persistance.SaveJson(Singleton.GetInstance().Boligliste,"Uge"+Dato.GetDenneUge()+".Json");
+            await OCTilDagList();
+            Gem gem = new Gem();
+            gem.importTilGem();
+           Persistance.SaveJson(gem,"Uge"+Dato.GetDenneUge()+".Json");
+
+        }
+
+        public async Task OCTilDagList()
+        {
+            Bolig standTemp = Singleton.GetInstance().Boligliste[DropDownValg];
+            for (int i = 0; i < 4; i++)
+            {
+                standTemp.DaglistMan[i] = OCmandag[i];
+                standTemp.DaglistTir[i] = OCtirsdag[i];
+                standTemp.DaglistOns[i] = OConsdag[i];
+                standTemp.DaglistTor[i] = OCtorsdag[i];
+            }
+            Singleton.GetInstance().Boligliste[DropDownValg] = standTemp;
+            await Task.Delay(500); // Nødvendigt Delay (ellers får den ikke gemt de rigtige ting)
 
         }
 
