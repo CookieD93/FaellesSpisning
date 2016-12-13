@@ -12,9 +12,11 @@ namespace Faellesspisning
 {
     class HistorikVM : INotifyPropertyChanged
     {
+        public double Payment { get; set= Betaling.HusBetaling(_dropDownValg); }
         private int _dropDownValg;
         private readonly ObservableCollection<int> _dropdownHuse;
         
+
         public Dictionary<int, Bolig> Boligliste { get; set; }
         private ObservableCollection<int> DropdownHuse
         {
@@ -31,6 +33,7 @@ namespace Faellesspisning
         }
 
         
+
 
         public HistorikVM()
         {
