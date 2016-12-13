@@ -101,7 +101,7 @@ namespace Faellesspisning
 
         public void Save()
         {
-            Singleton.GetInstance().DenneUge["uge"] = _uge;
+            //Singleton.GetInstance().DenneUge["uge"] = _uge;
         }
     }
 }
