@@ -12,10 +12,18 @@ namespace Faellesspisning
 {
     class HistorikVM : INotifyPropertyChanged
     {
-        public double Payment { get; set= Betaling.HusBetaling(_dropDownValg); }
+        public double Payment
+        {
+            get { return _payment; }
+            set { _payment = betal.HusBetaling(DropDownValg); }
+        }
+
+        public Betaling betal { get; set; }
+
         private int _dropDownValg;
         private readonly ObservableCollection<int> _dropdownHuse;
-        
+        private double _payment;
+
 
         public Dictionary<int, Bolig> Boligliste { get; set; }
         private ObservableCollection<int> DropdownHuse
@@ -50,6 +58,8 @@ namespace Faellesspisning
 
             _dropdownHuse = new ObservableCollection<int>(Boligliste.Keys);
             Boligliste = Singleton.GetInstance().Boligliste;
+            betal = new Betaling();
+
         }
 
         
