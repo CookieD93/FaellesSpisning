@@ -18,10 +18,10 @@ namespace Faellesspisning
         public RelayCommand StandardRelayCommand { get; set; }
         public RelayCommand TilmeldRelayCommand { get; set; }
         //public Dictionary<int,Bolig> Boligliste { get; set; }
-        public ObservableCollection<int> OCmandag { get; set; }
-        public ObservableCollection<int> OCtirsdag { get; set; }
-        public ObservableCollection<int> OConsdag { get; set; }
-        public ObservableCollection<int> OCtorsdag { get; set; }
+        public ObservableCollection<string> OCmandag { get; set; }
+        public ObservableCollection<string> OCtirsdag { get; set; }
+        public ObservableCollection<string> OConsdag { get; set; }
+        public ObservableCollection<string> OCtorsdag { get; set; }
 
         public ObservableCollection<int> DropdownHuse { get; set; }
         //{
@@ -59,10 +59,10 @@ namespace Faellesspisning
             //}
             //Persistance.SaveJson(tempListe,"templiste.json");
                 
-            OCmandag = new ObservableCollection<int>();
-            OCtirsdag = new ObservableCollection<int>();  
-            OConsdag = new ObservableCollection<int>();
-            OCtorsdag = new ObservableCollection<int>();        
+            OCmandag = new ObservableCollection<string>();
+            OCtirsdag = new ObservableCollection<string>();  
+            OConsdag = new ObservableCollection<string>();
+            OCtorsdag = new ObservableCollection<string>();        
             GetView();
             // foreach list in lists
             // udfold dagene
@@ -74,6 +74,8 @@ namespace Faellesspisning
         public void GetView()
         {
 
+            //Convert from int to string
+
             OCmandag.Clear();
             OCtirsdag.Clear();
             OConsdag.Clear();
@@ -81,10 +83,10 @@ namespace Faellesspisning
             Bolig temp = Singleton.GetInstance().Boligliste[DropDownValg];
             for (int i = 0; i < 4; i++)
             {
-                OCmandag.Add(temp.DaglistMan[i]);
-                OCtirsdag.Add(temp.DaglistTir[i]);
-                OConsdag.Add(temp.DaglistOns[i]);
-                OCtorsdag.Add(temp.DaglistTor[i]);
+                OCmandag.Add(Convert.ToString(temp.DaglistMan[i]));
+                OCtirsdag.Add(Convert.ToString(temp.DaglistTir[i]));
+                OConsdag.Add(Convert.ToString(temp.DaglistOns[i]));
+                OCtorsdag.Add(Convert.ToString(temp.DaglistTor[i]));
             }
             
 
@@ -93,7 +95,7 @@ namespace Faellesspisning
         //fejl fundet, OC's er ints og textboxes i UI prøver at gemme som string. <--- need work around
         public async void SetStandard() 
         {
-            OCmandag[0] = 1534; //Test ændring, kan slettes når UI'et opdaterer collections.
+           // OCmandag[0] = "1534"; //Test ændring, kan slettes når UI'et opdaterer collections.
             
            await OCTilDagList();
            Persistance.SaveJson(Singleton.GetInstance().Boligliste,"Standard.json");
@@ -114,10 +116,10 @@ namespace Faellesspisning
             Bolig standTemp = Singleton.GetInstance().Boligliste[DropDownValg];
             for (int i = 0; i < 4; i++)
             {
-                standTemp.DaglistMan[i] = OCmandag[i];
-                standTemp.DaglistTir[i] = OCtirsdag[i];
-                standTemp.DaglistOns[i] = OConsdag[i];
-                standTemp.DaglistTor[i] = OCtorsdag[i];
+                standTemp.DaglistMan[i] = int.Parse(OCmandag[i]);
+                standTemp.DaglistTir[i] = int.Parse(OCtirsdag[i]);
+                standTemp.DaglistOns[i] = int.Parse(OConsdag[i]);
+                standTemp.DaglistTor[i] = int.Parse(OCtorsdag[i]);
             }
             Singleton.GetInstance().Boligliste[DropDownValg] = standTemp;
             await Task.Delay(500); // Nødvendigt Delay (ellers får den ikke gemt de rigtige ting)
