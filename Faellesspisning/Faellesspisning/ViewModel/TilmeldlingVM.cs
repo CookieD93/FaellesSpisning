@@ -37,18 +37,6 @@ namespace Faellesspisning
         
         public TilmeldlingVm()
         {
-
-            // Denne skal loades fra filen hvor boliger er gemt
-            //Boligliste=new Dictionary<int, Bolig>();
-            
-            // Denne skal sættes ind et sted hvor den skal køres én gang, og gemmes i en json fil.
-            // ==============================================================
-            //for (int i = 74; i < 97; i++)
-            //{
-            //    Singleton.GetInstance().Boligliste.Add(i, new Bolig(i));
-            //}
-            // ==============================================================
-
             DropdownHuse = new ObservableCollection<int>(Singleton.GetInstance().Boligliste.Keys);
             TilmeldRelayCommand = new RelayCommand(Tilmeld);
             StandardRelayCommand = new RelayCommand(SetStandard);
