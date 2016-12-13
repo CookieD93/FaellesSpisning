@@ -14,7 +14,7 @@ namespace Faellesspisning
     {
         private int _dropDownValg;
         private readonly ObservableCollection<int> _dropdownHuse;
-        private int _husNr;
+        
         public Dictionary<int, Bolig> Boligliste { get; set; }
         private ObservableCollection<int> DropdownHuse
         {
@@ -30,11 +30,7 @@ namespace Faellesspisning
             }
         }
 
-        public int HusNr1
-        {
-            get { return _husNr; }
-            set { _husNr = value; OnPropertyChanged();}
-        }
+        
 
         public HistorikVM()
         {
@@ -43,14 +39,14 @@ namespace Faellesspisning
 
             // Denne skal sættes ind et sted hvor den skal køres én gang, og gemmes i en json fil.
             // ==============================================================
-            for (int i = 74; i < 97; i++)
-            {
-                Boligliste.Add(i, new Bolig(i));
-            }
+            //for (int i = 74; i < 97; i++)
+            //{
+            //    Boligliste.Add(i, new Bolig(i));
+            //}
             // ==============================================================
 
             _dropdownHuse = new ObservableCollection<int>(Boligliste.Keys);
-            HusNr1 = 0;
+            Boligliste = Singleton.GetInstance().Boligliste;
         }
 
         

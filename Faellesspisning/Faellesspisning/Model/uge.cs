@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Globalization;
+using Windows.Storage.FileProperties;
 
 namespace Faellesspisning
 {
@@ -13,20 +14,26 @@ namespace Faellesspisning
         public DateTime DtUgenummer { get; set; }
         public string StrUgenummer { get; set; }
         public int IntUgenummer { get; set; }
+        public Dag mandag { get; set; }
+        public Dag tirsdag { get; set; }
+        public Dag onsdag { get; set; }
+        public Dag torsdag { get; set; }
+
 
         // Denne klasses konstruktør skal oprettet 4 objekter af klassen Dag. Der indeholder Dagsnavn = Mandag, Tirsdag, osv.
         // Hvor alle de andre felter er tomme.
 
         public Uge()
         {
+            StrUgenummer = "Uge"+Dato.GetDenneUge();
             //Psuedo kode
             //Ugenummer = GetWeek;
             IntUgenummer = Dato.GetNextUge();
 
-            Dag mandag = new Dag("Mandag", IntUgenummer);
-            Dag tirsdag = new Dag("Tirsdag", IntUgenummer);
-            Dag onsdag = new Dag("Onsdag", IntUgenummer);
-            Dag torsdag = new Dag("Torsdag", IntUgenummer);
+            mandag = new Dag("Mandag", IntUgenummer);
+            tirsdag = new Dag("Tirsdag", IntUgenummer);
+            onsdag = new Dag("Onsdag", IntUgenummer);
+            torsdag = new Dag("Torsdag", IntUgenummer);
             
             
         } 

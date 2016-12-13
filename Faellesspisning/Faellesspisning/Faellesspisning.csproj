@@ -95,37 +95,37 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Arrangement.cs" />
-    <Compile Include="Betaling.cs" />
-    <Compile Include="Bolig.cs" />
-    <Compile Include="Dato.cs" />
-    <Compile Include="Dag.cs" />
-    <Compile Include="Historik.cs" />
-    <Compile Include="HistorikView.xaml.cs">
+    <Compile Include="Model\Arrangement.cs" />
+    <Compile Include="Model\Bolig.cs" />
+    <Compile Include="Util\Dato.cs" />
+    <Compile Include="Model\Dag.cs" />
+    <Compile Include="Model\Gem.cs" />
+    <Compile Include="Model\Historik.cs" />
+    <Compile Include="View\HistorikView.xaml.cs">
       <DependentUpon>HistorikView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="HistorikVM.cs" />
-    <Compile Include="HusSamling.cs" />
-    <Compile Include="MadPlanlaegningView.xaml.cs">
+    <Compile Include="ViewModel\HistorikVM.cs" />
+    <Compile Include="Model\HusSamling.cs" />
+    <Compile Include="View\MadPlanlaegningView.xaml.cs">
       <DependentUpon>MadPlanlaegningView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MadPlanlaegningViewVM.cs" />
-    <Compile Include="Persistance.cs" />
+    <Compile Include="ViewModel\MadPlanlaegningViewVM.cs" />
+    <Compile Include="Util\Persistance.cs" />
     <Compile Include="Properties\Annotations2.cs" />
-    <Compile Include="RelayArgCommand.cs" />
-    <Compile Include="RelayCommand.cs" />
-    <Compile Include="Singleton.cs" />
-    <Compile Include="TilmedlingView.xaml.cs">
+    <Compile Include="Util\RelayArgCommand.cs" />
+    <Compile Include="Util\RelayCommand.cs" />
+    <Compile Include="Util\Singleton.cs" />
+    <Compile Include="View\TilmedlingView.xaml.cs">
       <DependentUpon>TilmedlingView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Tilmelding.cs" />
-    <Compile Include="TilmeldlingVM.cs" />
-    <Compile Include="Uge.cs" />
-    <Compile Include="UgePlanView.xaml.cs">
+    <Compile Include="Model\Tilmelding.cs" />
+    <Compile Include="ViewModel\TilmeldlingVM.cs" />
+    <Compile Include="Model\Uge.cs" />
+    <Compile Include="View\UgePlanView.xaml.cs">
       <DependentUpon>UgePlanView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UgePlanVM.cs" />
+    <Compile Include="ViewModel\UgePlanVM.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -148,19 +148,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="HistorikView.xaml">
+    <Page Include="View\HistorikView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MadPlanlaegningView.xaml">
+    <Page Include="View\MadPlanlaegningView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TilmedlingView.xaml">
+    <Page Include="View\TilmedlingView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UgePlanView.xaml">
+    <Page Include="View\UgePlanView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
