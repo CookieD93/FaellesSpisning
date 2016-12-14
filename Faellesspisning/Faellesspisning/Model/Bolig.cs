@@ -42,10 +42,10 @@ namespace Faellesspisning
             {
                
                 
-                DaglistMan.Add(i);
-                DaglistTir.Add(i);
-                DaglistOns.Add(i);
-                DaglistTor.Add(i);
+                DaglistMan.Add(0);
+                DaglistTir.Add(0);
+                DaglistOns.Add(0);
+                DaglistTor.Add(0);
                
 
             }
