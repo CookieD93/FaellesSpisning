@@ -11,6 +11,8 @@ namespace Faellesspisning
     {
         private Uge _uge;
         public RelayCommand GemRetForDagForUgeRelayCommand { get; set; }
+        public RelayCommand GemArrangementRelayCommand { get; set; }
+        public Arrangement ArrangementIPlanlægning { get; set; }    
         // En constructer der laver et nyt object af en klassen Uge
         // Denne skal så hente alle data fra Bolig klassen, og gemme det i List/Dictionary/OC
         // Dette Uge object skal enten automatisk oprettes ved begyndelsen på en ny uge[1], eller ved en "manuel" knap på UgePlanLægnings View
@@ -81,6 +83,8 @@ namespace Faellesspisning
         {
             _uge = Singleton.GetInstance().TempUge;
             GemRetForDagForUgeRelayCommand = new RelayCommand(Save);
+            GemArrangementRelayCommand = new RelayCommand(GemArrangement);
+            ArrangementIPlanlægning = new Arrangement();
 
             // Psuedo kode:
             // 1. Hvis der ikke er en fil med navnet uge+(getWeek).json så skal der oprettes et object der hedder Uge+(getWeek).
@@ -88,6 +92,11 @@ namespace Faellesspisning
 
         }
 
+        public void GemArrangement()
+        {
+            Singleton.GetInstance().ArrengementListe.Add(ArrangementIPlanlægning);
+            Persistance.SaveJson(Singleton.GetInstance().ArrengementListe,"Arrangementer.json");
+        }
         public void Save()
         {
             Gem gem = new Gem();

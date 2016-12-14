@@ -38,6 +38,13 @@ namespace Faellesspisning
                 (Dictionary<int,Bolig>)
                 JsonConvert.DeserializeObject(JsonString, typeof(Dictionary<int,Bolig>));
         }
+        public static async Task<List<Arrangement>> LoadArrangementFromJsonAsync(string filenameLoad)
+        {
+            string JsonString = await DeSerializeFileAsync(filenameLoad);
+            return
+                (List<Arrangement>)
+                JsonConvert.DeserializeObject(JsonString, typeof(List<Arrangement>));
+        }
 
 
 
