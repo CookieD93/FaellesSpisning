@@ -71,10 +71,24 @@
             <ListView Name="UgeViser" Grid.Column="1" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
             <TextBlock Name="Hus" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="50,0,0,0" Text="Hus: " FontSize="50"/>
             <TextBlock Name="SelectedHus" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="160,-2,0,-3" FontSize="50" Text="{Binding DropDownValg, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="129" />
-            <TextBlock x:Name="Betaling" HorizontalAlignment="Left" Margin="317,364,0,0" Grid.Row="1" TextWrapping="Wrap" Text="{Binding Payment, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5"/>
+            <Grid Grid.Row="1"  HorizontalAlignment="Left">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid BorderThickness="1" BorderBrush="CadetBlue" Grid.Column="1"  HorizontalAlignment="Left" MaxHeight="45" MaxWidth="200" MinWidth="150">
+                    <TextBlock x:Name="Betaling" FontSize="19" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.Column="1" MaxHeight="60" MaxWidth="200" MinWidth="150" TextAlignment="Right" Text="{Binding Payment, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5"/>
+
+                </Grid>
+                <TextBlock Name="betaling" Text="Betaling for hele  ugen:" TextWrapping="Wrap" MaxHeight="60" MinWidth="200" FontSize="19" VerticalAlignment="Center"/>
+                <TextBlock Name="KrB" Text="kr." MaxHeight="45" MinWidth="200" FontSize="19" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    
+                
 
 
-
+            </Grid>
+            
         </Grid>
 
     </Grid>
