@@ -28,22 +28,15 @@ namespace Faellesspisning
 
         public Uge DenneUge { get; set; }
 
-
-        // En constructer der laver et nyt object af en klassen Uge
-        // Denne skal så hente alle data fra Bolig klassen, og gemme det i List/Dictionary/OC
-        // Dette Uge object skal enten automatisk oprettes ved begyndelsen på en ny uge[1], eller ved en "manuel" knap på UgePlanLægnings View
         public UgePlanVM()
         {
             CheckNewWeek();
             DenneUge = Singleton.GetInstance().TempUge;
             UgeNr = DenneUge.StrUgenummer;
-
         }
 
         private async void CheckNewWeek()
         {
-            //Dictionary<string,Object> DenneUge = await Persistance.LoadFromJsonAsync("Uge" + Dato.GetDenneUge() + ".json");
-
             try
             {
                 Gem Banan = await Persistance.LoadGemFromJsonAsync("Uge" + Dato.GetDenneUge()+ ".json");
@@ -56,9 +49,5 @@ namespace Faellesspisning
                 await Singleton.GetInstance().nyUge();
             }
         }
-
-        // Psuedo kode:
-        // 1. Hvis der ikke er en fil med navnet uge+(getWeek).json så skal der oprettes et object der hedder Uge+(getWeek).
-        //      Findes filen, skal denne loades ind i UgePlanlægnings Viewet
     }
 }
