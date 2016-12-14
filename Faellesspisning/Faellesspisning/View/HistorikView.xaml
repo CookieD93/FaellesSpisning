@@ -71,6 +71,7 @@
             <ListView Name="UgeViser" Grid.Column="1" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
             <TextBlock Name="Hus" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="50,0,0,0" Text="Hus: " FontSize="50"/>
             <TextBlock Name="SelectedHus" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="160,-2,0,-3" FontSize="50" Text="{Binding DropDownValg, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="129" />
+            <TextBlock x:Name="Betaling" HorizontalAlignment="Left" Margin="317,364,0,0" Grid.Row="1" TextWrapping="Wrap" Text="{Binding Payment, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5"/>
 
 
 

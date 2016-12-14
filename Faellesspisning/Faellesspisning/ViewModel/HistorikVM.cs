@@ -12,9 +12,19 @@ namespace Faellesspisning
 {
     class HistorikVM : INotifyPropertyChanged
     {
+        public double Payment
+        {
+            get { return _payment; }
+            set { _payment = value; OnPropertyChanged(); }
+        }
+
+        public Betaling betal { get; set; }
+
         private int _dropDownValg;
         private readonly ObservableCollection<int> _dropdownHuse;
-        
+        private double _payment ;
+
+
         public Dictionary<int, Bolig> Boligliste { get; set; }
         private ObservableCollection<int> DropdownHuse
         {
@@ -25,12 +35,16 @@ namespace Faellesspisning
             get { return _dropDownValg; }
             set
             {
-                _dropDownValg = value; OnPropertyChanged();
+                _dropDownValg = value; getFuckingPayment(); OnPropertyChanged();
 
             }
         }
-
+        public void getFuckingPayment()
+        {
+            Payment = betal.HusBetaling(_dropDownValg);
+        }
         
+
 
         public HistorikVM()
         {
@@ -47,6 +61,8 @@ namespace Faellesspisning
 
             _dropdownHuse = new ObservableCollection<int>(Boligliste.Keys);
             Boligliste = Singleton.GetInstance().Boligliste;
+            betal = new Betaling();
+            
         }
 
         
