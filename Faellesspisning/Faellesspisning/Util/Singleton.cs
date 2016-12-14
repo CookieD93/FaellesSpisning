@@ -47,20 +47,11 @@ namespace Faellesspisning
             //}
             Uge ugeX = new Uge();
             TempUge = ugeX;
-            try
-            {
-                await Standardido();
-
-            }
-            catch (FileNotFoundException)
-            {
-                
-                throw new NotImplementedException("Standard filen findes ikke(endnu), Den ligger i Repo mappen. \n Den skal ind og ligge i % appdata % mappen");
-            }
+            await Standardido();
             Boligliste = TempListe;
-           // DenneUge.Add("uge",ugeX);
+            // DenneUge.Add("uge",ugeX);
             Gem gem = new Gem();
-           // gem.importTilGem();
+            // gem.importTilGem();
             Persistance.SaveJson(gem, "Uge" + Dato.GetDenneUge() + ".json");
 
 
@@ -68,8 +59,22 @@ namespace Faellesspisning
 
         private async Task Standardido()
         {
-            
-            TempListe = await Persistance.LoadStandardFromJsonAsync("Standard.json");
+            try
+            {
+                TempListe = await Persistance.LoadStandardFromJsonAsync("Standard.json");
+
+            }
+            catch (FileNotFoundException ex)
+            {
+                Dictionary<int, Bolig> tempListeTilOprettelseAfStandard= new Dictionary<int, Bolig>();
+
+                for (int i = 72; i <= 116; i=i+2)
+                {
+                    tempListeTilOprettelseAfStandard.Add(i, new Bolig(i));
+                }
+                Persistance.SaveJson(tempListeTilOprettelseAfStandard, "Standard.json");
+                TempListe = tempListeTilOprettelseAfStandard;
+            }
             
         }
     }
