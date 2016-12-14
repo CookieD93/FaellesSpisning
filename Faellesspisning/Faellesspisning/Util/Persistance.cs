@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.Storage;
+using Windows.UI.Popups;
 using Newtonsoft.Json;
 
 namespace Faellesspisning
@@ -53,7 +54,14 @@ namespace Faellesspisning
             StorageFile localFile = await ApplicationData.Current.LocalFolder.GetFileAsync(fileName);
             return await FileIO.ReadTextAsync(localFile);
         }
-
+        public class MessageDialogHelper
+        {
+            public static async void Show(string content, string title)
+            {
+                MessageDialog messageDialog = new MessageDialog(content, title);
+                await messageDialog.ShowAsync();
+            }
+        }
 
     }
 }
