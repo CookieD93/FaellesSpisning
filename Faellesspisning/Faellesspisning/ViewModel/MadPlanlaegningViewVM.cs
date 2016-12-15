@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Windows.UI.Popups;
+using Windows.Storage;
 using Eventmaker.Common;
 
 namespace Faellesspisning
@@ -94,7 +95,6 @@ namespace Faellesspisning
             // Psuedo kode:
             // 1. Hvis der ikke er en fil med navnet uge+(getWeek).json så skal der oprettes et object der hedder Uge+(getWeek).
             //      Findes filen, skal denne loades ind i UgePlanlægnings Viewet
-
         }
 
         public void GemArrangement()
