@@ -13,7 +13,8 @@ namespace Faellesspisning
     {
         private static Singleton _instance = new Singleton();
 
-        public Uge TempUge { get; set; }
+        public Uge DenneTempUge { get; set; }
+        public Uge NæsteTempUge { get; set; }
         public Dictionary<int, Bolig> TempListe { get; set; }
         //public Dictionary<string, Object> DenneUge { get; set; }
         public Dictionary<int, Bolig> Boligliste { get; set; }
@@ -48,13 +49,13 @@ namespace Faellesspisning
             //    NaesteUge.Clear();
             //}
             Uge ugeX = new Uge();
-            TempUge = ugeX;
+            NæsteTempUge = ugeX;
             await Standardido();
             Boligliste = TempListe;
             // DenneUge.Add("uge",ugeX);
             Gem gem = new Gem();
-            // gem.importTilGem();
-            Persistance.SaveJson(gem, "Uge" + Dato.GetDenneUge() + ".json");
+            gem.importTilGem(Singleton._instance.NæsteTempUge);
+            Persistance.SaveJson(gem, "Uge" + Dato.GetNextUge() + ".json");
 
 
         }

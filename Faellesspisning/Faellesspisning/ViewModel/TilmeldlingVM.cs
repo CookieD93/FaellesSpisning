@@ -94,8 +94,8 @@ namespace Faellesspisning
         {
             await OCTilDagList();
             Gem gem = new Gem();
-            gem.importTilGem();
-           Persistance.SaveJson(gem,"Uge"+Dato.GetDenneUge()+".Json");
+            gem.importTilGem(Singleton.GetInstance().NæsteTempUge);
+           Persistance.SaveJson(gem,"Uge"+Dato.GetNextUge()+".Json");
 
         }
 

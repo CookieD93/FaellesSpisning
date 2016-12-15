@@ -15,10 +15,10 @@ namespace Faellesspisning
 
         public Betaling()
         {
-            DagligtUdlaegMandag = Singleton.GetInstance().TempUge.mandag.Udlæg;
-            DagligtUdlaegTirsdag = Singleton.GetInstance().TempUge.tirsdag.Udlæg;
-            DagligtUdlaegOnsdag = Singleton.GetInstance().TempUge.onsdag.Udlæg;
-            DagligtUdlaegTorsdag = Singleton.GetInstance().TempUge.torsdag.Udlæg;
+            DagligtUdlaegMandag = Singleton.GetInstance().DenneTempUge.mandag.Udlæg;
+            DagligtUdlaegTirsdag = Singleton.GetInstance().DenneTempUge.tirsdag.Udlæg;
+            DagligtUdlaegOnsdag = Singleton.GetInstance().DenneTempUge.onsdag.Udlæg;
+            DagligtUdlaegTorsdag = Singleton.GetInstance().DenneTempUge.torsdag.Udlæg;
         }
 
         public double UgentligUdlæg()

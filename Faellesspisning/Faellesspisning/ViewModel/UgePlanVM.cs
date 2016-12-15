@@ -5,8 +5,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection.Metadata;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Popups;
 
 namespace Faellesspisning
 {
@@ -29,23 +31,45 @@ namespace Faellesspisning
         }
 
         public Uge DenneUge { get; set; }
+        public Uge NæsteUge { get; set; }
 
         public UgePlanVM()
         {
-            CheckNewWeek();
-            DenneUge = Singleton.GetInstance().TempUge;
-            UgeNr = DenneUge.StrUgenummer;
-            CheckArrangement();
+            Boot();
         }
 
+        public async Task Boot()
+        {
+            CheckNewWeek();
+           // await Task.Delay(500);
+            DenneUge = Singleton.GetInstance().DenneTempUge;
+ await Task.Delay(1000);
+
+
+            NæsteUge = Singleton.GetInstance().NæsteTempUge;
+            //await Task.Delay(500);
+            CheckArrangement();
+        }
         private async void CheckNewWeek()
         {
             try
             {
-                Gem SavedJsonClass= await Persistance.LoadGemFromJsonAsync("Uge" + Dato.GetDenneUge() + ".json");
+                Gem SavedJsonClass = await Persistance.LoadGemFromJsonAsync("Uge" + Dato.GetDenneUge() + ".json");
                 Gem hentet = new Gem();
                 hentet = SavedJsonClass;
-                hentet.exportFraGem();
+                hentet.exportFraGemDenneUge();
+            }
+            catch (FileNotFoundException ex)
+            {
+
+                Persistance.MessageDialogHelper.Show("Ingen fil for denne uge fundet, der vil derfor ikke blive vist.","No new week");
+            }
+            try
+            {
+                Gem SavedJsonClass= await Persistance.LoadGemFromJsonAsync("Uge" + Dato.GetNextUge() + ".json");
+                Gem hentet = new Gem();
+                hentet = SavedJsonClass;
+                hentet.exportFraGemNæsteUge();
             }
             catch (FileNotFoundException)
             {

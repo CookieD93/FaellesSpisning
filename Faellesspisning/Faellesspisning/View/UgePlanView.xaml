@@ -207,15 +207,143 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="100"/>
+                            <RowDefinition Height="55"/>
                             <RowDefinition Height="2*"/>
                             <RowDefinition Height="2*"/>
                         </Grid.RowDefinitions>
-                        <TextBlock FontSize="50" Margin="50 0 0 0" VerticalAlignment="Center" Grid.Column="0" Text="{Binding UgeNr2}"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="CornflowerBlue" Grid.Column="0" Grid.Row="1" Margin="50 25 25 25"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="CornflowerBlue" Grid.Column="0" Grid.Row="2" Margin="50 25 25 25"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="CornflowerBlue" Grid.Column="1" Grid.Row="1" Margin="25 25 50 25"/>
-                        <Rectangle Width="Auto" Height="Auto" Fill="CornflowerBlue" Grid.Column="1" Grid.Row="2" Margin="25 25 50 25"/>
+                        <TextBlock FontSize="35" Margin="50 0 0 0" VerticalAlignment="Top" Grid.Column="0" Text="{Binding UgeNr2}"></TextBlock>
+
+                        <Grid  Grid.Column="0" Grid.Row="1" Margin="10" Background="LightGray" Padding="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock FontSize="30" VerticalAlignment="Top" Grid.ColumnSpan="2">Mandag</TextBlock>
+
+                            <TextBlock Grid.Row="0" Grid.Column="2" FontSize="30" Grid.ColumnSpan="2"  FontWeight="Bold" Text="{Binding NæsteUge.mandag.Ret}" HorizontalAlignment="Stretch"></TextBlock>
+
+                            <TextBlock Grid.Row="1" Grid.Column="0" VerticalAlignment="Center">Chefkok:</TextBlock>
+                            <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding DenneUge.mandag.ChefKok}" HorizontalAlignment="Stretch" VerticalAlignment="Center"></TextBlock>
+
+                            <TextBlock Grid.Column="0" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Center">Kokke:</TextBlock>
+                            <TextBlock Grid.Column="1" Grid.Row="2" Text="{Binding DenneUge.mandag.Kokke}" HorizontalAlignment="Stretch" VerticalAlignment="Center"></TextBlock>
+
+                            <TextBlock Grid.Column="0" Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Center">Opryddere:</TextBlock>
+                            <TextBlock Grid.Column="1" Grid.Row="3" Text="{Binding DenneUge.mandag.Opryddere}" HorizontalAlignment="Stretch" VerticalAlignment="Center"></TextBlock>
+
+
+                            <TextBlock Grid.Row="1" Grid.Column="2" VerticalAlignment="Bottom">Note:</TextBlock>
+                            <Grid BorderBrush="CadetBlue" BorderThickness="1" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="2">
+                                <TextBlock Padding="5" Text="{Binding DenneUge.mandag.Note}"></TextBlock>
+                            </Grid>
+                        </Grid>
+
+
+                        <Grid  Grid.Column="1" Grid.Row="1" Margin="10" Background="LightGray" Padding="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock FontSize="30" VerticalAlignment="Top" Grid.ColumnSpan="2">Tirsdag</TextBlock>
+
+                            <TextBlock Grid.Row="0" Grid.Column="2" FontSize="30" Grid.ColumnSpan="2"  FontWeight="Bold" Text="{Binding DenneUge.tirsdag.Ret}" HorizontalAlignment="Stretch"></TextBlock>
+
+                            <TextBlock Grid.Row="1" Grid.Column="0" VerticalAlignment="Center">Chefkok:</TextBlock>
+                            <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding DenneUge.tirsdag.ChefKok}" HorizontalAlignment="Stretch" VerticalAlignment="Center"></TextBlock>
+
+                            <TextBlock Grid.Column="0" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Center">Kokke:</TextBlock>
+                            <TextBlock Grid.Column="1" Grid.Row="2" Text="{Binding DenneUge.tirsdag.Kokke}" HorizontalAlignment="Stretch" VerticalAlignment="Center"></TextBlock>
+
+                            <TextBlock Grid.Column="0" Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Center">Opryddere:</TextBlock>
+                            <TextBlock Grid.Column="1" Grid.Row="3" Text="{Binding DenneUge.tirsdag.Opryddere}" HorizontalAlignment="Stretch" VerticalAlignment="Center"></TextBlock>
+
+
+                            <TextBlock Grid.Row="1" Grid.Column="2" VerticalAlignment="Bottom">Note:</TextBlock>
+                            <Grid BorderBrush="CadetBlue" BorderThickness="1" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="2">
+                                <TextBlock Padding="5" Text="{Binding DenneUge.tirsdag.Note}"></TextBlock>
+                            </Grid>
+                        </Grid>
+
+                        <Grid  Grid.Column="0" Grid.Row="2" Margin="10" Background="LightGray" Padding="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock FontSize="30" VerticalAlignment="Top" Grid.ColumnSpan="2">Onsdag</TextBlock>
+
+                            <TextBlock Grid.Row="0" Grid.Column="2" FontSize="30" Grid.ColumnSpan="2"  FontWeight="Bold" Text="{Binding DenneUge.onsdag.Ret}" HorizontalAlignment="Stretch"></TextBlock>
+
+                            <TextBlock Grid.Row="1" Grid.Column="0" VerticalAlignment="Center">Chefkok:</TextBlock>
+                            <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding DenneUge.onsdag.ChefKok}" HorizontalAlignment="Stretch" VerticalAlignment="Center"></TextBlock>
+
+                            <TextBlock Grid.Column="0" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Center">Kokke:</TextBlock>
+                            <TextBlock Grid.Column="1" Grid.Row="2" Text="{Binding DenneUge.onsdag.Kokke}" HorizontalAlignment="Stretch" VerticalAlignment="Center"></TextBlock>
+
+                            <TextBlock Grid.Column="0" Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Center">Opryddere:</TextBlock>
+                            <TextBlock Grid.Column="1" Grid.Row="3" Text="{Binding DenneUge.onsdag.Opryddere}" HorizontalAlignment="Stretch" VerticalAlignment="Center"></TextBlock>
+
+
+                            <TextBlock Grid.Row="1" Grid.Column="2" VerticalAlignment="Bottom">Note:</TextBlock>
+                            <Grid BorderBrush="CadetBlue" BorderThickness="1" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="2">
+                                <TextBlock Padding="5" Text="{Binding DenneUge.onsdag.Note}"></TextBlock>
+                            </Grid>
+                        </Grid>
+
+                        <Grid  Grid.Column="1" Grid.Row="2" Margin="10" Background="LightGray" Padding="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock FontSize="30" VerticalAlignment="Top" Grid.ColumnSpan="2">Torsdag</TextBlock>
+
+                            <TextBlock Grid.Row="0" Grid.Column="2" FontSize="30" Grid.ColumnSpan="2"  FontWeight="Bold" Text="{Binding DenneUge.torsdag.Ret}" HorizontalAlignment="Stretch"></TextBlock>
+
+                            <TextBlock Grid.Row="1" Grid.Column="0" VerticalAlignment="Center">Chefkok:</TextBlock>
+                            <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding DenneUge.torsdag.ChefKok}" HorizontalAlignment="Stretch" VerticalAlignment="Center"></TextBlock>
+
+                            <TextBlock Grid.Column="0" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Center">Kokke:</TextBlock>
+                            <TextBlock Grid.Column="1" Grid.Row="2" Text="{Binding DenneUge.torsdag.Kokke}" HorizontalAlignment="Stretch" VerticalAlignment="Center"></TextBlock>
+
+                            <TextBlock Grid.Column="0" Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Center">Opryddere:</TextBlock>
+                            <TextBlock Grid.Column="1" Grid.Row="3" Text="{Binding DenneUge.torsdag.Opryddere}" HorizontalAlignment="Stretch" VerticalAlignment="Center"></TextBlock>
+
+                            <TextBlock Grid.Row="1" Grid.Column="2" VerticalAlignment="Bottom">Note:</TextBlock>
+                            <Grid BorderBrush="CadetBlue" BorderThickness="1" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="2">
+                                <TextBlock Padding="5" Text="{Binding DenneUge.torsdag.Note}"></TextBlock>
+                            </Grid>
+                        </Grid>
                     </Grid>
                 </PivotItem>
             </Pivot>

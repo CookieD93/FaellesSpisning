@@ -25,7 +25,7 @@ namespace Faellesspisning
 
         public Uge()
         {
-            StrUgenummer = "Uge"+Dato.GetDenneUge();
+            StrUgenummer = "Uge"+Dato.GetNextUge();
             //Psuedo kode
             //Ugenummer = GetWeek;
             IntUgenummer = Dato.GetNextUge();
