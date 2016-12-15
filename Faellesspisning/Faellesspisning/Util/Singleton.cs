@@ -17,6 +17,8 @@ namespace Faellesspisning
         public Dictionary<int, Bolig> TempListe { get; set; }
         //public Dictionary<string, Object> DenneUge { get; set; }
         public Dictionary<int, Bolig> Boligliste { get; set; }
+        public List<Arrangement> ArrengementListe { get; set; }
+
         //public Dictionary<string,Object> NaesteUge { get; set; }
 
         private Singleton()

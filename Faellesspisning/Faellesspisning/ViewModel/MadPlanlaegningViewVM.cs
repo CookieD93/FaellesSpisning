@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.Storage;
 using Eventmaker.Common;
 
 namespace Faellesspisning
@@ -11,10 +13,14 @@ namespace Faellesspisning
     {
         private Uge _uge;
         public RelayCommand GemRetForDagForUgeRelayCommand { get; set; }
+        public RelayCommand GemArrangementRelayCommand { get; set; }
+        public Arrangement ArrangementIPlanlægning { get; set; }
         // En constructer der laver et nyt object af en klassen Uge
         // Denne skal så hente alle data fra Bolig klassen, og gemme det i List/Dictionary/OC
         // Dette Uge object skal enten automatisk oprettes ved begyndelsen på en ny uge[1], eller ved en "manuel" knap på UgePlanLægnings View
+
         #region Props til Databinding
+
         //Ret
         //public string DMRet { get; set; }
         //public string DTiRet { get; set; }
@@ -69,6 +75,7 @@ namespace Faellesspisning
         //public string NTiUdlæg { get; set; }
         //public string NOUdlæg { get; set; }
         //public string NToUdlæg { get; set; } 
+
         #endregion
 
         public Uge uge
@@ -81,13 +88,22 @@ namespace Faellesspisning
         {
             _uge = Singleton.GetInstance().TempUge;
             GemRetForDagForUgeRelayCommand = new RelayCommand(Save);
+            GemArrangementRelayCommand = new RelayCommand(GemArrangement);
+ 
+            ArrangementIPlanlægning = new Arrangement();
 
             // Psuedo kode:
             // 1. Hvis der ikke er en fil med navnet uge+(getWeek).json så skal der oprettes et object der hedder Uge+(getWeek).
             //      Findes filen, skal denne loades ind i UgePlanlægnings Viewet
-
         }
 
+        public void GemArrangement()
+        {
+            Singleton.GetInstance().ArrengementListe.Add(ArrangementIPlanlægning);
+            Persistance.SaveJson(Singleton.GetInstance().ArrengementListe,"Arrangementer.json");
+            Persistance.MessageDialogHelper.Show("File Saved", "Saved");
+
+        }
         public void Save()
         {
             Gem gem = new Gem();

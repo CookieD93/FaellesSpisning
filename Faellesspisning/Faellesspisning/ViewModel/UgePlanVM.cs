@@ -1,4 +1,5 @@
 
+
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -11,13 +12,14 @@ namespace Faellesspisning
 {
     class UgePlanVM
     {
-        private String _ugeNr = "Uge: "+Dato.GetDenneUge();
+        private String _ugeNr = "Uge: " + Dato.GetDenneUge();
 
         public String UgeNr
         {
             get { return _ugeNr; }
             set { _ugeNr = value; }
         }
+
         private String _ugeNr2 = "Uge: " + Dato.GetNextUge();
 
         public String UgeNr2
@@ -28,27 +30,21 @@ namespace Faellesspisning
 
         public Uge DenneUge { get; set; }
 
-
-        // En constructer der laver et nyt object af en klassen Uge
-        // Denne skal så hente alle data fra Bolig klassen, og gemme det i List/Dictionary/OC
-        // Dette Uge object skal enten automatisk oprettes ved begyndelsen på en ny uge[1], eller ved en "manuel" knap på UgePlanLægnings View
         public UgePlanVM()
         {
             CheckNewWeek();
             DenneUge = Singleton.GetInstance().TempUge;
             UgeNr = DenneUge.StrUgenummer;
-
+            CheckArrangement();
         }
 
         private async void CheckNewWeek()
         {
-            //Dictionary<string,Object> DenneUge = await Persistance.LoadFromJsonAsync("Uge" + Dato.GetDenneUge() + ".json");
-
             try
             {
-                Gem Banan = await Persistance.LoadGemFromJsonAsync("Uge" + Dato.GetDenneUge()+ ".json");
+                Gem SavedJsonClass= await Persistance.LoadGemFromJsonAsync("Uge" + Dato.GetDenneUge() + ".json");
                 Gem hentet = new Gem();
-                hentet = Banan;
+                hentet = SavedJsonClass;
                 hentet.exportFraGem();
             }
             catch (FileNotFoundException)
@@ -57,8 +53,19 @@ namespace Faellesspisning
             }
         }
 
-        // Psuedo kode:
-        // 1. Hvis der ikke er en fil med navnet uge+(getWeek).json så skal der oprettes et object der hedder Uge+(getWeek).
-        //      Findes filen, skal denne loades ind i UgePlanlægnings Viewet
+        private async void CheckArrangement()
+        {
+            try
+            {
+                List<Arrangement> SavedJsonArrangementer = await Persistance.LoadArrangementFromJsonAsync("Arrangementer.json");
+                Singleton.GetInstance().ArrengementListe = SavedJsonArrangementer;
+            }
+            catch (FileNotFoundException ex)
+            {
+
+                Singleton.GetInstance().ArrengementListe = new List<Arrangement>();
+                Persistance.SaveJson(Singleton.GetInstance().ArrengementListe,"Arrangementer.json");
+            }
+        }
     }
 }
