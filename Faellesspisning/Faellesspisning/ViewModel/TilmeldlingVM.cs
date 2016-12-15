@@ -96,6 +96,7 @@ namespace Faellesspisning
             Gem gem = new Gem();
             gem.importTilGem();
            Persistance.SaveJson(gem,"Uge"+Dato.GetDenneUge()+".Json");
+            Persistance.MessageDialogHelper.Show("Din tilmelding er Gemt", "Gemt");
 
         }
 

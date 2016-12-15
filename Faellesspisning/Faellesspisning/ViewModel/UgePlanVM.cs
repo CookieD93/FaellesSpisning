@@ -34,7 +34,7 @@ namespace Faellesspisning
         {
             CheckNewWeek();
             DenneUge = Singleton.GetInstance().TempUge;
-            UgeNr = DenneUge.StrUgenummer;
+            
             CheckArrangement();
         }
 
