@@ -43,9 +43,7 @@ namespace Faellesspisning
             CheckNewWeek();
            // await Task.Delay(500);
             DenneUge = Singleton.GetInstance().DenneTempUge;
- await Task.Delay(1000);
-
-
+            await Task.Delay(1000);
             NæsteUge = Singleton.GetInstance().NæsteTempUge;
             //await Task.Delay(500);
             CheckArrangement();
@@ -59,10 +57,12 @@ namespace Faellesspisning
                 hentet = SavedJsonClass;
                 hentet.exportFraGemDenneUge();
             }
-            catch (FileNotFoundException ex)
+            catch (FileNotFoundException)
             {
 
-                Persistance.MessageDialogHelper.Show("Ingen fil for denne uge fundet, der vil derfor ikke blive vist.","No new week");
+                Persistance.MessageDialogHelper.Show("Ingen fil for denne uge fundet, der vil derfor blive oprettet en tom uge","No current week");
+                //Denne her linje giver en Access Denied exception hvis den bliver kørt uden nogen som helst filer (clean run)
+                await Singleton.GetInstance().nyDenneUge();
             }
             try
             {
@@ -73,7 +73,7 @@ namespace Faellesspisning
             }
             catch (FileNotFoundException)
             {
-                await Singleton.GetInstance().nyUge();
+                await Singleton.GetInstance().nyNæsteUge();
             }
         }
 
@@ -84,7 +84,7 @@ namespace Faellesspisning
                 List<Arrangement> SavedJsonArrangementer = await Persistance.LoadArrangementFromJsonAsync("Arrangementer.json");
                 Singleton.GetInstance().ArrengementListe = SavedJsonArrangementer;
             }
-            catch (FileNotFoundException ex)
+            catch (FileNotFoundException)
             {
 
                 Singleton.GetInstance().ArrengementListe = new List<Arrangement>();

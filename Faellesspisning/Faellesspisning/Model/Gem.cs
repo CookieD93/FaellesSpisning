@@ -10,27 +10,32 @@ namespace Faellesspisning
     {
         public Uge GemtUge { get; set; }
 
-        public Dictionary<int,Bolig> GemtBoligliste { get; set; }
+       // public Dictionary<int,Bolig> GemtBoligliste { get; set; }
 
         public Gem()
         {
             
         }
-        public void importTilGem(Uge HvilkenUge)
+        //Har lagt BoligListerne ind under Ugen. På den måde skal vi "bare" gemme ugen.
+        public void importTilGemNæsteUge()
         {
-            GemtUge = HvilkenUge;
-            GemtBoligliste = Singleton.GetInstance().Boligliste;
+            GemtUge = Singleton.GetInstance().NæsteTempUge;
+           // GemtBoligliste = Singleton.GetInstance().NæsteTempUge.BoligListe;
+        }public void importTilGemDenneUge()
+        {
+            GemtUge = Singleton.GetInstance().DenneTempUge;
+            //GemtBoligliste = Singleton.GetInstance().DenneTempUge.BoligListe;
         }
 
         public void exportFraGemNæsteUge()
         {
             Singleton.GetInstance().NæsteTempUge = GemtUge;
-            Singleton.GetInstance().Boligliste = GemtBoligliste;
+          //  Singleton.GetInstance().NæsteTempUge.BoligListe = GemtBoligliste;
         }
         public void exportFraGemDenneUge()
         {
             Singleton.GetInstance().DenneTempUge = GemtUge;
-            Singleton.GetInstance().Boligliste = GemtBoligliste;
+           // Singleton.GetInstance().DenneTempUge.BoligListe = GemtBoligliste;
         }
     }
 }
