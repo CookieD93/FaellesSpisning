@@ -773,9 +773,9 @@
                             <TextBox x:Name="textBox_HusAnsvarlig" HorizontalAlignment="Stretch" Margin="155,30,40,20"
                                      Grid.Row="0" TextWrapping="Wrap" PlaceholderText="Hvem har ansvar for Køkkenet"
                                      VerticalAlignment="Stretch" Grid.Column="1" Text="{Binding ArrangementIPlanlægning.HusNummer, Mode=TwoWay}"/>
-                            <CheckBox x:Name="CheckBox_Private" Command="{Binding ArrangementIPlanlægning.ErArrangementPrivat}"/>
-                            <TextBox x:Name="textBox_Dato" HorizontalAlignment="Stretch" Margin="50,47,40,20"
-                                     Grid.Row="1" TextWrapping="Wrap" PlaceholderText="Dato for arrangementet"
+                            <CheckBox x:Name="CheckBox_Private" Command="{Binding ArrangementIPlanlægning.ErArrangementPrivat}" Margin="50,73,0,78" Grid.Row="1"/>
+                            <TextBox x:Name="textBox_Dato" HorizontalAlignment="Stretch" Margin="50,57,418,85"
+                                     Grid.Row="1" TextWrapping="Wrap" PlaceholderText="31/12/2016"
                                      VerticalAlignment="Stretch" Grid.Column="1" AcceptsReturn="True" />
                             <TextBox x:Name="textBox_Note" HorizontalAlignment="Stretch" Margin="50,47,40,20"
                                      Grid.Row="2" TextWrapping="Wrap" Text="{Binding ArrangementIPlanlægning.Note, Mode=TwoWay}"
