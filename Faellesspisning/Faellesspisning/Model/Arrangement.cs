@@ -10,9 +10,18 @@ namespace Faellesspisning
     {
         public DateTime Dato { get; set; }
         public string Titel { get; set; }
-        public string Beskrivelse { get; set; }
-        public bool DeltagerTilladt { get; set; }
+        
+        public bool ErArrangementPrivat { get; set; }
         public double Udlæg { get; set; }
+        public int HusNummer { get; set; }
+
+        public string Note { get; set; }
+
+        public Arrangement()
+        {
+            
+        }
+
 
 
     }
