@@ -1,4 +1,5 @@
 
+
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -11,13 +12,14 @@ namespace Faellesspisning
 {
     class UgePlanVM
     {
-        private String _ugeNr = "Uge: "+Dato.GetDenneUge();
+        private String _ugeNr = "Uge: " + Dato.GetDenneUge();
 
         public String UgeNr
         {
             get { return _ugeNr; }
             set { _ugeNr = value; }
         }
+
         private String _ugeNr2 = "Uge: " + Dato.GetNextUge();
 
         public String UgeNr2
@@ -33,20 +35,36 @@ namespace Faellesspisning
             CheckNewWeek();
             DenneUge = Singleton.GetInstance().TempUge;
             UgeNr = DenneUge.StrUgenummer;
+            CheckArrangement();
         }
 
         private async void CheckNewWeek()
         {
             try
             {
-                Gem Banan = await Persistance.LoadGemFromJsonAsync("Uge" + Dato.GetDenneUge()+ ".json");
+                Gem SavedJsonClass= await Persistance.LoadGemFromJsonAsync("Uge" + Dato.GetDenneUge() + ".json");
                 Gem hentet = new Gem();
-                hentet = Banan;
+                hentet = SavedJsonClass;
                 hentet.exportFraGem();
             }
             catch (FileNotFoundException)
             {
                 await Singleton.GetInstance().nyUge();
+            }
+        }
+
+        private async void CheckArrangement()
+        {
+            try
+            {
+                List<Arrangement> SavedJsonArrangementer = await Persistance.LoadArrangementFromJsonAsync("Arrangementer.json");
+                Singleton.GetInstance().ArrengementListe = SavedJsonArrangementer;
+            }
+            catch (FileNotFoundException ex)
+            {
+
+                Singleton.GetInstance().ArrengementListe = new List<Arrangement>();
+                Persistance.SaveJson(Singleton.GetInstance().ArrengementListe,"Arrangementer.json");
             }
         }
     }

@@ -769,18 +769,16 @@
 
                             <TextBox x:Name="textBox_Titel" HorizontalAlignment="Stretch" Margin="155,30,40,20"
                                      Grid.Row="0" TextWrapping="Wrap" PlaceholderText="Hvad skal der ske"
-                                     VerticalAlignment="Stretch" />
+                                     VerticalAlignment="Stretch" Text="{Binding ArrangementIPlanlægning.Titel, Mode=TwoWay}"/>
                             <TextBox x:Name="textBox_HusAnsvarlig" HorizontalAlignment="Stretch" Margin="155,30,40,20"
                                      Grid.Row="0" TextWrapping="Wrap" PlaceholderText="Hvem har ansvar for Køkkenet"
-                                     VerticalAlignment="Stretch" Grid.Column="1" />
-                            <TextBox x:Name="textBox_Private" HorizontalAlignment="Stretch" Margin="50,47,40,20"
-                                     Grid.Row="1" TextWrapping="Wrap" PlaceholderText="Er Arrangementet Private"
-                                     VerticalAlignment="Stretch" AcceptsReturn="True" />
+                                     VerticalAlignment="Stretch" Grid.Column="1" Text="{Binding ArrangementIPlanlægning.HusNummer, Mode=TwoWay}"/>
+                            <CheckBox x:Name="CheckBox_Private" Command="{Binding ArrangementIPlanlægning.ErArrangementPrivat}"/>
                             <TextBox x:Name="textBox_Dato" HorizontalAlignment="Stretch" Margin="50,47,40,20"
                                      Grid.Row="1" TextWrapping="Wrap" PlaceholderText="Dato for arrangementet"
                                      VerticalAlignment="Stretch" Grid.Column="1" AcceptsReturn="True" />
                             <TextBox x:Name="textBox_Note" HorizontalAlignment="Stretch" Margin="50,47,40,20"
-                                     Grid.Row="2" TextWrapping="Wrap"
+                                     Grid.Row="2" TextWrapping="Wrap" Text="{Binding ArrangementIPlanlægning.Note, Mode=TwoWay}"
                                      PlaceholderText="Note til arrangementet evt. indkøbsliste"
                                      VerticalAlignment="Stretch" AcceptsReturn="True" />
                             <Grid Grid.Row="2" Grid.Column="1" Margin="0,0,0,70" VerticalAlignment="Stretch"
@@ -797,14 +795,14 @@
                                 <TextBlock x:Name="textBlock_Udlaeg" FontSize="24" HorizontalAlignment="Left"
                                            Height="32" Margin="50,10,0,0" TextWrapping="Wrap" Text="Udlæg:"
                                            VerticalAlignment="Top" Width="76" Grid.Row="0" Grid.Column="0" />
-                                <TextBox x:Name="textBox_Udlaeg" HorizontalAlignment="Stretch" Margin="50,0,0,60"
+                                <TextBox x:Name="textBox_Udlaeg" HorizontalAlignment="Stretch" Text="{Binding ArrangementIPlanlægning.Udlæg, Mode=TwoWay}" Margin="50,0,0,60"
                                          Grid.Row="1" TextWrapping="Wrap" PlaceholderText="Hvad er der købt for"
                                          VerticalAlignment="Stretch" Grid.Column="0" />
                                 <TextBlock Name="Kr" Margin="5,0,0,0" Text="Kr." VerticalAlignment="Stretch"
                                            HorizontalAlignment="Stretch" Grid.Row="1" Grid.Column="1" FontSize="25" />
                             </Grid>
                             <Button Name="GemSaerDag" Width="125" Grid.Row="2" Grid.Column="1" Margin="0,150,20,0"
-                                    VerticalAlignment="Top" HorizontalAlignment="Right" Content="Gem" />
+                                    VerticalAlignment="Top" Command="{Binding GemArrangementRelayCommand}" HorizontalAlignment="Right" Content="Gem" />
                         </Grid>
                     </PivotItem>
 
