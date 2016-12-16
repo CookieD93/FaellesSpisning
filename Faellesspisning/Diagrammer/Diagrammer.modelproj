@@ -29,6 +29,13 @@
       <SubType>Content</SubType>
       <DependentUpon>ClassDiagram.classdiagram</DependentUpon>
     </Content>
+    <Content Include="OprettelseMadPlan.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="OprettelseMadPlan.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>OprettelseMadPlan.sequencediagram</DependentUpon>
+    </Content>
     <Content Include="UseCaseDiagram.usecasediagram">
       <SubType>Content</SubType>
     </Content>
