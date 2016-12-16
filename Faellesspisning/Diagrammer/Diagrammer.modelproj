@@ -29,6 +29,13 @@
       <SubType>Content</SubType>
       <DependentUpon>ClassDiagram.classdiagram</DependentUpon>
     </Content>
+    <Content Include="OprettelseMadPlan.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="OprettelseMadPlan.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>OprettelseMadPlan.sequencediagram</DependentUpon>
+    </Content>
     <Content Include="UseCaseDiagram.usecasediagram">
       <SubType>Content</SubType>
     </Content>
@@ -44,12 +51,12 @@
       <SubType>Content</SubType>
       <DependentUpon>DomainModel.classdiagram</DependentUpon>
     </Content>
-    <Content Include="InteractionDiagram.sequencediagram">
+    <Content Include="Tilmelding.sequencediagram">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="InteractionDiagram.sequencediagram.layout">
+    <Content Include="Tilmelding.sequencediagram.layout">
       <SubType>Content</SubType>
-      <DependentUpon>InteractionDiagram.sequencediagram</DependentUpon>
+      <DependentUpon>Tilmelding.sequencediagram</DependentUpon>
     </Content>
     <Content Include="ModelDefinition\Diagrammer.uml">
       <SubType>Content</SubType>

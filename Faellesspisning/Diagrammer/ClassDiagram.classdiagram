@@ -197,11 +197,6 @@
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <class Id="10d8d407-c5f7-4160-a292-ce14dd5cbaf8" name="Historik" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <elementDefinition Id="b214092b-dde5-4dca-a0de-75c76088a9b7" />
-      </class>
-    </logicalClassDesignerModelHasTypes>
-    <logicalClassDesignerModelHasTypes>
       <class Id="c63af81e-9875-4846-b7a0-77b4f09b3b70" name="Uge" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="5c6bb956-73db-44cc-a482-ae9e15ee5f44" />
         <ownedAttributesInternal>
@@ -296,40 +291,6 @@
         <elementDefinition Id="fbfd7ade-9e78-4f16-a834-ae73c1845a18" />
       </referencedType>
     </packageHasNamedElement>
-    <logicalClassDesignerModelHasTypes>
-      <class Id="8ed7422c-93fa-4de3-94e8-788e2f5368c1" name="HusSamling" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <elementDefinition Id="fdad44f7-c955-4689-b2f6-c2beffe6283b" />
-        <ownedAttributesInternal>
-          <property Id="9266aed0-e409-4eee-84df-91f625381029" name="_husSamling" visibility="Private" isLeaf="false" isStatic="true" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="57389bc8-8bd1-45a9-ab7c-ab169c0fd17f" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="6282016f-8440-4f83-a7b6-3c9b6107bbe7" LastKnownName="HusSamling" />
-            </type_NamedElement>
-          </property>
-          <property Id="81ae95ef-fc15-4edc-be04-54c07286a311" name="_huseOc" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="6852acbe-b42a-4f1b-9b04-616adea9fbb4" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="28b2e15c-2033-45f9-bac8-de594e816665" LastKnownName="ObservableCollection&lt;Bolig&gt;" />
-            </type_NamedElement>
-          </property>
-        </ownedAttributesInternal>
-        <ownedOperationsInternal>
-          <operation Id="2b31b52f-410b-4cc3-9fe5-cf4f3c7710d8" name="GetHusSamling" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="383e374e-47f4-441b-9b3e-e85f5f1de7a5" />
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter Id="3836a321-6fee-4ef8-8d07-c0a4fa0fe040" direction="Return">
-                  <elementDefinition Id="4c8dddfa-81ac-4767-a072-6599074277ed" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="b7c37cbc-55ab-4404-9ffd-8f3b371b9aa5" LastKnownName="HusSamling" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-        </ownedOperationsInternal>
-      </class>
-    </logicalClassDesignerModelHasTypes>
     <packageHasNamedElement>
       <referencedType Id="d21fd834-0a5e-4407-b251-f47a6e83a866" name="List&lt;int&gt;" isAbstract="false" isLeaf="false" cachedFullName="List&lt;int&gt;">
         <elementDefinition Id="de9c5669-5292-4c0f-93b1-23007a5eb4b7" />
@@ -435,21 +396,6 @@
     <packageHasNamedElement>
       <referencedType Id="a24ddd9d-09f4-453e-98bf-c8a8bf6f1cf5" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
         <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="6282016f-8440-4f83-a7b6-3c9b6107bbe7" name="HusSamling" isAbstract="false" isLeaf="false" cachedFullName="Diagrammer::HusSamling">
-        <elementDefinition Id="fdad44f7-c955-4689-b2f6-c2beffe6283b" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="28b2e15c-2033-45f9-bac8-de594e816665" name="ObservableCollection&lt;Bolig&gt;" isAbstract="false" isLeaf="false" cachedFullName="ObservableCollection&lt;Bolig&gt;">
-        <elementDefinition Id="9cbb7788-3dc2-43a6-858a-6766c0057c25" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="b7c37cbc-55ab-4404-9ffd-8f3b371b9aa5" name="HusSamling" isAbstract="false" isLeaf="false" cachedFullName="Diagrammer::HusSamling">
-        <elementDefinition Id="fdad44f7-c955-4689-b2f6-c2beffe6283b" />
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -794,30 +740,6 @@
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <class Id="85c39717-e9d4-4fcc-b85a-fbcd6d37ddcd" name="RelayArgCommand" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <elementDefinition Id="fa445a31-bac5-4a03-94bc-5a50c03d5764" />
-        <ownedAttributesInternal>
-          <property Id="891d8b5b-588e-4fb4-a928-748644e0fbfd" name="_execute" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="true" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="12227051-6aaa-40e5-8617-d8491b76e8a9" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="00e5b03b-ddab-41aa-8bac-9db382a1c069" LastKnownName="Action&lt;T&gt;" />
-            </type_NamedElement>
-          </property>
-          <property Id="05e0aa02-ab80-4520-b9e7-eb823613f121" name="_canExecute" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="true" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="760e10f6-fceb-4ea9-8a55-08be8af2d760" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="6df50a51-5c20-4c58-acbb-120227ca44ce" LastKnownName="Func&lt;bool&gt;" />
-            </type_NamedElement>
-          </property>
-        </ownedAttributesInternal>
-      </class>
-    </logicalClassDesignerModelHasTypes>
-    <logicalClassDesignerModelHasTypes>
-      <class Id="91fc949e-2e44-4073-894e-b2534608226f" name="RelayCommand" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <elementDefinition Id="2961f1eb-58e8-45b3-8e35-b94b8a4a3b08" />
-      </class>
-    </logicalClassDesignerModelHasTypes>
-    <logicalClassDesignerModelHasTypes>
       <class Id="be6d4dee-a250-445a-81e2-782c2f8fbbe6" name="Singleton" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="c5f7e878-3516-47dd-97dd-57ea3cb98e3f" />
         <ownedAttributesInternal>
@@ -902,16 +824,6 @@
     <packageHasNamedElement>
       <referencedType Id="65aba442-04d3-4d67-9d68-4ce2d682bc6d" name="string" isAbstract="false" isLeaf="false" cachedFullName="string">
         <elementDefinition Id="103efe2a-8d70-4b47-bfb9-67c53a6a3f1a" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="00e5b03b-ddab-41aa-8bac-9db382a1c069" name="Action&lt;T&gt;" isAbstract="false" isLeaf="false" cachedFullName="Action&lt;T&gt;">
-        <elementDefinition Id="6532bad7-c61f-47e8-b727-b44497614960" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="6df50a51-5c20-4c58-acbb-120227ca44ce" name="Func&lt;bool&gt;" isAbstract="false" isLeaf="false" cachedFullName="Func&lt;bool&gt;">
-        <elementDefinition Id="703969b8-d2b6-419c-b1c1-ebd9e021e932" />
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>

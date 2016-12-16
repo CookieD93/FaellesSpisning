@@ -182,22 +182,22 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="UgeplanButton" Content="Ugeplan" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Button x:Name="UgeplanButton" Content="Ugeplan" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#0078d7" Foreground="#fff" FontWeight="Bold" FontSize="20">
                 <interactivity:Interaction.Behaviors>
                     <core:EventTriggerBehavior EventName="Click">
                         <core:NavigateToPageAction TargetPage="Faellesspisning.MainPage"/>
                     </core:EventTriggerBehavior>
                 </interactivity:Interaction.Behaviors>
             </Button>
-            <Button x:Name="TilmeldingButton" Content="Tilmelding" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsEnabled="False"/>
-            <Button x:Name="HistorikButton" Content="Historik/Betaling" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Button x:Name="TilmeldingButton" Content="Tilmelding" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsEnabled="False" Background="#0078d7" Foreground="#fff" FontWeight="Bold" FontSize="20"/>
+            <Button x:Name="HistorikButton" Content="Historik/Betaling" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#0078d7" Foreground="#fff" FontWeight="Bold" FontSize="20">
                 <interactivity:Interaction.Behaviors>
                     <core:EventTriggerBehavior EventName="Click">
                         <core:NavigateToPageAction TargetPage="Faellesspisning.HistorikView"/>
                     </core:EventTriggerBehavior>
                 </interactivity:Interaction.Behaviors>
             </Button>
-            <Button x:Name="MadplanButton" Content="Madplan" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Button x:Name="MadplanButton" Content="Madplan" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#0078d7" Foreground="#fff" FontWeight="Bold" FontSize="20">
                 <interactivity:Interaction.Behaviors>
                     <core:EventTriggerBehavior EventName="Click">
                         <core:NavigateToPageAction TargetPage="Faellesspisning.MadPlanlaegningView"/>
@@ -222,14 +222,17 @@
                 </Grid.RowDefinitions>
 
                 <ComboBox
+                    
                     HorizontalAlignment="Left"
                     Margin="50 0 0 0"
                     Grid.Row="0"
                     VerticalAlignment="Center"
                     Width="160"
                     ItemsSource="{Binding DropdownHuse}"
-                    SelectedItem="{Binding DropDownValg, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                 />
+                    SelectedItem="{Binding DropDownValg, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" BorderBrush="#0078d7"
+                 >
+                    
+                </ComboBox>
 
 
                 <Grid Row="1" Margin="50 0">
@@ -311,9 +314,9 @@
 
                 <!--<Button x:Name="button" Content="Save" HorizontalAlignment="Left" Command="{Binding StandardRelayCommand}" Margin="960,55,0,0" VerticalAlignment="Top"/>-->
                 <!-- <Button x:Name="button1" Content="Load" HorizontalAlignment="Left" Command="{Binding LoadRelayCommand}" Margin="785,66,0,0" VerticalAlignment="Top"/>-->
-                <Button Grid.Row="2" Content="Gem Standard" HorizontalAlignment="Right" Command="{Binding StandardRelayCommand}" Margin="0 0 350 0"></Button>
+                <Button Grid.Row="2" Content="Gem Standard" HorizontalAlignment="Right" Command="{Binding StandardRelayCommand}" Margin="0 0 400 0" Background="#0078d7" Foreground="#ffffff" FontWeight="Bold" FontSize="18"/>
 
-                <Button Grid.Row="2" Content="Gem Tilmeldte for næste uge" HorizontalAlignment="Right" Command="{Binding TilmeldRelayCommand}" Margin="0 0 50 0"></Button>
+                <Button Grid.Row="2" Content="Gem Tilmeldte for næste uge" MinWidth="300" HorizontalAlignment="Right" Command="{Binding TilmeldRelayCommand}" Margin="0 0 50 0" Background="#0078d7" Foreground="#ffffff" FontWeight="Bold" FontSize="18"/>
             </Grid>
         </ScrollViewer>
         <!-- Content Grid End -->
