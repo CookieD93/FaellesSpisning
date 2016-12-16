@@ -147,7 +147,7 @@ namespace Faellesspisning
 
             else
             {
-                Persistance.MessageDialogHelper.Show("Fejl yo", "fejl");
+                Persistance.MessageDialogHelper.Show("Udlægget er ikke et tal", "fejl");
             }
         }
             public
