@@ -19,13 +19,14 @@ namespace Faellesspisning
         public Dag onsdag { get; set; }
         public Dag torsdag { get; set; }
 
+        public Dictionary<int,Bolig> BoligListe { get; set; }
 
         // Denne klasses konstruktør skal oprettet 4 objekter af klassen Dag. Der indeholder Dagsnavn = Mandag, Tirsdag, osv.
         // Hvor alle de andre felter er tomme.
 
         public Uge()
         {
-            StrUgenummer = "Uge"+Dato.GetDenneUge();
+            StrUgenummer = "Uge"+Dato.GetNextUge();
             //Psuedo kode
             //Ugenummer = GetWeek;
             IntUgenummer = Dato.GetNextUge();

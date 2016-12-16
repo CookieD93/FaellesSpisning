@@ -15,10 +15,10 @@ namespace Faellesspisning
 
         public Betaling()
         {
-            DagligtUdlaegMandag = Singleton.GetInstance().TempUge.mandag.Udlæg;
-            DagligtUdlaegTirsdag = Singleton.GetInstance().TempUge.tirsdag.Udlæg;
-            DagligtUdlaegOnsdag = Singleton.GetInstance().TempUge.onsdag.Udlæg;
-            DagligtUdlaegTorsdag = Singleton.GetInstance().TempUge.torsdag.Udlæg;
+            DagligtUdlaegMandag = Singleton.GetInstance().DenneTempUge.mandag.Udlæg;
+            DagligtUdlaegTirsdag = Singleton.GetInstance().DenneTempUge.tirsdag.Udlæg;
+            DagligtUdlaegOnsdag = Singleton.GetInstance().DenneTempUge.onsdag.Udlæg;
+            DagligtUdlaegTorsdag = Singleton.GetInstance().DenneTempUge.torsdag.Udlæg;
         }
 
         public double UgentligUdlæg()
@@ -32,7 +32,7 @@ namespace Faellesspisning
         }
         public double DeltagereValgtHus(int i)
         {
-            Bolig TempBolig = Singleton.GetInstance().Boligliste[i];
+            Bolig TempBolig = Singleton.GetInstance().DenneTempUge.BoligListe[i];
 
             double Mandag = TempBolig.DaglistMan[0] + TempBolig.DaglistMan[1] * 0.5 + TempBolig.DaglistMan[2] * 0.25;
             double Tirsdag = TempBolig.DaglistTir[0]+ TempBolig.DaglistTir[1] *0.5+ TempBolig.DaglistTir[2]*0.25;
@@ -44,7 +44,7 @@ namespace Faellesspisning
         public double DeltagereIAlt()
         {
             double Result = 0;
-            foreach (KeyValuePair<int, Bolig> hus in Singleton.GetInstance().Boligliste)
+            foreach (KeyValuePair<int, Bolig> hus in Singleton.GetInstance().DenneTempUge.BoligListe)
             {
                 Result += DeltagereValgtHus(hus.Key);
             }

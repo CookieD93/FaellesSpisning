@@ -60,7 +60,7 @@ namespace Faellesspisning
             // ==============================================================
 
             _dropdownHuse = new ObservableCollection<int>(Boligliste.Keys);
-            Boligliste = Singleton.GetInstance().Boligliste;
+            Boligliste = Singleton.GetInstance().DenneTempUge.BoligListe;
             betal = new Betaling();
             
         }

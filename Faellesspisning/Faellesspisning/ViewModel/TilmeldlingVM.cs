@@ -37,7 +37,7 @@ namespace Faellesspisning
         
         public TilmeldlingVm()
         {
-            DropdownHuse = new ObservableCollection<int>(Singleton.GetInstance().Boligliste.Keys);
+            DropdownHuse = new ObservableCollection<int>(Singleton.GetInstance().NæsteTempUge.BoligListe.Keys);
             TilmeldRelayCommand = new RelayCommand(Tilmeld);
             StandardRelayCommand = new RelayCommand(SetStandard);
             //tempListe = new Dictionary<int,Bolig>();
@@ -68,7 +68,7 @@ namespace Faellesspisning
             OCtirsdag.Clear();
             OConsdag.Clear();
             OCtorsdag.Clear();
-            Bolig temp = Singleton.GetInstance().Boligliste[DropDownValg];
+            Bolig temp = Singleton.GetInstance().NæsteTempUge.BoligListe[DropDownValg];
             for (int i = 0; i < 4; i++)
             {
                 OCmandag.Add(Convert.ToString(temp.DaglistMan[i]));
@@ -79,37 +79,34 @@ namespace Faellesspisning
             
 
         }
-        //Indtil videre bliver OC's ikke ændret når man ændrer i appen.
-        //fejl fundet, OC's er ints og textboxes i UI prøver at gemme som string. <--- need work around
+        //SetStandard skal vidst ændres lidt, da den gemmer hele den 
         public async void SetStandard() 
         {
-           // OCmandag[0] = "1534"; //Test ændring, kan slettes når UI'et opdaterer collections.
-            
-           await OCTilDagList();
-           Persistance.SaveJson(Singleton.GetInstance().Boligliste,"Standard.json");
-            Tilmeld();
+           await OCTilDagList(Singleton.GetInstance().StandardListe);
+           Persistance.SaveJson(Singleton.GetInstance().StandardListe,"Standard.json");
+           Tilmeld();
         }
 
         public async void Tilmeld()
         {
-            await OCTilDagList();
-            Gem gem = new Gem();
-            gem.importTilGem();
-           Persistance.SaveJson(gem,"Uge"+Dato.GetDenneUge()+".Json");
+            await OCTilDagList(Singleton.GetInstance().NæsteTempUge.BoligListe);
+            GemUge gem = new GemUge();
+            gem.importTilGemNæsteUge();
+           Persistance.SaveJson(gem,"Uge"+Dato.GetNextUge()+".Json");
 
         }
 
-        public async Task OCTilDagList()
+        public async Task OCTilDagList(Dictionary<int,Bolig> hvilkenBoligListe)
         {
-            Bolig standTemp = Singleton.GetInstance().Boligliste[DropDownValg];
+            Bolig tempBolig = hvilkenBoligListe[DropDownValg];
             for (int i = 0; i < 4; i++)
             {
-                standTemp.DaglistMan[i] = int.Parse(OCmandag[i]);
-                standTemp.DaglistTir[i] = int.Parse(OCtirsdag[i]);
-                standTemp.DaglistOns[i] = int.Parse(OConsdag[i]);
-                standTemp.DaglistTor[i] = int.Parse(OCtorsdag[i]);
+                tempBolig.DaglistMan[i] = int.Parse(OCmandag[i]);
+                tempBolig.DaglistTir[i] = int.Parse(OCtirsdag[i]);
+                tempBolig.DaglistOns[i] = int.Parse(OConsdag[i]);
+                tempBolig.DaglistTor[i] = int.Parse(OCtorsdag[i]);
             }
-            Singleton.GetInstance().Boligliste[DropDownValg] = standTemp;
+            hvilkenBoligListe[DropDownValg] = tempBolig;
             await Task.Delay(500); // Nødvendigt Delay (ellers får den ikke gemt de rigtige ting)
 
         }
