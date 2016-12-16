@@ -51,9 +51,16 @@ namespace Faellesspisning
             return Result;
         }
 
-        public double HusBetaling(int j)
+        public string HusBetaling(int j)
         {
-            return KuvertPris()*DeltagereValgtHus(j);
+            string result;
+            if (KuvertPris()<=0||DeltagereValgtHus(j)<=0)
+            {
+                result = $"ikke nok tal til beregning";
+                return result;
+            }
+            result = $"{KuvertPris() * DeltagereValgtHus(j)}";
+            return result;
         }
 
         public double DeltagereMandag()
