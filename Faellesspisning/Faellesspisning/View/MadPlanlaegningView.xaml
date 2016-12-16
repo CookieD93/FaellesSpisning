@@ -156,7 +156,7 @@
                                                      Margin="50,0,10,60" Grid.Row="1" TextWrapping="Wrap"
                                                      PlaceholderText="Hvad er der købt for" VerticalAlignment="Stretch"
                                                      Grid.Column="0"
-                                                     Text="{Binding DenneUge.mandag.Udlæg, Mode=TwoWay}" />
+                                                     Text="{Binding DMUdlæg, Mode=TwoWay}" />
                                             <TextBlock Margin="5,0,0,0" Text="Kr."
                                                        VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
                                                        Grid.Row="1" Grid.Column="1" FontSize="25" />
@@ -249,7 +249,7 @@
                                                      Margin="50,0,10,60" Grid.Row="1" TextWrapping="Wrap"
                                                      PlaceholderText="Hvad er der købt for" VerticalAlignment="Stretch"
                                                      Grid.Column="0"
-                                                     Text="{Binding DenneUge.tirsdag.Udlæg, Mode=TwoWay}" />
+                                                     Text="{Binding DTiUdlæg, Mode=TwoWay}" />
                                             <TextBlock Margin="5,0,0,0" Text="Kr."
                                                        VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
                                                        Grid.Row="1" Grid.Column="1" FontSize="25" />
@@ -340,7 +340,7 @@
                                                      Margin="50,0,10,60" Grid.Row="1" TextWrapping="Wrap"
                                                      PlaceholderText="Hvad er der købt for" VerticalAlignment="Stretch"
                                                      Grid.Column="0"
-                                                     Text="{Binding DenneUge.onsdag.Udlæg, Mode=TwoWay}" />
+                                                     Text="{Binding DOUdlæg, Mode=TwoWay}" />
                                             <TextBlock Margin="5,0,0,0" Text="Kr."
                                                        VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
                                                        Grid.Row="1" Grid.Column="1" FontSize="25" />
@@ -433,7 +433,7 @@
                                                      Margin="50,0,10,60" Grid.Row="1" TextWrapping="Wrap"
                                                      PlaceholderText="Hvad er der købt for" VerticalAlignment="Stretch"
                                                      Grid.Column="0"
-                                                     Text="{Binding DenneUge.torsdag.Udlæg, Mode=TwoWay}" />
+                                                     Text="{Binding DToUdlæg, Mode=TwoWay}" />
                                             <TextBlock Margin="5,0,0,0" Text="Kr."
                                                        VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
                                                        Grid.Row="1" Grid.Column="1" FontSize="25" />
@@ -538,7 +538,7 @@
                                                      Margin="50,0,10,60" Grid.Row="1" TextWrapping="Wrap"
                                                      PlaceholderText="Hvad er der købt for" VerticalAlignment="Stretch"
                                                      Grid.Column="0"
-                                                     Text="{Binding NæsteUge.mandag.Udlæg, Mode=TwoWay}" />
+                                                     Text="{Binding NMUdlæg, Mode=TwoWay}" />
                                             <TextBlock Margin="5,0,0,0" Text="Kr."
                                                        VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
                                                        Grid.Row="1" Grid.Column="1" FontSize="25" />
@@ -626,7 +626,7 @@
                                                      Margin="50,0,10,60" Grid.Row="1" TextWrapping="Wrap"
                                                      PlaceholderText="Hvad er der købt for" VerticalAlignment="Stretch"
                                                      Grid.Column="0"
-                                                     Text="{Binding NæsteUge.tirsdag.Udlæg, Mode=TwoWay}" />
+                                                     Text="{Binding NTiUdlæg, Mode=TwoWay}" />
                                             <TextBlock Margin="5,0,0,0" Text="Kr."
                                                        VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
                                                        Grid.Row="1" Grid.Column="1" FontSize="25" />
@@ -714,7 +714,7 @@
                                                      Margin="50,0,10,60" Grid.Row="1" TextWrapping="Wrap"
                                                      PlaceholderText="Hvad er der købt for" VerticalAlignment="Stretch"
                                                      Grid.Column="0"
-                                                     Text="{Binding NæsteUge.onsdag.Udlæg, Mode=TwoWay}" />
+                                                     Text="{Binding NOUdlæg, Mode=TwoWay}" />
                                             <TextBlock Margin="5,0,0,0" Text="Kr."
                                                        VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
                                                        Grid.Row="1" Grid.Column="1" FontSize="25" />
@@ -802,7 +802,7 @@
                                                      Margin="50,0,10,60" Grid.Row="1" TextWrapping="Wrap"
                                                      PlaceholderText="Hvad er der købt for" VerticalAlignment="Stretch"
                                                      Grid.Column="0"
-                                                     Text="{Binding NæsteUge.torsdag.Udlæg, Mode=TwoWay}" />
+                                                     Text="{Binding NToUdlæg, Mode=TwoWay}" />
                                             <TextBlock Margin="5,0,0,0" Text="Kr."
                                                        VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
                                                        Grid.Row="1" Grid.Column="1" FontSize="25" />
