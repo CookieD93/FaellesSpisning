@@ -139,14 +139,19 @@ namespace Faellesspisning
         {
             double tal=0;
             double result;
-            
-            if (double.TryParse(input, out result))
+
+            if (double.TryParse(input, out result)&& double.Parse(input)>0)
             {
                 BindPlace = double.Parse(input);
             }
-            Persistance.MessageDialogHelper.Show("Fejl yo","fejl");
+
+            else
+            {
+                Persistance.MessageDialogHelper.Show("Fejl yo", "fejl");
+            }
         }
-        public MadPlanlaegningViewVM()
+            public
+            MadPlanlaegningViewVM()
         {
             _denneUge = Singleton.GetInstance().DenneTempUge;
             NæsteUge = Singleton.GetInstance().NæsteTempUge;
