@@ -52,8 +52,8 @@ namespace Faellesspisning
         {
             try
             {
-                Gem SavedJsonClass = await Persistance.LoadGemFromJsonAsync("Uge" + Dato.GetDenneUge() + ".json");
-                Gem hentet = new Gem();
+                GemUge SavedJsonClass = await Persistance.LoadGemFromJsonAsync("Uge" + Dato.GetDenneUge() + ".json");
+                GemUge hentet = new GemUge();
                 hentet = SavedJsonClass;
                 hentet.exportFraGemDenneUge();
             }
@@ -66,8 +66,8 @@ namespace Faellesspisning
             }
             try
             {
-                Gem SavedJsonClass= await Persistance.LoadGemFromJsonAsync("Uge" + Dato.GetNextUge() + ".json");
-                Gem hentet = new Gem();
+                GemUge SavedJsonClass= await Persistance.LoadGemFromJsonAsync("Uge" + Dato.GetNextUge() + ".json");
+                GemUge hentet = new GemUge();
                 hentet = SavedJsonClass;
                 hentet.exportFraGemNæsteUge();
             }

@@ -90,7 +90,7 @@ namespace Faellesspisning
         public async void Tilmeld()
         {
             await OCTilDagList(Singleton.GetInstance().NæsteTempUge.BoligListe);
-            Gem gem = new Gem();
+            GemUge gem = new GemUge();
             gem.importTilGemNæsteUge();
            Persistance.SaveJson(gem,"Uge"+Dato.GetNextUge()+".Json");
 

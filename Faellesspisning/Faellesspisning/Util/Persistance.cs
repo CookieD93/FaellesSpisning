@@ -25,12 +25,12 @@ namespace Faellesspisning
            
         }
 
-        public static async Task<Gem> LoadGemFromJsonAsync(string filenameLoad)
+        public static async Task<GemUge> LoadGemFromJsonAsync(string filenameLoad)
         {
             string JsonString = await DeSerializeFileAsync(filenameLoad);
             return
-                (Gem)
-                JsonConvert.DeserializeObject(JsonString, typeof(Gem));
+                (GemUge)
+                JsonConvert.DeserializeObject(JsonString, typeof(GemUge));
         }
         public static async Task<Dictionary<int,Bolig>> LoadStandardFromJsonAsync(string filenameLoad)
         {

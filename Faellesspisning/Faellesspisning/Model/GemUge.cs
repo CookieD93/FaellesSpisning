@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Faellesspisning
 {
-    class Gem
+    class GemUge
     {
         public Uge GemtUge { get; set; }
 
        // public Dictionary<int,Bolig> GemtBoligliste { get; set; }
 
-        public Gem()
+        public GemUge()
         {
             
         }

@@ -42,7 +42,7 @@ namespace Faellesspisning
             NæsteTempUge = ugeX;
             await Standardido();
             NæsteTempUge.BoligListe = StandardListe;
-            Gem gem = new Gem();
+            GemUge gem = new GemUge();
             gem.importTilGemNæsteUge();
             Persistance.SaveJson(gem, "Uge" + Dato.GetNextUge() + ".json");
         }public async Task nyDenneUge()
@@ -51,7 +51,7 @@ namespace Faellesspisning
             DenneTempUge = ugeX;
             await Standardido();
             DenneTempUge.BoligListe = StandardListe;
-            Gem gem = new Gem();
+            GemUge gem = new GemUge();
             gem.importTilGemDenneUge();
             Persistance.SaveJson(gem, "Uge" + Dato.GetDenneUge() + ".json");
         }

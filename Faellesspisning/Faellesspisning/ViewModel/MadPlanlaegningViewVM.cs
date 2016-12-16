@@ -111,12 +111,12 @@ namespace Faellesspisning
         }
         public void Save()
         {
-            Gem gem = new Gem();
+            GemUge gem = new GemUge();
             gem.importTilGemDenneUge();
             Persistance.SaveJson(gem,"Uge"+Dato.GetDenneUge()+".json");
         }public void SaveNæste()
         {
-            Gem gem = new Gem();
+            GemUge gem = new GemUge();
             gem.importTilGemNæsteUge();
             Persistance.SaveJson(gem,"Uge"+Dato.GetNextUge()+".json");
         }
