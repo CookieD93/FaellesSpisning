@@ -21,28 +21,28 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="UgeplanButton" Content="Ugeplan" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+            <Button x:Name="UgeplanButton" Content="Ugeplan" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#0078d7" Foreground="#fff" FontWeight="Bold" FontSize="20">
                 <interactivity:Interaction.Behaviors>
                     <core:EventTriggerBehavior EventName="Click">
                         <core:NavigateToPageAction TargetPage="Faellesspisning.MainPage"/>
                     </core:EventTriggerBehavior>
                 </interactivity:Interaction.Behaviors>
             </Button>
-            <Button x:Name="TilmeldingButton" Content="Tilmelding" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Button x:Name="TilmeldingButton" Content="Tilmelding" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#0078d7" Foreground="#fff" FontWeight="Bold" FontSize="20">
                 <interactivity:Interaction.Behaviors>
                     <core:EventTriggerBehavior EventName="Click">
                         <core:NavigateToPageAction TargetPage="Faellesspisning.TilmedlingView"/>
                     </core:EventTriggerBehavior>
                 </interactivity:Interaction.Behaviors>
             </Button>
-            <Button x:Name="HistorikButton" Content="Historik/Betaling" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsEnabled="False">
+            <Button x:Name="HistorikButton" Content="Historik/Betaling" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsEnabled="False" Background="#0078d7" Foreground="#fff" FontWeight="Bold" FontSize="20">
                 <interactivity:Interaction.Behaviors>
                     <core:EventTriggerBehavior EventName="Click">
                         <core:NavigateToPageAction TargetPage="Faellesspisning.HistorikView"/>
                     </core:EventTriggerBehavior>
                 </interactivity:Interaction.Behaviors>
             </Button>
-            <Button x:Name="MadplanButton" Content="Madplan" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+            <Button x:Name="MadplanButton" Content="Madplan" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#0078d7" Foreground="#fff" FontWeight="Bold" FontSize="20">
                 <interactivity:Interaction.Behaviors>
                     <core:EventTriggerBehavior EventName="Click">
                         <core:NavigateToPageAction TargetPage="Faellesspisning.MadPlanlaegningView"/>
@@ -62,15 +62,15 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="9*"/>
 
             </Grid.RowDefinitions>
-            <ComboBox x:Name="comboBox" HorizontalAlignment="Center"  Grid.Row="0" VerticalAlignment="Center" Width="160" ItemsSource="{Binding Boligliste.Keys}" SelectedValue="{Binding DropDownValg, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1"/>
+            <ComboBox x:Name="comboBox" HorizontalAlignment="Center"  BorderBrush="#0078d7" Grid.Row="0" VerticalAlignment="Center" Width="160" ItemsSource="{Binding Boligliste.Keys}" SelectedValue="{Binding DropDownValg, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1"/>
 
             <ListView Name="UgeViser" Grid.Column="1" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
-            <TextBlock Name="Hus" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="50,0,0,0" Text="Hus: " FontSize="50"/>
-            <TextBlock Name="SelectedHus" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="160,-2,0,-3" FontSize="50" Text="{Binding DropDownValg, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="129" />
+            <TextBlock Name="Hus" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="50,0,0,0" Text="Hus: " FontSize="35"/>
+            <TextBlock Name="SelectedHus" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="160,-2,0,-3" FontSize="35" Text="{Binding DropDownValg, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="129" />
             <TextBlock x:Name="Betaling" HorizontalAlignment="Left" Margin="317,364,0,0" Grid.Row="1" TextWrapping="Wrap" Text="{Binding Payment, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5"/>
 
 
