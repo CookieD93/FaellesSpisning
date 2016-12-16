@@ -24,7 +24,7 @@ namespace Faellesspisning
 
         private Singleton()
         {
-           Standardido();
+          // Standardido();
             //DenneUge["uge"]= new Uge();
             //DenneUge = new Dictionary<string, object>();
 
@@ -45,7 +45,8 @@ namespace Faellesspisning
             GemUge gem = new GemUge();
             gem.importTilGemNæsteUge();
             Persistance.SaveJson(gem, "Uge" + Dato.GetNextUge() + ".json");
-        }public async Task nyDenneUge()
+        }
+        public async Task nyDenneUge()
         {
             Uge ugeX = new Uge();
             DenneTempUge = ugeX;

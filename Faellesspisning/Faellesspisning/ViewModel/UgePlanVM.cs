@@ -40,7 +40,7 @@ namespace Faellesspisning
 
         public async Task Boot()
         {
-            CheckNewWeek();
+            await CheckNewWeek();
            // await Task.Delay(500);
             DenneUge = Singleton.GetInstance().DenneTempUge;
             await Task.Delay(1000);
@@ -48,7 +48,7 @@ namespace Faellesspisning
             //await Task.Delay(500);
             CheckArrangement();
         }
-        private async void CheckNewWeek()
+        private async Task CheckNewWeek()
         {
             try
             {
