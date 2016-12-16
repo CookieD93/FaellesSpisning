@@ -21,7 +21,7 @@
     <packageHasNamedElement>
       <class
         Id="e66e1672-6bad-448a-a14a-61a000612aff"
-        name="Hus"
+        name="Bolig"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -29,7 +29,7 @@
           <association
             Id="10b4488b-3c32-47a9-892a-4b63033590bc"
             isDerived="false"
-            sourceEndRoleName="Hus"
+            sourceEndRoleName="Bolig"
             targetEndRoleName="Tilmelding"
             isLeaf="false"
             isAbstract="false">
@@ -41,7 +41,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="b2d09f08-7d97-4b91-b910-5867d244c926"
-                  name="Hus"
+                  name="Bolig"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -55,6 +55,45 @@
                 <memberEnd
                   Id="8944b80d-34be-4e73-92d7-4af78cc437ab"
                   name="Tilmelding"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="052f90a2-6624-4bb1-9dc5-57d52232c497"
+            isDerived="false"
+            sourceEndRoleName="Bolig"
+            targetEndRoleName="Arrangement"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="a9d0dcfe-1f7b-4a82-a333-3ba620401583"
+              LastKnownName="Arrangement"
+              LastKnownLocation="Diagrammer.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a28c2b8a-4deb-4290-8a03-b4f4a3b9334f"
+                  name="Bolig"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9758fe7d-4168-4df3-be7e-d369b6078976"
+                  name="Arrangement"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -91,7 +130,7 @@
     <packageHasNamedElement>
       <class
         Id="7b8d6f55-8217-4f5b-82c5-21578cd16437"
-        name="Beregning"
+        name="Betaling"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -156,7 +195,7 @@
     <packageHasNamedElement>
       <class
         Id="27f109f6-6635-4e16-8320-0d61dc0983ad"
-        name="Ugeplan"
+        name="Madplan"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -164,19 +203,19 @@
           <association
             Id="d2745f21-d5f8-49f2-b240-121b5ec140bf"
             isDerived="false"
-            sourceEndRoleName="Ugeplan"
-            targetEndRoleName="Beregning"
+            sourceEndRoleName="Madplan"
+            targetEndRoleName="Betaling"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
               Id="7b8d6f55-8217-4f5b-82c5-21578cd16437"
-              LastKnownName="Beregning"
+              LastKnownName="Betaling"
               LastKnownLocation="Diagrammer.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="f725e707-4ad8-4316-9eed-fe9e102e8c97"
-                  name="Ugeplan"
+                  name="Madplan"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -189,7 +228,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="14be5837-14c2-4f3d-9aeb-d838c03f5cd8"
-                  name="Beregning"
+                  name="Betaling"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -325,12 +364,12 @@
             Id="c549f746-ea49-4d7e-9255-23ab32967606"
             isDerived="false"
             sourceEndRoleName="Tilmelding"
-            targetEndRoleName="Beregning"
+            targetEndRoleName="Betaling"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
               Id="7b8d6f55-8217-4f5b-82c5-21578cd16437"
-              LastKnownName="Beregning"
+              LastKnownName="Betaling"
               LastKnownLocation="Diagrammer.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -349,7 +388,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="c9606fc6-a2ff-4224-bbc8-0557058a04fa"
-                  name="Beregning"
+                  name="Betaling"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -476,7 +515,7 @@
     <packageHasNamedElement>
       <class
         Id="a9d0dcfe-1f7b-4a82-a333-3ba620401583"
-        name="Særarrangement"
+        name="Arrangement"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -484,19 +523,19 @@
           <association
             Id="a4732ca9-6d7c-4e40-8c59-d98fe430d115"
             isDerived="false"
-            sourceEndRoleName="Særarrangement"
-            targetEndRoleName="Beregning"
+            sourceEndRoleName="Arrangement"
+            targetEndRoleName="Betaling"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
               Id="7b8d6f55-8217-4f5b-82c5-21578cd16437"
-              LastKnownName="Beregning"
+              LastKnownName="Betaling"
               LastKnownLocation="Diagrammer.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="1ce83c43-f294-4214-89c9-f712177d9f03"
-                  name="Særarrangement"
+                  name="Arrangement"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -509,7 +548,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="d8a7d0ee-5ac8-413e-86ea-adae242aad8a"
-                  name="Beregning"
+                  name="Betaling"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -3067,6 +3106,56 @@
       <undefinedType
         Id="40131803-2904-42f5-bc9f-d30129003fce"
         name="async Task" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="1b120ce7-9e33-4bdc-8b5c-c9bc9e28a359"
+        name="Madgruppen"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="242f7d98-ff84-4565-8cf6-2c0bcd3e543a"
+            isDerived="false"
+            sourceEndRoleName="Madgruppen"
+            targetEndRoleName="Madplan"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="27f109f6-6635-4e16-8320-0d61dc0983ad"
+              LastKnownName="Madplan"
+              LastKnownLocation="Diagrammer.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0c48ba6a-4e4b-4f46-ba0c-0d2599028924"
+                  name="Madgruppen"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8abd3a96-e792-478a-9bf9-b2770e1deea1"
+                  name="Madplan"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

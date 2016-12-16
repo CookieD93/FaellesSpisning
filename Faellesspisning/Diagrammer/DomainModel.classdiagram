@@ -2,14 +2,14 @@
 <logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="a7573fb3-7ca5-40ce-a370-5e6fb3f2d663" name="DomainModel" linkedPackageId="2a26e0fc-4e53-4076-881f-11bb7cbb335b" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
-      <class Id="3f8c570d-b6a6-4867-9ca3-c5003b638708" name="Hus" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="3f8c570d-b6a6-4867-9ca3-c5003b638708" name="Bolig" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="e66e1672-6bad-448a-a14a-61a000612aff" />
         <targetEnds>
-          <association Id="21817d14-c080-4e05-83d4-325c70823a72" isDerived="false" sourceEndRoleName="Hus" targetEndRoleName="Tilmelding" isLeaf="false" isAbstract="false">
+          <association Id="21817d14-c080-4e05-83d4-325c70823a72" isDerived="false" sourceEndRoleName="Bolig" targetEndRoleName="Tilmelding" isLeaf="false" isAbstract="false">
             <classMoniker Id="d7de8654-6915-41eb-ba82-3f0853cbb7ea" LastKnownName="Tilmelding" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
-                <memberEnd Id="7a84236e-b00c-47ec-b70f-8545b18943fa" name="Hus" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                <memberEnd Id="7a84236e-b00c-47ec-b70f-8545b18943fa" name="Bolig" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
                   <elementDefinition Id="b2d09f08-7d97-4b91-b910-5867d244c926" />
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -20,6 +20,22 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="10b4488b-3c32-47a9-892a-4b63033590bc" />
+          </association>
+          <association Id="2ff57c58-a13f-4085-bcfe-684d438c2940" isDerived="false" sourceEndRoleName="Bolig" targetEndRoleName="Arrangement" isLeaf="false" isAbstract="false">
+            <classMoniker Id="b1717106-2662-49d1-a7ce-0df3cbf41ea2" LastKnownName="Arrangement" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b8a2863f-c8b3-44fc-908d-9c22be44ff72" name="Bolig" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a28c2b8a-4deb-4290-8a03-b4f4a3b9334f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c8119258-8e83-43bf-9595-6ae37e429bc1" name="Arrangement" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9758fe7d-4168-4df3-be7e-d369b6078976" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="052f90a2-6624-4bb1-9dc5-57d52232c497" />
           </association>
         </targetEnds>
         <ownedAttributesInternal>
@@ -33,7 +49,7 @@
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <class Id="5f97b6b3-848f-43ea-bc95-2bf315b0b98f" name="Beregning" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="5f97b6b3-848f-43ea-bc95-2bf315b0b98f" name="Betaling" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="7b8d6f55-8217-4f5b-82c5-21578cd16437" />
         <ownedAttributesInternal>
           <property Id="c9f73c04-80d1-4ab7-8547-0dbce8dec404" name="Ugeplan.Udlæg" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -58,19 +74,19 @@
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <class Id="6150f58c-5f36-4cc3-8cf5-5ead02537637" name="Ugeplan" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="6150f58c-5f36-4cc3-8cf5-5ead02537637" name="Madplan" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="27f109f6-6635-4e16-8320-0d61dc0983ad" />
         <targetEnds>
-          <association Id="1299517d-95ee-47d0-aa87-730e97a9b34c" isDerived="false" sourceEndRoleName="Ugeplan" targetEndRoleName="Beregning" isLeaf="false" isAbstract="false">
-            <classMoniker Id="5f97b6b3-848f-43ea-bc95-2bf315b0b98f" LastKnownName="Beregning" />
+          <association Id="1299517d-95ee-47d0-aa87-730e97a9b34c" isDerived="false" sourceEndRoleName="Madplan" targetEndRoleName="Betaling" isLeaf="false" isAbstract="false">
+            <classMoniker Id="5f97b6b3-848f-43ea-bc95-2bf315b0b98f" LastKnownName="Betaling" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
-                <memberEnd Id="ed6a55eb-15d5-4303-a64c-3ab0b3e8a8b3" name="Ugeplan" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                <memberEnd Id="ed6a55eb-15d5-4303-a64c-3ab0b3e8a8b3" name="Madplan" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
                   <elementDefinition Id="f725e707-4ad8-4316-9eed-fe9e102e8c97" />
                 </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
-                <memberEnd Id="f5a7176b-b1e1-4c94-a815-75745fa7c38c" name="Beregning" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <memberEnd Id="f5a7176b-b1e1-4c94-a815-75745fa7c38c" name="Betaling" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="14be5837-14c2-4f3d-9aeb-d838c03f5cd8" />
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -122,8 +138,8 @@
       <class Id="d7de8654-6915-41eb-ba82-3f0853cbb7ea" name="Tilmelding" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="79794386-ce75-4683-923c-7777ce6de138" />
         <targetEnds>
-          <association Id="a5ce3a93-3d1a-4e45-80d1-e2fa5c6fdde0" isDerived="false" sourceEndRoleName="Tilmelding" targetEndRoleName="Beregning" isLeaf="false" isAbstract="false">
-            <classMoniker Id="5f97b6b3-848f-43ea-bc95-2bf315b0b98f" LastKnownName="Beregning" />
+          <association Id="a5ce3a93-3d1a-4e45-80d1-e2fa5c6fdde0" isDerived="false" sourceEndRoleName="Tilmelding" targetEndRoleName="Betaling" isLeaf="false" isAbstract="false">
+            <classMoniker Id="5f97b6b3-848f-43ea-bc95-2bf315b0b98f" LastKnownName="Betaling" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="856d05e2-dfc7-424d-9831-8f1829e278b8" name="Tilmelding" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -131,7 +147,7 @@
                 </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
-                <memberEnd Id="1759b5d8-1978-44e3-8883-25a9a25b136a" name="Beregning" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <memberEnd Id="1759b5d8-1978-44e3-8883-25a9a25b136a" name="Betaling" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="c9606fc6-a2ff-4224-bbc8-0557058a04fa" />
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -180,19 +196,19 @@
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <class Id="b1717106-2662-49d1-a7ce-0df3cbf41ea2" name="Særarrangement" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="b1717106-2662-49d1-a7ce-0df3cbf41ea2" name="Arrangement" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="a9d0dcfe-1f7b-4a82-a333-3ba620401583" />
         <targetEnds>
-          <association Id="e4bef189-97fa-496a-8239-3735974c45a9" isDerived="false" sourceEndRoleName="Særarrangement" targetEndRoleName="Beregning" isLeaf="false" isAbstract="false">
-            <classMoniker Id="5f97b6b3-848f-43ea-bc95-2bf315b0b98f" LastKnownName="Beregning" />
+          <association Id="e4bef189-97fa-496a-8239-3735974c45a9" isDerived="false" sourceEndRoleName="Arrangement" targetEndRoleName="Betaling" isLeaf="false" isAbstract="false">
+            <classMoniker Id="5f97b6b3-848f-43ea-bc95-2bf315b0b98f" LastKnownName="Betaling" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
-                <memberEnd Id="6feecb67-ce69-4a34-8a9a-0c22fc52bb04" name="Særarrangement" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                <memberEnd Id="6feecb67-ce69-4a34-8a9a-0c22fc52bb04" name="Arrangement" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
                   <elementDefinition Id="1ce83c43-f294-4214-89c9-f712177d9f03" />
                 </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
-                <memberEnd Id="e3580386-4da8-4d93-ae4f-93fbc95005b0" name="Beregning" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <memberEnd Id="e3580386-4da8-4d93-ae4f-93fbc95005b0" name="Betaling" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="d8a7d0ee-5ac8-413e-86ea-adae242aad8a" />
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -317,6 +333,29 @@
         <elementDefinition Id="fbfd7ade-9e78-4f16-a834-ae73c1845a18" />
       </referencedType>
     </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="79b69ab1-f1be-43ff-9cb9-6523ef6560b1" name="Madgruppen" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1b120ce7-9e33-4bdc-8b5c-c9bc9e28a359" />
+        <targetEnds>
+          <association Id="4af0f2f1-f396-4aa4-9ace-0ffc350a93dc" isDerived="false" sourceEndRoleName="Madgruppen" targetEndRoleName="Madplan" isLeaf="false" isAbstract="false">
+            <classMoniker Id="6150f58c-5f36-4cc3-8cf5-5ead02537637" LastKnownName="Madplan" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ea86d5d4-3928-44f8-8034-4030628c9358" name="Madgruppen" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0c48ba6a-4e4b-4f46-ba0c-0d2599028924" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6e4a26f4-f5ce-4ac9-861e-559c80cc735e" name="Madplan" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8abd3a96-e792-478a-9bf9-b2770e1deea1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="242f7d98-ff84-4565-8cf6-2c0bcd3e543a" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
   </packagedElements>
   <package Id="2a26e0fc-4e53-4076-881f-11bb7cbb335b" name="Diagrammer">
     <elementDefinition Id="c0f52b76-d1af-4e60-b82b-4a792cfb4b96" />
