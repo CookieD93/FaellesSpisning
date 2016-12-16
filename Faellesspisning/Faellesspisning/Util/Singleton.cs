@@ -50,6 +50,7 @@ namespace Faellesspisning
         {
             Uge ugeX = new Uge();
             DenneTempUge = ugeX;
+            DenneTempUge.StrUgenummer = "" + Dato.GetDenneUge();
             await Standardido();
             DenneTempUge.BoligListe = StandardListe;
             GemUge gem = new GemUge();

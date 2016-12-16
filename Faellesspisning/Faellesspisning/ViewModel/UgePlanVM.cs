@@ -37,13 +37,13 @@ namespace Faellesspisning
         {
             Boot();
         }
-
+        //Indsæt await på singletons 
         public async Task Boot()
         {
             await CheckNewWeek();
            // await Task.Delay(500);
             DenneUge = Singleton.GetInstance().DenneTempUge;
-            await Task.Delay(1000);
+            await Task.Delay(500);
             NæsteUge = Singleton.GetInstance().NæsteTempUge;
             //await Task.Delay(500);
             CheckArrangement();

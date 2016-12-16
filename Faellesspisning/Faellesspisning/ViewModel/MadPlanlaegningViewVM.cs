@@ -12,6 +12,14 @@ namespace Faellesspisning
     class MadPlanlaegningViewVM
     {
         private Uge _denneUge;
+        private string _dmUdlæg;
+        private string _dTiUdlæg;
+        private string _doUdlæg;
+        private string _dToUdlæg;
+        private string _nmUdlæg;
+        private string _nTiUdlæg;
+        private string _noUdlæg;
+        private string _nToUdlæg;
         public RelayCommand GemRetterForDenneUgeRelayCommand { get; set; }
         public RelayCommand GemRetterForNæsteUgeRelayCommand { get; set; }
         public RelayCommand GemArrangementRelayCommand { get; set; }
@@ -67,15 +75,55 @@ namespace Faellesspisning
         //public string NTiNote { get; set; }
         //public string NONote { get; set; }
         //public string NToNote { get; set; }
-        ////Udlæg
-        //public string DMUdlæg { get; set; }
-        //public string DTiUdlæg { get; set; }
-        //public string DOUdlæg { get; set; }
-        //public string DToUdlæg { get; set; }
-        //public string NMUdlæg { get; set; }
-        //public string NTiUdlæg { get; set; }
-        //public string NOUdlæg { get; set; }
-        //public string NToUdlæg { get; set; } 
+        //Udlæg
+        public string DMUdlæg
+        {
+            get { return _dmUdlæg; }
+            set { _dmUdlæg = value; tryParseToDouble(value, NæsteUge.torsdag.Udlæg);
+            }
+        }
+
+        public string DTiUdlæg
+        {
+            get { return _dTiUdlæg; }
+            set { _dTiUdlæg = value; tryParseToDouble(value, NæsteUge.torsdag.Udlæg); }
+        }
+
+        public string DOUdlæg
+        {
+            get { return _doUdlæg; }
+            set { _doUdlæg = value; tryParseToDouble(value, NæsteUge.torsdag.Udlæg); }
+        }
+
+        public string DToUdlæg
+        {
+            get { return _dToUdlæg; }
+            set { _dToUdlæg = value; tryParseToDouble(value, NæsteUge.torsdag.Udlæg); }
+        }
+
+        public string NMUdlæg
+        {
+            get { return _nmUdlæg; }
+            set { _nmUdlæg = value; tryParseToDouble(value, NæsteUge.torsdag.Udlæg); }
+        }
+
+        public string NTiUdlæg
+        {
+            get { return _nTiUdlæg; }
+            set { _nTiUdlæg = value; tryParseToDouble(value, NæsteUge.torsdag.Udlæg); }
+        }
+
+        public string NOUdlæg
+        {
+            get { return _noUdlæg; }
+            set { _noUdlæg = value; tryParseToDouble(value, NæsteUge.torsdag.Udlæg); }
+        }
+
+        public string NToUdlæg
+        {
+            get { return _nToUdlæg; }
+            set { _nToUdlæg = value; tryParseToDouble(value,NæsteUge.torsdag.Udlæg); }
+        }
 
         #endregion
 
@@ -87,6 +135,17 @@ namespace Faellesspisning
 
         public Uge NæsteUge { get; set; }
 
+        private void tryParseToDouble(string input, double BindPlace)
+        {
+            double tal=0;
+            double result;
+            
+            if (double.TryParse(input, out result))
+            {
+                BindPlace = double.Parse(input);
+            }
+            Persistance.MessageDialogHelper.Show("Fejl yo","fejl");
+        }
         public MadPlanlaegningViewVM()
         {
             _denneUge = Singleton.GetInstance().DenneTempUge;

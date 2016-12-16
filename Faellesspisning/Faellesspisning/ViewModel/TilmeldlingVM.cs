@@ -6,15 +6,16 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Popups;
 using Eventmaker.Common;
 
 namespace Faellesspisning
 {
     class TilmeldlingVm : INotifyPropertyChanged
     {
-       // private Dictionary<int, Bolig> tempListe;
-        private int _dropDownValg=72;
-       // private readonly ObservableCollection<int> _dropdownHuse;
+        // private Dictionary<int, Bolig> tempListe;
+        private int _dropDownValg = 72;
+        // private readonly ObservableCollection<int> _dropdownHuse;
         public RelayCommand StandardRelayCommand { get; set; }
         public RelayCommand TilmeldRelayCommand { get; set; }
         //public Dictionary<int,Bolig> Boligliste { get; set; }
@@ -31,10 +32,15 @@ namespace Faellesspisning
         public int DropDownValg
         {
             get { return _dropDownValg; }
-            set { _dropDownValg = value;OnPropertyChanged();GetView(); }
+            set
+            {
+                _dropDownValg = value;
+                OnPropertyChanged();
+                GetView();
+            }
         }
 
-        
+
         public TilmeldlingVm()
         {
             DropdownHuse = new ObservableCollection<int>(Singleton.GetInstance().NæsteTempUge.BoligListe.Keys);
@@ -46,17 +52,16 @@ namespace Faellesspisning
             //    tempListe.Add(i,new Bolig(i));
             //}
             //Persistance.SaveJson(tempListe,"templiste.json");
-                
+
             OCmandag = new ObservableCollection<string>();
-            OCtirsdag = new ObservableCollection<string>();  
+            OCtirsdag = new ObservableCollection<string>();
             OConsdag = new ObservableCollection<string>();
-            OCtorsdag = new ObservableCollection<string>();        
+            OCtorsdag = new ObservableCollection<string>();
             GetView();
             // foreach list in lists
             // udfold dagene
             // foreach dag i dagene
             // udfold v/b/b/b
-            
         }
 
         public void GetView()
@@ -76,31 +81,55 @@ namespace Faellesspisning
                 OConsdag.Add(Convert.ToString(temp.DaglistOns[i]));
                 OCtorsdag.Add(Convert.ToString(temp.DaglistTor[i]));
             }
-            
+         }
 
-        }
         //SetStandard skal vidst ændres lidt, da den gemmer hele den 
-        public async void SetStandard() 
+        public async void SetStandard()
         {
-           await OCTilDagList(Singleton.GetInstance().StandardListe);
-           Persistance.SaveJson(Singleton.GetInstance().StandardListe,"Standard.json");
-           Tilmeld();
+            await OCTilDagList(Singleton.GetInstance().StandardListe);
+            Persistance.SaveJson(Singleton.GetInstance().StandardListe, "Standard.json");
+            Tilmeld();
         }
 
         public async void Tilmeld()
         {
-            await OCTilDagList(Singleton.GetInstance().NæsteTempUge.BoligListe);
-            GemUge gem = new GemUge();
-            gem.importTilGemNæsteUge();
-           Persistance.SaveJson(gem,"Uge"+Dato.GetNextUge()+".Json");
-
+            try
+            {
+                await OCTilDagList(Singleton.GetInstance().NæsteTempUge.BoligListe);
+                GemUge gem = new GemUge();
+                gem.importTilGemNæsteUge();
+                Persistance.SaveJson(gem, "Uge" + Dato.GetNextUge() + ".Json");
+            }
+            catch (FormatException)
+            {
+                Persistance.MessageDialogHelper.Show("Der stod tekst i et felt","Fejl");
+            }
         }
 
         public async Task OCTilDagList(Dictionary<int,Bolig> hvilkenBoligListe)
         {
             Bolig tempBolig = hvilkenBoligListe[DropDownValg];
+            
             for (int i = 0; i < 4; i++)
             {
+                #region If WhiteSpace
+                if (OCmandag[i] == "")
+                {
+                    OCmandag[i] = "0";
+                }
+                if (OCtirsdag[i] == "")
+                {
+                    OCtirsdag[i] = "0";
+                }
+                if (OConsdag[i] == "")
+                {
+                    OConsdag[i] = "0";
+                }
+                if (OCtorsdag[i] == "")
+                {
+                    OCtorsdag[i] = "0";
+                } 
+                #endregion
                 tempBolig.DaglistMan[i] = int.Parse(OCmandag[i]);
                 tempBolig.DaglistTir[i] = int.Parse(OCtirsdag[i]);
                 tempBolig.DaglistOns[i] = int.Parse(OConsdag[i]);
