@@ -56,5 +56,6 @@ namespace Faellesspisning
             return KuvertPris()*DeltagereValgtHus(j);
         }
 
+
     }
 }
