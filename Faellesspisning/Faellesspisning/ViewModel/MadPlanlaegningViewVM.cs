@@ -11,8 +11,9 @@ namespace Faellesspisning
 {
     class MadPlanlaegningViewVM
     {
-        private Uge _uge;
-        public RelayCommand GemRetForDagForUgeRelayCommand { get; set; }
+        private Uge _denneUge;
+        public RelayCommand GemRetterForDenneUgeRelayCommand { get; set; }
+        public RelayCommand GemRetterForNæsteUgeRelayCommand { get; set; }
         public RelayCommand GemArrangementRelayCommand { get; set; }
         public Arrangement ArrangementIPlanlægning { get; set; }
         // En constructer der laver et nyt object af en klassen Uge
@@ -78,16 +79,20 @@ namespace Faellesspisning
 
         #endregion
 
-        public Uge uge
+        public Uge DenneUge
         {
-            get { return _uge; }
-            set { _uge = value; }
+            get { return _denneUge; }
+            set { _denneUge = value; }
         }
+
+        public Uge NæsteUge { get; set; }
 
         public MadPlanlaegningViewVM()
         {
-            _uge = Singleton.GetInstance().TempUge;
-            GemRetForDagForUgeRelayCommand = new RelayCommand(Save);
+            _denneUge = Singleton.GetInstance().DenneTempUge;
+            NæsteUge = Singleton.GetInstance().NæsteTempUge;
+            GemRetterForDenneUgeRelayCommand = new RelayCommand(Save);
+            GemRetterForNæsteUgeRelayCommand = new RelayCommand(SaveNæste);
             GemArrangementRelayCommand = new RelayCommand(GemArrangement);
  
             ArrangementIPlanlægning = new Arrangement();
@@ -106,8 +111,14 @@ namespace Faellesspisning
         }
         public void Save()
         {
-            Gem gem = new Gem();
+            GemUge gem = new GemUge();
+            gem.importTilGemDenneUge();
             Persistance.SaveJson(gem,"Uge"+Dato.GetDenneUge()+".json");
+        }public void SaveNæste()
+        {
+            GemUge gem = new GemUge();
+            gem.importTilGemNæsteUge();
+            Persistance.SaveJson(gem,"Uge"+Dato.GetNextUge()+".json");
         }
     }
 }

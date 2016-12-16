@@ -100,7 +100,7 @@
     <Compile Include="Model\Bolig.cs" />
     <Compile Include="Util\Dato.cs" />
     <Compile Include="Model\Dag.cs" />
-    <Compile Include="Model\Gem.cs" />
+    <Compile Include="Model\GemUge.cs" />
     <Compile Include="Model\Historik.cs" />
     <Compile Include="View\HistorikView.xaml.cs">
       <DependentUpon>HistorikView.xaml</DependentUpon>

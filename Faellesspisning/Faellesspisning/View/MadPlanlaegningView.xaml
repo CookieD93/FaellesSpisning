@@ -69,7 +69,7 @@
                                 <RowDefinition Height="1*" />
                                 <RowDefinition Height="9*" />
                             </Grid.RowDefinitions>
-                            <TextBlock Text="{Binding uge.StrUgenummer}" FontSize="30" VerticalAlignment="Stretch"
+                            <TextBlock Text="{Binding DenneUge.StrUgenummer}" FontSize="30" VerticalAlignment="Stretch"
                                        HorizontalAlignment="Stretch" Margin="50,0,34,10" Grid.Row="0" Height="auto"
                                        Width="auto" />
                             <Pivot Grid.Row="1">
@@ -108,26 +108,26 @@
                                         <TextBox x:Name="textBox_RetM" HorizontalAlignment="Stretch"
                                                  Margin="155,30,40,20" Grid.Row="0" TextWrapping="Wrap"
                                                  PlaceholderText="Hvad skal der spises" VerticalAlignment="Stretch"
-                                                 Text="{Binding uge.mandag.Ret, Mode=TwoWay}" />
+                                                 Text="{Binding DenneUge.mandag.Ret, Mode=TwoWay}" />
                                         <TextBox x:Name="textBox_ChefKokM" HorizontalAlignment="Stretch"
                                                  Margin="155,30,40,20" Grid.Row="0" TextWrapping="Wrap"
                                                  PlaceholderText="Hvem har ansvar for Køkkenet"
                                                  VerticalAlignment="Stretch" Grid.Column="1"
-                                                 Text="{Binding uge.mandag.ChefKok, Mode=TwoWay}" />
+                                                 Text="{Binding DenneUge.mandag.ChefKok, Mode=TwoWay}" />
                                         <TextBox x:Name="textBox_HjaelpeKokkeM" HorizontalAlignment="Stretch"
                                                  Margin="50,47,40,20" Grid.Row="1" TextWrapping="Wrap"
                                                  PlaceholderText="Hvem skal hjælpe med maden"
                                                  VerticalAlignment="Stretch"
-                                                 Text="{Binding uge.mandag.Kokke, Mode=TwoWay}" />
+                                                 Text="{Binding DenneUge.mandag.Kokke, Mode=TwoWay}" />
                                         <TextBox x:Name="textBox_OpryddereM" HorizontalAlignment="Stretch"
                                                  Margin="50,47,40,20" Grid.Row="1" TextWrapping="Wrap"
                                                  PlaceholderText="Hvem skal rydder op" VerticalAlignment="Stretch"
-                                                 Grid.Column="1" Text="{Binding uge.mandag.Opryddere, Mode=TwoWay}" />
+                                                 Grid.Column="1" Text="{Binding DenneUge.mandag.Opryddere, Mode=TwoWay}" />
                                         <TextBox x:Name="textBox_NoteM" HorizontalAlignment="Stretch"
                                                  Margin="50,47,40,20" Grid.Row="2" TextWrapping="Wrap"
                                                  PlaceholderText="Note til retten evt. indkøbsliste"
                                                  VerticalAlignment="Stretch"
-                                                 Text="{Binding uge.mandag.Note, Mode=TwoWay}" />
+                                                 Text="{Binding DenneUge.mandag.Note, Mode=TwoWay}" />
                                         <Grid Grid.Row="2" Grid.Column="1" Margin="0,0,0,70"
                                               VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
                                             <Grid.RowDefinitions>
@@ -146,13 +146,13 @@
                                             <TextBox x:Name="textBox_UdlaegM" HorizontalAlignment="Stretch"
                                                      Margin="50,0,0,60" Grid.Row="1" TextWrapping="Wrap"
                                                      PlaceholderText="Hvad er der købt for" VerticalAlignment="Stretch"
-                                                     Grid.Column="0" Text="{Binding uge.mandag.Udlæg, Mode=TwoWay}" />
+                                                     Grid.Column="0" Text="{Binding DenneUge.mandag.Udlæg, Mode=TwoWay}" />
                                             <TextBlock Name="KrM" Margin="5,0,0,0" Text="Kr."
                                                        VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
                                                        Grid.Row="1" Grid.Column="1" FontSize="25" />
                                         </Grid>
                                         <Button Name="GemMandag" Width="125" Grid.Row="2" Grid.Column="1"
-                                                Command="{Binding GemRetForDagForUgeRelayCommand}" Margin="0,150,20,0"
+                                                Command="{Binding GemRetterForDenneUgeRelayCommand}" Margin="0,150,20,0"
                                                 VerticalAlignment="Top" HorizontalAlignment="Right" Content="Gem" />
                                     </Grid>
                                 </PivotItem>
@@ -191,26 +191,26 @@
                                         <TextBox x:Name="textBox_RetTir" HorizontalAlignment="Stretch"
                                                  Margin="155,30,40,20" Grid.Row="0" TextWrapping="Wrap"
                                                  PlaceholderText="Hvad skal der spises" VerticalAlignment="Stretch"
-                                                 Text="{Binding uge.tirsdag.Ret, Mode=TwoWay}" />
+                                                 Text="{Binding DenneUge.tirsdag.Ret, Mode=TwoWay}" />
                                         <TextBox x:Name="textBox_ChefKokTir" HorizontalAlignment="Stretch"
                                                  Margin="155,30,40,20" Grid.Row="0" TextWrapping="Wrap"
                                                  PlaceholderText="Hvem har ansvar for Køkkenet"
                                                  VerticalAlignment="Stretch" Grid.Column="1"
-                                                 Text="{Binding uge.tirsdag.ChefKok, Mode=TwoWay}" />
+                                                 Text="{Binding DenneUge.tirsdag.ChefKok, Mode=TwoWay}" />
                                         <TextBox x:Name="textBox_HjaelpeKokkeTir" HorizontalAlignment="Stretch"
                                                  Margin="50,47,40,20" Grid.Row="1" TextWrapping="Wrap"
                                                  PlaceholderText="Hvem skal hjælpe med maden"
                                                  VerticalAlignment="Stretch"
-                                                 Text="{Binding uge.tirsdag.Kokke, Mode=TwoWay}" />
+                                                 Text="{Binding DenneUge.tirsdag.Kokke, Mode=TwoWay}" />
                                         <TextBox x:Name="textBox_OpryddereTir" HorizontalAlignment="Stretch"
                                                  Margin="50,47,40,20" Grid.Row="1" TextWrapping="Wrap"
                                                  PlaceholderText="Hvem skal rydder op" VerticalAlignment="Stretch"
-                                                 Grid.Column="1" Text="{Binding uge.tirsdag.Opryddere, Mode=TwoWay}" />
+                                                 Grid.Column="1" Text="{Binding DenneUge.tirsdag.Opryddere, Mode=TwoWay}" />
                                         <TextBox x:Name="textBox_NoteTir" HorizontalAlignment="Stretch"
                                                  Margin="50,47,40,20" Grid.Row="2" TextWrapping="Wrap"
                                                  PlaceholderText="Note til retten evt. indkøbsliste"
                                                  VerticalAlignment="Stretch"
-                                                 Text="{Binding uge.tirsdag.Note, Mode=TwoWay}" />
+                                                 Text="{Binding DenneUge.tirsdag.Note, Mode=TwoWay}" />
                                         <Grid Grid.Row="2" Grid.Column="1" Margin="0,0,0,70"
                                               VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
                                             <Grid.RowDefinitions>
@@ -229,12 +229,13 @@
                                             <TextBox x:Name="textBox_UdlaegTir" HorizontalAlignment="Stretch"
                                                      Margin="50,0,0,60" Grid.Row="1" TextWrapping="Wrap"
                                                      PlaceholderText="Hvad er der købt for" VerticalAlignment="Stretch"
-                                                     Grid.Column="0" Text="{Binding uge.tirsdag.Udlæg, Mode=TwoWay}" />
+                                                     Grid.Column="0" Text="{Binding DenneUge.tirsdag.Udlæg, Mode=TwoWay}" />
                                             <TextBlock Name="KrTir" Margin="5,0,0,0" Text="Kr."
                                                        VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
                                                        Grid.Row="1" Grid.Column="1" FontSize="25" />
                                         </Grid>
                                         <Button Name="GemTirsdag" Width="125" Grid.Row="2" Grid.Column="1"
+                                                Command="{Binding GemRetterForDenneUgeRelayCommand}"
                                                 Margin="0,150,20,0" VerticalAlignment="Top" HorizontalAlignment="Right"
                                                 Content="Gem" />
                                     </Grid>
@@ -273,26 +274,26 @@
                                         <TextBox x:Name="textBox_RetO" HorizontalAlignment="Stretch"
                                                  Margin="155,30,40,20" Grid.Row="0" TextWrapping="Wrap"
                                                  PlaceholderText="Hvad skal der spises" VerticalAlignment="Stretch"
-                                                 Text="{Binding uge.onsdag.Ret, Mode=TwoWay}" />
+                                                 Text="{Binding DenneUge.onsdag.Ret, Mode=TwoWay}" />
                                         <TextBox x:Name="textBox_ChefKokO" HorizontalAlignment="Stretch"
                                                  Margin="155,30,40,20" Grid.Row="0" TextWrapping="Wrap"
                                                  PlaceholderText="Hvem har ansvar for Køkkenet"
                                                  VerticalAlignment="Stretch" Grid.Column="1"
-                                                 Text="{Binding uge.onsdag.ChefKok, Mode=TwoWay}" />
+                                                 Text="{Binding DenneUge.onsdag.ChefKok, Mode=TwoWay}" />
                                         <TextBox x:Name="textBox_HjaelpeKokkeO" HorizontalAlignment="Stretch"
                                                  Margin="50,47,40,20" Grid.Row="1" TextWrapping="Wrap"
                                                  PlaceholderText="Hvem skal hjælpe med maden"
                                                  VerticalAlignment="Stretch"
-                                                 Text="{Binding uge.onsdag.Kokke, Mode=TwoWay}" />
+                                                 Text="{Binding DenneUge.onsdag.Kokke, Mode=TwoWay}" />
                                         <TextBox x:Name="textBox_OpryddereO" HorizontalAlignment="Stretch"
                                                  Margin="50,47,40,20" Grid.Row="1" TextWrapping="Wrap"
                                                  PlaceholderText="Hvem skal rydder op" VerticalAlignment="Stretch"
-                                                 Grid.Column="1" Text="{Binding uge.onsdag.Opryddere, Mode=TwoWay}" />
+                                                 Grid.Column="1" Text="{Binding DenneUge.onsdag.Opryddere, Mode=TwoWay}" />
                                         <TextBox x:Name="textBox_NoteO" HorizontalAlignment="Stretch"
                                                  Margin="50,47,40,20" Grid.Row="2" TextWrapping="Wrap"
                                                  PlaceholderText="Note til retten evt. indkøbsliste"
                                                  VerticalAlignment="Stretch"
-                                                 Text="{Binding uge.onsdag.Note, Mode=TwoWay}" />
+                                                 Text="{Binding DenneUge.onsdag.Note, Mode=TwoWay}" />
                                         <Grid Grid.Row="2" Grid.Column="1" Margin="0,0,0,70"
                                               VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
                                             <Grid.RowDefinitions>
@@ -311,12 +312,13 @@
                                             <TextBox x:Name="textBox_UdlaegO" HorizontalAlignment="Stretch"
                                                      Margin="50,0,0,60" Grid.Row="1" TextWrapping="Wrap"
                                                      PlaceholderText="Hvad er der købt for" VerticalAlignment="Stretch"
-                                                     Grid.Column="0" Text="{Binding uge.onsdag.Udlæg, Mode=TwoWay}" />
+                                                     Grid.Column="0" Text="{Binding DenneUge.onsdag.Udlæg, Mode=TwoWay}" />
                                             <TextBlock Name="KrO" Margin="5,0,0,0" Text="Kr."
                                                        VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
                                                        Grid.Row="1" Grid.Column="1" FontSize="25" />
                                         </Grid>
                                         <Button Name="GemOnsdag" Width="125" Grid.Row="2" Grid.Column="1"
+                                                Command="{Binding GemRetterForDenneUgeRelayCommand}"
                                                 Margin="0,150,20,0" VerticalAlignment="Top" HorizontalAlignment="Right"
                                                 Content="Gem" />
                                     </Grid>
@@ -356,26 +358,26 @@
                                         <TextBox x:Name="textBox_RetTor" HorizontalAlignment="Stretch"
                                                  Margin="155,30,40,20" Grid.Row="0" TextWrapping="Wrap"
                                                  PlaceholderText="Hvad skal der spises" VerticalAlignment="Stretch"
-                                                 Text="{Binding uge.torsdag.Ret, Mode=TwoWay}" />
+                                                 Text="{Binding DenneUge.torsdag.Ret, Mode=TwoWay}" />
                                         <TextBox x:Name="textBox_ChefKokTor" HorizontalAlignment="Stretch"
                                                  Margin="155,30,40,20" Grid.Row="0" TextWrapping="Wrap"
                                                  PlaceholderText="Hvem har ansvar for Køkkenet"
                                                  VerticalAlignment="Stretch" Grid.Column="1"
-                                                 Text="{Binding uge.torsdag.ChefKok, Mode=TwoWay}" />
+                                                 Text="{Binding DenneUge.torsdag.ChefKok, Mode=TwoWay}" />
                                         <TextBox x:Name="textBox_HjaelpeKokkeTor" HorizontalAlignment="Stretch"
                                                  Margin="50,47,40,20" Grid.Row="1" TextWrapping="Wrap"
                                                  PlaceholderText="Hvem skal hjælpe med maden"
                                                  VerticalAlignment="Stretch"
-                                                 Text="{Binding uge.torsdag.Kokke, Mode=TwoWay}" />
+                                                 Text="{Binding DenneUge.torsdag.Kokke, Mode=TwoWay}" />
                                         <TextBox x:Name="textBox_OpryddereTor" HorizontalAlignment="Stretch"
                                                  Margin="50,47,40,20" Grid.Row="1" TextWrapping="Wrap"
                                                  PlaceholderText="Hvem skal rydder op" VerticalAlignment="Stretch"
-                                                 Grid.Column="1" Text="{Binding uge.torsdag.Opryddere, Mode=TwoWay}" />
+                                                 Grid.Column="1" Text="{Binding DenneUge.torsdag.Opryddere, Mode=TwoWay}" />
                                         <TextBox x:Name="textBox_NoteTor" HorizontalAlignment="Stretch"
                                                  Margin="50,47,40,20" Grid.Row="2" TextWrapping="Wrap"
                                                  PlaceholderText="Note til retten evt. indkøbsliste"
                                                  VerticalAlignment="Stretch"
-                                                 Text="{Binding uge.torsdag.Note, Mode=TwoWay}" />
+                                                 Text="{Binding DenneUge.torsdag.Note, Mode=TwoWay}" />
                                         <Grid Grid.Row="2" Grid.Column="1" Margin="0,0,0,70"
                                               VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
                                             <Grid.RowDefinitions>
@@ -394,12 +396,13 @@
                                             <TextBox x:Name="textBox_UdlaegTor" HorizontalAlignment="Stretch"
                                                      Margin="50,0,0,60" Grid.Row="1" TextWrapping="Wrap"
                                                      PlaceholderText="Hvad er der købt for" VerticalAlignment="Stretch"
-                                                     Grid.Column="0" Text="{Binding uge.torsdag.Udlæg, Mode=TwoWay}" />
+                                                     Grid.Column="0" Text="{Binding DenneUge.torsdag.Udlæg, Mode=TwoWay}" />
                                             <TextBlock Name="KrTor" Margin="5,0,0,0" Text="Kr."
                                                        VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
                                                        Grid.Row="1" Grid.Column="1" FontSize="25" />
                                         </Grid>
                                         <Button Name="GemTorsdag" Width="125" Grid.Row="2" Grid.Column="1"
+                                                Command="{Binding GemRetterForDenneUgeRelayCommand}"
                                                 Margin="0,150,20,0" VerticalAlignment="Top" HorizontalAlignment="Right"
                                                 Content="Gem" />
                                     </Grid>
@@ -414,7 +417,7 @@
                                 <RowDefinition Height="1*" />
                                 <RowDefinition Height="9*" />
                             </Grid.RowDefinitions>
-                            <TextBlock Text="Uge Nr." FontSize="30" VerticalAlignment="Stretch"
+                            <TextBlock Text="{Binding NæsteUge.StrUgenummer}" FontSize="30" VerticalAlignment="Stretch"
                                        HorizontalAlignment="Stretch" Margin="50,0,34,10" Grid.Row="0" Height="auto"
                                        Width="auto" />
                             <Pivot Grid.Row="1">
@@ -450,22 +453,22 @@
                                                    Height="auto" Margin="50,10,0,0" TextWrapping="Wrap" Text="Note:"
                                                    VerticalAlignment="Top" Width="auto" Grid.Row="2" />
 
-                                        <TextBox x:Name="textBox_RetM2" HorizontalAlignment="Stretch"
+                                        <TextBox x:Name="textBox_RetM2" Text="{Binding NæsteUge.mandag.Ret, Mode=TwoWay}" HorizontalAlignment="Stretch"
                                                  Margin="155,30,40,20" Grid.Row="0" TextWrapping="Wrap"
                                                  PlaceholderText="Hvad skal der spises" VerticalAlignment="Stretch" />
-                                        <TextBox x:Name="textBox_ChefKokM2" HorizontalAlignment="Stretch"
+                                        <TextBox x:Name="textBox_ChefKokM2" Text="{Binding NæsteUge.mandag.ChefKok, Mode=TwoWay}" HorizontalAlignment="Stretch"
                                                  Margin="155,30,40,20" Grid.Row="0" TextWrapping="Wrap"
                                                  PlaceholderText="Hvem har ansvar for Køkkenet"
                                                  VerticalAlignment="Stretch" Grid.Column="1" />
-                                        <TextBox x:Name="textBox_HjaelpeKokkeM2" HorizontalAlignment="Stretch"
+                                        <TextBox x:Name="textBox_HjaelpeKokkeM2" Text="{Binding NæsteUge.mandag.Kokke, Mode=TwoWay}" HorizontalAlignment="Stretch"
                                                  Margin="50,47,40,20" Grid.Row="1" TextWrapping="Wrap"
                                                  PlaceholderText="Hvem skal hjælpe med maden"
                                                  VerticalAlignment="Stretch" AcceptsReturn="True" />
-                                        <TextBox x:Name="textBox_OpryddereM2" HorizontalAlignment="Stretch"
+                                        <TextBox x:Name="textBox_OpryddereM2" Text="{Binding NæsteUge.mandag.Opryddere, Mode=TwoWay}" HorizontalAlignment="Stretch"
                                                  Margin="50,47,40,20" Grid.Row="1" TextWrapping="Wrap"
                                                  PlaceholderText="Hvem skal rydder op" VerticalAlignment="Stretch"
                                                  Grid.Column="1" AcceptsReturn="True" />
-                                        <TextBox x:Name="textBox_NoteM2" HorizontalAlignment="Stretch"
+                                        <TextBox x:Name="textBox_NoteM2" Text="{Binding NæsteUge.mandag.Note, Mode=TwoWay}" HorizontalAlignment="Stretch"
                                                  Margin="50,47,40,20" Grid.Row="2" TextWrapping="Wrap"
                                                  PlaceholderText="Note til retten evt. indkøbsliste"
                                                  VerticalAlignment="Stretch" AcceptsReturn="True" />
@@ -484,7 +487,7 @@
                                                        HorizontalAlignment="Left" Height="32" Margin="50,10,0,0"
                                                        TextWrapping="Wrap" Text="Udlæg:" VerticalAlignment="Top"
                                                        Width="76" Grid.Row="0" Grid.Column="0" />
-                                            <TextBox x:Name="textBox_UdlaegM2" HorizontalAlignment="Stretch"
+                                            <TextBox x:Name="textBox_UdlaegM2" Text="{Binding NæsteUge.mandag.Udlæg, Mode=TwoWay}" HorizontalAlignment="Stretch"
                                                      Margin="50,0,0,60" Grid.Row="1" TextWrapping="Wrap"
                                                      PlaceholderText="Hvad er der købt for" VerticalAlignment="Stretch"
                                                      Grid.Column="0" />
@@ -493,6 +496,7 @@
                                                        Grid.Row="1" Grid.Column="1" FontSize="25" />
                                         </Grid>
                                         <Button Name="GemMandag2" Width="125" Grid.Row="2" Grid.Column="1"
+                                                Command="{Binding GemRetterForNæsteUgeRelayCommand}"
                                                 Margin="0,150,20,0" VerticalAlignment="Top" HorizontalAlignment="Right"
                                                 Content="Gem" />
                                     </Grid>
@@ -529,22 +533,22 @@
                                                    Height="auto" Margin="50,10,0,0" TextWrapping="Wrap" Text="Note:"
                                                    VerticalAlignment="Top" Width="auto" Grid.Row="2" />
 
-                                        <TextBox x:Name="textBox_RetTir2" HorizontalAlignment="Stretch"
+                                        <TextBox x:Name="textBox_RetTir2" Text="{Binding NæsteUge.tirsdag.Ret, Mode=TwoWay}" HorizontalAlignment="Stretch"
                                                  Margin="155,30,40,20" Grid.Row="0" TextWrapping="Wrap"
                                                  PlaceholderText="Hvad skal der spises" VerticalAlignment="Stretch" />
-                                        <TextBox x:Name="textBox_ChefKokTir2" HorizontalAlignment="Stretch"
+                                        <TextBox x:Name="textBox_ChefKokTir2" Text="{Binding NæsteUge.tirsdag.ChefKok, Mode=TwoWay}" HorizontalAlignment="Stretch"
                                                  Margin="155,30,40,20" Grid.Row="0" TextWrapping="Wrap"
                                                  PlaceholderText="Hvem har ansvar for Køkkenet"
                                                  VerticalAlignment="Stretch" Grid.Column="1" />
-                                        <TextBox x:Name="textBox_HjaelpeKokkeTir2" HorizontalAlignment="Stretch"
+                                        <TextBox x:Name="textBox_HjaelpeKokkeTir2" Text="{Binding NæsteUge.tirsdag.Kokke, Mode=TwoWay}" HorizontalAlignment="Stretch"
                                                  Margin="50,47,40,20" Grid.Row="1" TextWrapping="Wrap"
                                                  PlaceholderText="Hvem skal hjælpe med maden"
                                                  VerticalAlignment="Stretch" AcceptsReturn="True" />
-                                        <TextBox x:Name="textBox_OpryddereTir2" HorizontalAlignment="Stretch"
+                                        <TextBox x:Name="textBox_OpryddereTir2" Text="{Binding NæsteUge.tirsdag.Opryddere, Mode=TwoWay}" HorizontalAlignment="Stretch"
                                                  Margin="50,47,40,20" Grid.Row="1" TextWrapping="Wrap"
                                                  PlaceholderText="Hvem skal rydder op" VerticalAlignment="Stretch"
                                                  Grid.Column="1" AcceptsReturn="True" />
-                                        <TextBox x:Name="textBox_NoteTir2" HorizontalAlignment="Stretch"
+                                        <TextBox x:Name="textBox_NoteTir2" Text="{Binding NæsteUge.tirsdag.Note, Mode=TwoWay}" HorizontalAlignment="Stretch"
                                                  Margin="50,47,40,20" Grid.Row="2" TextWrapping="Wrap"
                                                  PlaceholderText="Note til retten evt. indkøbsliste"
                                                  VerticalAlignment="Stretch" AcceptsReturn="True" />
@@ -563,7 +567,7 @@
                                                        HorizontalAlignment="Left" Height="32" Margin="50,10,0,0"
                                                        TextWrapping="Wrap" Text="Udlæg:" VerticalAlignment="Top"
                                                        Width="76" Grid.Row="0" Grid.Column="0" />
-                                            <TextBox x:Name="textBox_UdlaegTir2" HorizontalAlignment="Stretch"
+                                            <TextBox x:Name="textBox_UdlaegTir2" Text="{Binding NæsteUge.tirsdag.Udlæg, Mode=TwoWay}" HorizontalAlignment="Stretch"
                                                      Margin="50,0,0,60" Grid.Row="1" TextWrapping="Wrap"
                                                      PlaceholderText="Hvad er der købt for" VerticalAlignment="Stretch"
                                                      Grid.Column="0" />
@@ -572,6 +576,7 @@
                                                        Grid.Row="1" Grid.Column="1" FontSize="25" />
                                         </Grid>
                                         <Button Name="GemTirsdag2" Width="125" Grid.Row="2" Grid.Column="1"
+                                                Command="{Binding GemRetterForNæsteUgeRelayCommand}"
                                                 Margin="0,150,20,0" VerticalAlignment="Top" HorizontalAlignment="Right"
                                                 Content="Gem" />
                                     </Grid>
@@ -608,22 +613,22 @@
                                                    Height="auto" Margin="50,10,0,0" TextWrapping="Wrap" Text="Note:"
                                                    VerticalAlignment="Top" Width="auto" Grid.Row="2" />
 
-                                        <TextBox x:Name="textBox_RetO2" HorizontalAlignment="Stretch"
+                                        <TextBox x:Name="textBox_RetO2" Text="{Binding NæsteUge.onsdag.Ret, Mode=TwoWay}" HorizontalAlignment="Stretch"
                                                  Margin="155,30,40,20" Grid.Row="0" TextWrapping="Wrap"
                                                  PlaceholderText="Hvad skal der spises" VerticalAlignment="Stretch" />
-                                        <TextBox x:Name="textBox_ChefKokO2" HorizontalAlignment="Stretch"
+                                        <TextBox x:Name="textBox_ChefKokO2" Text="{Binding NæsteUge.onsdag.ChefKok, Mode=TwoWay}" HorizontalAlignment="Stretch"
                                                  Margin="155,30,40,20" Grid.Row="0" TextWrapping="Wrap"
                                                  PlaceholderText="Hvem har ansvar for Køkkenet"
                                                  VerticalAlignment="Stretch" Grid.Column="1" />
-                                        <TextBox x:Name="textBox_HjaelpeKokkeO2" HorizontalAlignment="Stretch"
+                                        <TextBox x:Name="textBox_HjaelpeKokkeO2" Text="{Binding NæsteUge.onsdag.Kokke, Mode=TwoWay}" HorizontalAlignment="Stretch"
                                                  Margin="50,47,40,20" Grid.Row="1" TextWrapping="Wrap"
                                                  PlaceholderText="Hvem skal hjælpe med maden"
                                                  VerticalAlignment="Stretch" AcceptsReturn="True" />
-                                        <TextBox x:Name="textBox_OpryddereO2" HorizontalAlignment="Stretch"
+                                        <TextBox x:Name="textBox_OpryddereO2" Text="{Binding NæsteUge.onsdag.Opryddere, Mode=TwoWay}" HorizontalAlignment="Stretch"
                                                  Margin="50,47,40,20" Grid.Row="1" TextWrapping="Wrap"
                                                  PlaceholderText="Hvem skal rydder op" VerticalAlignment="Stretch"
                                                  Grid.Column="1" AcceptsReturn="True" />
-                                        <TextBox x:Name="textBox_NoteO2" HorizontalAlignment="Stretch"
+                                        <TextBox x:Name="textBox_NoteO2" Text="{Binding NæsteUge.onsdag.Note, Mode=TwoWay}" HorizontalAlignment="Stretch"
                                                  Margin="50,47,40,20" Grid.Row="2" TextWrapping="Wrap"
                                                  PlaceholderText="Note til retten evt. indkøbsliste"
                                                  VerticalAlignment="Stretch" AcceptsReturn="True" />
@@ -642,7 +647,7 @@
                                                        HorizontalAlignment="Left" Height="32" Margin="50,10,0,0"
                                                        TextWrapping="Wrap" Text="Udlæg:" VerticalAlignment="Top"
                                                        Width="76" Grid.Row="0" Grid.Column="0" />
-                                            <TextBox x:Name="textBox_UdlaegO2" HorizontalAlignment="Stretch"
+                                            <TextBox x:Name="textBox_UdlaegO2" Text="{Binding NæsteUge.onsdag.Udlæg, Mode=TwoWay}" HorizontalAlignment="Stretch"
                                                      Margin="50,0,0,60" Grid.Row="1" TextWrapping="Wrap"
                                                      PlaceholderText="Hvad er der købt for" VerticalAlignment="Stretch"
                                                      Grid.Column="0" />
@@ -651,6 +656,7 @@
                                                        Grid.Row="1" Grid.Column="1" FontSize="25" />
                                         </Grid>
                                         <Button Name="GemOnsdag2" Width="125" Grid.Row="2" Grid.Column="1"
+                                                Command="{Binding GemRetterForNæsteUgeRelayCommand}"
                                                 Margin="0,150,20,0" VerticalAlignment="Top" HorizontalAlignment="Right"
                                                 Content="Gem" />
                                     </Grid>
@@ -687,22 +693,22 @@
                                                    Height="auto" Margin="50,10,0,0" TextWrapping="Wrap" Text="Note:"
                                                    VerticalAlignment="Top" Width="auto" Grid.Row="2" />
 
-                                        <TextBox x:Name="textBox_RetTor2" HorizontalAlignment="Stretch"
+                                        <TextBox x:Name="textBox_RetTor2" Text="{Binding NæsteUge.torsdag.Ret, Mode=TwoWay}" HorizontalAlignment="Stretch"
                                                  Margin="100,30,40,20" Grid.Row="0" TextWrapping="Wrap"
                                                  PlaceholderText="Hvad skal der spises" VerticalAlignment="Stretch" />
-                                        <TextBox x:Name="textBox_ChefKokTor2" HorizontalAlignment="Stretch"
+                                        <TextBox x:Name="textBox_ChefKokTor2" Text="{Binding NæsteUge.torsdag.ChefKok, Mode=TwoWay}" HorizontalAlignment="Stretch"
                                                  Margin="155,30,40,20" Grid.Row="0" TextWrapping="Wrap"
                                                  PlaceholderText="Hvem har ansvar for Køkkenet"
                                                  VerticalAlignment="Stretch" Grid.Column="1" />
-                                        <TextBox x:Name="textBox_HjaelpeKokkeTor2" HorizontalAlignment="Stretch"
+                                        <TextBox x:Name="textBox_HjaelpeKokkeTor2" Text="{Binding NæsteUge.torsdag.Kokke, Mode=TwoWay}" HorizontalAlignment="Stretch"
                                                  Margin="50,47,40,20" Grid.Row="1" TextWrapping="Wrap"
                                                  PlaceholderText="Hvem skal hjælpe med maden"
                                                  VerticalAlignment="Stretch" AcceptsReturn="True" />
-                                        <TextBox x:Name="textBox_OpryddereTor2" HorizontalAlignment="Stretch"
+                                        <TextBox x:Name="textBox_OpryddereTor2" Text="{Binding NæsteUge.torsdag.Opryddere, Mode=TwoWay}" HorizontalAlignment="Stretch"
                                                  Margin="50,47,40,20" Grid.Row="1" TextWrapping="Wrap"
                                                  PlaceholderText="Hvem skal rydder op" VerticalAlignment="Stretch"
                                                  Grid.Column="1" AcceptsReturn="True" />
-                                        <TextBox x:Name="textBox_NoteTor2" HorizontalAlignment="Stretch"
+                                        <TextBox x:Name="textBox_NoteTor2" Text="{Binding NæsteUge.torsdag.Note, Mode=TwoWay}" HorizontalAlignment="Stretch"
                                                  Margin="50,47,40,20" Grid.Row="2" TextWrapping="Wrap"
                                                  PlaceholderText="Note til retten evt. indkøbsliste"
                                                  VerticalAlignment="Stretch" AcceptsReturn="True" />
@@ -721,7 +727,7 @@
                                                        HorizontalAlignment="Left" Height="32" Margin="50,10,0,0"
                                                        TextWrapping="Wrap" Text="Udlæg:" VerticalAlignment="Top"
                                                        Width="76" Grid.Row="0" Grid.Column="0" />
-                                            <TextBox x:Name="textBox_UdlaegTor2" HorizontalAlignment="Stretch"
+                                            <TextBox x:Name="textBox_UdlaegTor2" Text="{Binding NæsteUge.torsdag.Udlæg, Mode=TwoWay}" HorizontalAlignment="Stretch"
                                                      Margin="50,0,0,60" Grid.Row="1" TextWrapping="Wrap"
                                                      PlaceholderText="Hvad er der købt for" VerticalAlignment="Stretch"
                                                      Grid.Column="0" />
@@ -730,6 +736,7 @@
                                                        Grid.Row="1" Grid.Column="1" FontSize="25" />
                                         </Grid>
                                         <Button Name="GemTorsdag2" Width="125" Grid.Row="2" Grid.Column="1"
+                                                Command="{Binding GemRetterForNæsteUgeRelayCommand}"
                                                 Margin="0,150,20,0" VerticalAlignment="Top" HorizontalAlignment="Right"
                                                 Content="Gem" />
                                     </Grid>
@@ -773,9 +780,9 @@
                             <TextBox x:Name="textBox_HusAnsvarlig" HorizontalAlignment="Stretch" Margin="155,30,40,20"
                                      Grid.Row="0" TextWrapping="Wrap" PlaceholderText="Hvem har ansvar for Køkkenet"
                                      VerticalAlignment="Stretch" Grid.Column="1" Text="{Binding ArrangementIPlanlægning.HusNummer, Mode=TwoWay}"/>
-                            <CheckBox x:Name="CheckBox_Private" Command="{Binding ArrangementIPlanlægning.ErArrangementPrivat}"/>
-                            <TextBox x:Name="textBox_Dato" HorizontalAlignment="Stretch" Margin="50,47,40,20"
-                                     Grid.Row="1" TextWrapping="Wrap" PlaceholderText="Dato for arrangementet"
+                            <CheckBox x:Name="CheckBox_Private" Command="{Binding ArrangementIPlanlægning.ErArrangementPrivat}" Margin="50,73,0,78" Grid.Row="1"/>
+                            <TextBox x:Name="textBox_Dato" HorizontalAlignment="Stretch" Margin="50,57,418,85"
+                                     Grid.Row="1" TextWrapping="Wrap" PlaceholderText="31/12/2016"
                                      VerticalAlignment="Stretch" Grid.Column="1" AcceptsReturn="True" />
                             <TextBox x:Name="textBox_Note" HorizontalAlignment="Stretch" Margin="50,47,40,20"
                                      Grid.Row="2" TextWrapping="Wrap" Text="{Binding ArrangementIPlanlægning.Note, Mode=TwoWay}"

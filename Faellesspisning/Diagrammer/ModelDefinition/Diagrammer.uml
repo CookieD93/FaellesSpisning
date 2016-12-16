@@ -27,45 +27,6 @@
         isActiveClass="false">
         <targetEnds>
           <association
-            Id="55bc2df6-17de-4d5a-9324-59e02e5b5766"
-            isDerived="false"
-            sourceEndRoleName="Hus"
-            targetEndRoleName="Ugeplan"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="27f109f6-6635-4e16-8320-0d61dc0983ad"
-              LastKnownName="Ugeplan"
-              LastKnownLocation="Diagrammer.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="25ecd0c0-6428-4609-964d-155dcf17afc2"
-                  name="Hus"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="cdc0f345-18f1-43a5-8330-ba211109ef73"
-                  name="Ugeplan"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
             Id="10b4488b-3c32-47a9-892a-4b63033590bc"
             isDerived="false"
             sourceEndRoleName="Hus"
@@ -891,22 +852,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="263bffb8-f70d-4c78-a977-d138c257fb80"
-            name="MessageOccurrenceSpecification20">
-            <covered>
-              <lifelineMoniker
-                Id="ef10d912-2c80-4574-b481-9b78e918f9f3"
-                LastKnownName="System"
-                LastKnownLocation="Diagrammer.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="8c659938-22c6-4bdb-b63f-e8a231c3aa15"
             name="MessageOccurrenceSpecification19">
             <covered>
               <lifelineMoniker
                 Id="20a1d04e-4bf8-485b-87fd-874533267cee"
                 LastKnownName="Bruger"
+                LastKnownLocation="Diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="263bffb8-f70d-4c78-a977-d138c257fb80"
+            name="MessageOccurrenceSpecification20">
+            <covered>
+              <lifelineMoniker
+                Id="ef10d912-2c80-4574-b481-9b78e918f9f3"
+                LastKnownName="System"
                 LastKnownLocation="Diagrammer.uml" />
             </covered>
           </messageOccurrenceSpecification>

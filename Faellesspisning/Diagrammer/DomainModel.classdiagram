@@ -5,22 +5,6 @@
       <class Id="3f8c570d-b6a6-4867-9ca3-c5003b638708" name="Hus" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="e66e1672-6bad-448a-a14a-61a000612aff" />
         <targetEnds>
-          <association Id="05f37f81-0ed6-44ee-8085-bbb9dae52b05" isDerived="false" sourceEndRoleName="Hus" targetEndRoleName="Ugeplan" isLeaf="false" isAbstract="false">
-            <classMoniker Id="6150f58c-5f36-4cc3-8cf5-5ead02537637" LastKnownName="Ugeplan" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="fdf9fec5-0e8b-47b0-a5f8-a5cd5e4d8e65" name="Hus" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="25ecd0c0-6428-4609-964d-155dcf17afc2" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="8a5bc261-80cd-460c-b53f-0213b0af5cd1" name="Ugeplan" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="cdc0f345-18f1-43a5-8330-ba211109ef73" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="55bc2df6-17de-4d5a-9324-59e02e5b5766" />
-          </association>
           <association Id="21817d14-c080-4e05-83d4-325c70823a72" isDerived="false" sourceEndRoleName="Hus" targetEndRoleName="Tilmelding" isLeaf="false" isAbstract="false">
             <classMoniker Id="d7de8654-6915-41eb-ba82-3f0853cbb7ea" LastKnownName="Tilmelding" />
             <relationshipOwnedElementsInternal>
