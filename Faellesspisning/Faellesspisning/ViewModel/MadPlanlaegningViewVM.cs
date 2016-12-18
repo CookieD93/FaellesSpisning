@@ -12,6 +12,14 @@ namespace Faellesspisning
     class MadPlanlaegningViewVM
     {
         private Uge _denneUge;
+        private string _dmUdlæg;
+        private string _dTiUdlæg;
+        private string _doUdlæg;
+        private string _dToUdlæg;
+        private string _nmUdlæg;
+        private string _nTiUdlæg;
+        private string _noUdlæg;
+        private string _nToUdlæg;
         public RelayCommand GemRetterForDenneUgeRelayCommand { get; set; }
         public RelayCommand GemRetterForNæsteUgeRelayCommand { get; set; }
         public RelayCommand GemArrangementRelayCommand { get; set; }
@@ -67,15 +75,86 @@ namespace Faellesspisning
         //public string NTiNote { get; set; }
         //public string NONote { get; set; }
         //public string NToNote { get; set; }
-        ////Udlæg
-        //public string DMUdlæg { get; set; }
-        //public string DTiUdlæg { get; set; }
-        //public string DOUdlæg { get; set; }
-        //public string DToUdlæg { get; set; }
-        //public string NMUdlæg { get; set; }
-        //public string NTiUdlæg { get; set; }
-        //public string NOUdlæg { get; set; }
-        //public string NToUdlæg { get; set; } 
+        //Udlæg
+        public string DMUdlæg
+        {
+            get { return _dmUdlæg; }
+            set
+            {
+                _dmUdlæg = value;
+                DenneUge.mandag.Udlæg= tryParseToDouble(value);
+            }
+        }
+
+        public string DTiUdlæg
+        {
+            get { return _dTiUdlæg; }
+            set
+            {
+                _dTiUdlæg = value;
+                DenneUge.tirsdag.Udlæg=tryParseToDouble(value);
+            }
+        }
+
+        public string DOUdlæg
+        {
+            get { return _doUdlæg; }
+            set
+            {
+                _doUdlæg = value;
+                DenneUge.onsdag.Udlæg=tryParseToDouble(value);
+            }
+        }
+
+        public string DToUdlæg
+        {
+            get { return _dToUdlæg; }
+            set
+            {
+                _dToUdlæg = value;
+                DenneUge.torsdag.Udlæg=tryParseToDouble(value);
+            }
+        }
+
+        public string NMUdlæg
+        {
+            get { return _nmUdlæg; }
+            set
+            {
+                _nmUdlæg = value;
+                NæsteUge.mandag.Udlæg=tryParseToDouble(value);
+            }
+        }
+
+        public string NTiUdlæg
+        {
+            get { return _nTiUdlæg; }
+            set
+            {
+                _nTiUdlæg = value;
+                NæsteUge.tirsdag.Udlæg=tryParseToDouble(value);
+            }
+        }
+
+        public string NOUdlæg
+        {
+            get { return _noUdlæg; }
+            set
+            {
+                _noUdlæg = value;
+                NæsteUge.onsdag.Udlæg=tryParseToDouble(value);
+            }
+        }
+
+        public string NToUdlæg
+        {
+            get { return _nToUdlæg; }
+            set
+            {
+                _nToUdlæg = value;
+                NæsteUge.torsdag.Udlæg=tryParseToDouble(value);
+            }
+        }
 
         #endregion
 
@@ -87,6 +166,18 @@ namespace Faellesspisning
 
         public Uge NæsteUge { get; set; }
 
+        private double tryParseToDouble(string input)
+        {
+            double result;
+
+            if (double.TryParse(input, out result) && double.Parse(input) > 0)
+            {
+               return result;
+            }   
+                Persistance.MessageDialogHelper.Show(@"Udlægget er ikke et tal, der vil derfor blive gemt et udlæg på 0 hvis der bliver trykket ""Gem"" ", "fejl");
+                return 0;
+        }
+
         public MadPlanlaegningViewVM()
         {
             _denneUge = Singleton.GetInstance().DenneTempUge;
@@ -94,7 +185,6 @@ namespace Faellesspisning
             GemRetterForDenneUgeRelayCommand = new RelayCommand(Save);
             GemRetterForNæsteUgeRelayCommand = new RelayCommand(SaveNæste);
             GemArrangementRelayCommand = new RelayCommand(GemArrangement);
- 
             ArrangementIPlanlægning = new Arrangement();
 
             // Psuedo kode:
@@ -105,10 +195,11 @@ namespace Faellesspisning
         public void GemArrangement()
         {
             Singleton.GetInstance().ArrengementListe.Add(ArrangementIPlanlægning);
-            Persistance.SaveJson(Singleton.GetInstance().ArrengementListe,"Arrangementer.json");
+            Persistance.SaveJson(Singleton.GetInstance().ArrengementListe, "Arrangementer.json");
             Persistance.MessageDialogHelper.Show("File Saved", "Saved");
 
         }
+
         public void Save()
         {
             GemUge gem = new GemUge();

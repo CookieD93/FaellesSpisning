@@ -51,10 +51,68 @@ namespace Faellesspisning
             return Result;
         }
 
-        public double HusBetaling(int j)
+        public string HusBetaling(int j)
         {
-            return KuvertPris()*DeltagereValgtHus(j);
+            string result;
+            if (KuvertPris()<=0||DeltagereValgtHus(j)<=0)
+            {
+                result = $"ikke nok tal til beregning";
+                return result;
+            }
+            result = $"{KuvertPris() * DeltagereValgtHus(j)}";
+            return result;
         }
+
+        public double DeltagereMandag()
+        {
+            double Result = 0;
+            foreach (KeyValuePair<int, Bolig> hus in Singleton.GetInstance().DenneTempUge.BoligListe)
+            {
+                Bolig TempBolig = Singleton.GetInstance().DenneTempUge.BoligListe[hus.Key];
+
+
+                Result = TempBolig.DaglistMan[0] + TempBolig.DaglistMan[1]*0.5 + TempBolig.DaglistMan[2]*0.25;
+            }
+            return Result;
+        }
+        public double DeltagereTirsdag()
+        {
+            double Result = 0;
+            foreach (KeyValuePair<int, Bolig> hus in Singleton.GetInstance().DenneTempUge.BoligListe)
+            {
+                Bolig TempBolig = Singleton.GetInstance().DenneTempUge.BoligListe[hus.Key];
+
+
+                Result = TempBolig.DaglistTir[0] + TempBolig.DaglistTir[1] * 0.5 + TempBolig.DaglistTir[2] * 0.25;
+            }
+            return Result;
+        }
+        public double DeltagereOnsdag()
+        {
+            double Result = 0;
+            foreach (KeyValuePair<int, Bolig> hus in Singleton.GetInstance().DenneTempUge.BoligListe)
+            {
+                Bolig TempBolig = Singleton.GetInstance().DenneTempUge.BoligListe[hus.Key];
+
+
+                Result = TempBolig.DaglistOns[0] + TempBolig.DaglistOns[1] * 0.5 + TempBolig.DaglistOns[2] * 0.25;
+            }
+            return Result;
+        }
+        public double DeltagereTorsdag()
+        {
+            double Result = 0;
+            foreach (KeyValuePair<int, Bolig> hus in Singleton.GetInstance().DenneTempUge.BoligListe)
+            {
+                Bolig TempBolig = Singleton.GetInstance().DenneTempUge.BoligListe[hus.Key];
+
+
+                Result = TempBolig.DaglistTor[0] + TempBolig.DaglistTor[1] * 0.5 + TempBolig.DaglistTor[2] * 0.25;
+            }
+            return Result;
+        }
+
+
 
 
     }

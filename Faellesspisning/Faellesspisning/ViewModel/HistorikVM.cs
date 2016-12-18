@@ -12,7 +12,7 @@ namespace Faellesspisning
 {
     class HistorikVM : INotifyPropertyChanged
     {
-        public double Payment
+        public string Payment
         {
             get { return _payment; }
             set { _payment = value; OnPropertyChanged(); }
@@ -22,7 +22,7 @@ namespace Faellesspisning
 
         private int _dropDownValg;
         private readonly ObservableCollection<int> _dropdownHuse;
-        private double _payment ;
+        private string _payment ;
 
 
         public Dictionary<int, Bolig> Boligliste { get; set; }
