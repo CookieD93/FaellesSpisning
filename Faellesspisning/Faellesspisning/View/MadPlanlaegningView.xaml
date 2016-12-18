@@ -311,6 +311,7 @@
                                         <TextBox HorizontalAlignment="Stretch"
                                                  Margin="50,47,40,20" Grid.Row="1" TextWrapping="Wrap"
                                                  PlaceholderText="Hvem skal rydder op" VerticalAlignment="Stretch"
+                                                 IsReadOnly="True"
                                                  Grid.Column="1"
                                                  Text="{Binding DenneUge.onsdag.Opryddere, Mode=TwoWay}" />
                                         <TextBox HorizontalAlignment="Stretch" Grid.Column="0"

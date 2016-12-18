@@ -8,27 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Popups;
 using Eventmaker.Common;
+using Faellesspisning;
 
 namespace Faellesspisning
 {
     class TilmeldlingVm : INotifyPropertyChanged
     {
-        // private Dictionary<int, Bolig> tempListe;
         private int _dropDownValg = 72;
-        // private readonly ObservableCollection<int> _dropdownHuse;
         public RelayCommand StandardRelayCommand { get; set; }
         public RelayCommand TilmeldRelayCommand { get; set; }
-        //public Dictionary<int,Bolig> Boligliste { get; set; }
-        public ObservableCollection<string> OCmandag { get; set; }
-        public ObservableCollection<string> OCtirsdag { get; set; }
-        public ObservableCollection<string> OConsdag { get; set; }
-        public ObservableCollection<string> OCtorsdag { get; set; }
-
+        public static ObservableCollection<string> OCmandag { get; set; }
+        public static ObservableCollection<string> OCtirsdag { get; set; }
+        public static ObservableCollection<string> OConsdag { get; set; }
+        public static ObservableCollection<string> OCtorsdag { get; set; }
         public ObservableCollection<int> DropdownHuse { get; set; }
-        //{
-        //    get { return _dropdownHuse; }
-        //}
-
         public int DropDownValg
         {
             get { return _dropDownValg; }
@@ -39,36 +32,19 @@ namespace Faellesspisning
                 GetView();
             }
         }
-
-
         public TilmeldlingVm()
         {
             DropdownHuse = new ObservableCollection<int>(Singleton.GetInstance().NæsteTempUge.BoligListe.Keys);
             TilmeldRelayCommand = new RelayCommand(Tilmeld);
             StandardRelayCommand = new RelayCommand(SetStandard);
-            //tempListe = new Dictionary<int,Bolig>();
-            //for (int i = 0; i < 22; i++)
-            //{
-            //    tempListe.Add(i,new Bolig(i));
-            //}
-            //Persistance.SaveJson(tempListe,"templiste.json");
-
             OCmandag = new ObservableCollection<string>();
             OCtirsdag = new ObservableCollection<string>();
             OConsdag = new ObservableCollection<string>();
             OCtorsdag = new ObservableCollection<string>();
             GetView();
-            // foreach list in lists
-            // udfold dagene
-            // foreach dag i dagene
-            // udfold v/b/b/b
         }
-
         public void GetView()
         {
-
-            //Convert from int to string
-
             OCmandag.Clear();
             OCtirsdag.Clear();
             OConsdag.Clear();
@@ -82,15 +58,12 @@ namespace Faellesspisning
                 OCtorsdag.Add(Convert.ToString(temp.DaglistTor[i]));
             }
          }
-
-        //SetStandard skal vidst ændres lidt, da den gemmer hele den 
         public async void SetStandard()
         {
             await OCTilDagList(Singleton.GetInstance().StandardListe);
             Persistance.SaveJson(Singleton.GetInstance().StandardListe, "Standard.json");
             Tilmeld();
         }
-
         public async void Tilmeld()
         {
             try
@@ -98,18 +71,17 @@ namespace Faellesspisning
                 await OCTilDagList(Singleton.GetInstance().NæsteTempUge.BoligListe);
                 GemUge gem = new GemUge();
                 gem.importTilGemNæsteUge();
-                Persistance.SaveJson(gem, "Uge" + Dato.GetNextUge() + ".Json");
+                Persistance.SaveJson(gem, "Uge" + Dato.GetNæsteUge() + ".Json");
+                Persistance.MessageDialogHelper.Show("Din Tilmelding er hermed gemt!","Gemt");
             }
             catch (FormatException)
             {
                 Persistance.MessageDialogHelper.Show("Der stod tekst i et felt","Fejl");
             }
         }
-
         public async Task OCTilDagList(Dictionary<int,Bolig> hvilkenBoligListe)
         {
             Bolig tempBolig = hvilkenBoligListe[DropDownValg];
-            
             for (int i = 0; i < 4; i++)
             {
                 #region If WhiteSpace
@@ -137,9 +109,7 @@ namespace Faellesspisning
             }
             hvilkenBoligListe[DropDownValg] = tempBolig;
             await Task.Delay(500); // Nødvendigt Delay (ellers får den ikke gemt de rigtige ting)
-
         }
-
         #region NotifyPropertyChanged
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -148,6 +118,5 @@ namespace Faellesspisning
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 #endregion
-
     }
 }

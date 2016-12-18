@@ -11,34 +11,22 @@ namespace Faellesspisning
 {
     class Uge
     {
-        public DateTime DtUgenummer { get; set; }
         public string StrUgenummer { get; set; }
         public int IntUgenummer { get; set; }
         public Dag mandag { get; set; }
         public Dag tirsdag { get; set; }
         public Dag onsdag { get; set; }
         public Dag torsdag { get; set; }
-
         public Dictionary<int,Bolig> BoligListe { get; set; }
-
-        // Denne klasses konstruktør skal oprettet 4 objekter af klassen Dag. Der indeholder Dagsnavn = Mandag, Tirsdag, osv.
-        // Hvor alle de andre felter er tomme.
-
         public Uge()
         {
-            StrUgenummer = "Uge"+Dato.GetNextUge();
-            //Psuedo kode
-            //Ugenummer = GetWeek;
-            IntUgenummer = Dato.GetNextUge();
-
+            StrUgenummer = "Uge"+Dato.GetNæsteUge();
+            IntUgenummer = Dato.GetNæsteUge();
             mandag = new Dag("Mandag", IntUgenummer);
             tirsdag = new Dag("Tirsdag", IntUgenummer);
             onsdag = new Dag("Onsdag", IntUgenummer);
             torsdag = new Dag("Torsdag", IntUgenummer);
-            
-            
         }
-
         public string deltagereMandag()
         {
             int voksne=new int();
@@ -52,7 +40,6 @@ namespace Faellesspisning
                 børn += bolig.Value.DaglistMan[2];
                 småbørn += bolig.Value.DaglistMan[3];
             }
-
             string result = $"Voksne: {voksne}, Unge: {unge}, Børn: {børn}, Småbørn: {småbørn}";
             return result;
         }
@@ -69,10 +56,10 @@ namespace Faellesspisning
                 børn += bolig.Value.DaglistTir[2];
                 småbørn += bolig.Value.DaglistTir[3];
             }
-
             string result = $"Voksne: {voksne}, Unge: {unge}, Børn: {børn}, Småbørn: {småbørn}";
             return result;
-        }public string deltagerOnsdag()
+        }
+        public string deltagereOnsdag()
         {
             int voksne=new int();
             int unge= new int();
@@ -85,7 +72,6 @@ namespace Faellesspisning
                 børn += bolig.Value.DaglistOns[2];
                 småbørn += bolig.Value.DaglistOns[3];
             }
-
             string result = $"Voksne: {voksne}, Unge: {unge}, Børn: {børn}, Småbørn: {småbørn}";
             return result;
         }
@@ -102,7 +88,6 @@ namespace Faellesspisning
                 børn += bolig.Value.DaglistTor[2];
                 småbørn += bolig.Value.DaglistTor[3];
             }
-
             string result = $"Voksne: {voksne}, Unge: {unge}, Børn: {børn}, Småbørn: {småbørn}";
             return result;
         }

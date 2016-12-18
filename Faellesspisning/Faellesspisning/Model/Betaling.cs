@@ -12,7 +12,6 @@ namespace Faellesspisning
         public Double DagligtUdlaegTirsdag { get; set; }
         public Double DagligtUdlaegOnsdag { get; set; }
         public Double DagligtUdlaegTorsdag { get; set; }
-
         public Betaling()
         {
             DagligtUdlaegMandag = Singleton.GetInstance().DenneTempUge.mandag.Udlæg;
@@ -20,12 +19,10 @@ namespace Faellesspisning
             DagligtUdlaegOnsdag = Singleton.GetInstance().DenneTempUge.onsdag.Udlæg;
             DagligtUdlaegTorsdag = Singleton.GetInstance().DenneTempUge.torsdag.Udlæg;
         }
-
         public double UgentligUdlæg()
         {
             return DagligtUdlaegMandag + DagligtUdlaegTirsdag + DagligtUdlaegOnsdag + DagligtUdlaegTorsdag;
         }
-
         public double KuvertPris()
         {
             return UgentligUdlæg() / DeltagereIAlt();
@@ -40,7 +37,6 @@ namespace Faellesspisning
             double Torsdag = TempBolig.DaglistTor[0] + TempBolig.DaglistTor[1] * 0.5 + TempBolig.DaglistTor[2] * 0.25;
             return Mandag+Tirsdag+Onsdag+Torsdag;
         }
-
         public double DeltagereIAlt()
         {
             double Result = 0;
@@ -50,7 +46,6 @@ namespace Faellesspisning
             }
             return Result;
         }
-
         public string HusBetaling(int j)
         {
             string result;
@@ -62,7 +57,6 @@ namespace Faellesspisning
             result = $"{KuvertPris() * DeltagereValgtHus(j)}";
             return result;
         }
-
         public double DeltagereMandag()
         {
             double Result = 0;
@@ -111,9 +105,5 @@ namespace Faellesspisning
             }
             return Result;
         }
-
-
-
-
     }
 }

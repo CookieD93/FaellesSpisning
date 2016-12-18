@@ -17,7 +17,6 @@ namespace Faellesspisning
         public string Opryddere { get; set; }
         public double Udlæg { get; set; }
         public string Note { get; set; }
-
         public Dag(string dagsNavn, int ugenummer)
         {
             Ugenummer = ugenummer;
@@ -30,6 +29,5 @@ namespace Faellesspisning
             Udlæg = 0.0;
             Note = "";
         }
-        
     }
 }
