@@ -316,7 +316,14 @@
                 <!-- <Button x:Name="button1" Content="Load" HorizontalAlignment="Left" Command="{Binding LoadRelayCommand}" Margin="785,66,0,0" VerticalAlignment="Top"/>-->
                 <Button Grid.Row="2" Content="Gem Standard" HorizontalAlignment="Right" Command="{Binding StandardRelayCommand}" Margin="0 0 400 0" Background="#0078d7" Foreground="#ffffff" FontWeight="Bold" FontSize="18"/>
 
-                <Button Grid.Row="2" Content="Gem Tilmeldte for næste uge" MinWidth="300" HorizontalAlignment="Right" Command="{Binding TilmeldRelayCommand}" Margin="0 0 50 0" Background="#0078d7" Foreground="#ffffff" FontWeight="Bold" FontSize="18"/>
+                <Button Grid.Row="2" Content="Gem Tilmeldte for næste uge" HorizontalAlignment="Right" Command="{Binding TilmeldRelayCommand}" Margin="0 0 50 0">
+                    <interactivity:Interaction.Behaviors>
+                        <core:EventTriggerBehavior EventName="Click">
+                            <core:NavigateToPageAction TargetPage="Faellesspisning.MainPage"/>
+                        </core:EventTriggerBehavior>
+                    </interactivity:Interaction.Behaviors>
+                </Button>
+                
             </Grid>
         </ScrollViewer>
         <!-- Content Grid End -->

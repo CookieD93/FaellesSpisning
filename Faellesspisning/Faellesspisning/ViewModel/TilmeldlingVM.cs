@@ -92,7 +92,8 @@ namespace Faellesspisning
             await OCTilDagList(Singleton.GetInstance().NæsteTempUge.BoligListe);
             GemUge gem = new GemUge();
             gem.importTilGemNæsteUge();
-           Persistance.SaveJson(gem,"Uge"+Dato.GetNextUge()+".Json");
+            Persistance.SaveJson(gem,"Uge"+Dato.GetNextUge()+".Json");
+            Persistance.MessageDialogHelper.Show("Du er nu Tilmeldt", "Tilmeldt");
 
         }
 
