@@ -12,20 +12,10 @@ namespace Faellesspisning
     class Bolig
     {
         public int BoligNr { get; set; }
-       // public List<List<int>> UgeList { get; set; }
-        //public List<int> DaglistMan { get; set; }
-       // public List<int> DaglistTir { get; set; }
-       // public List<int> DaglistOns { get; set; }
-      //  public List<int> DaglistTor { get; set; }
         public List<int> DaglistMan { get; set; }
         public List<int> DaglistTir { get; set; }
         public List<int> DaglistOns { get; set; }
         public List<int> DaglistTor { get; set; }
-
-        //public int[,] _standarder;
-        
-
-
         public Bolig(int boligNr)
         {
             BoligNr = boligNr;
@@ -54,7 +44,5 @@ namespace Faellesspisning
             
             
         }
-
-        
     }
 }

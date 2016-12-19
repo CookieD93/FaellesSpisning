@@ -83,7 +83,7 @@
                             <TextBlock FontSize="30" VerticalAlignment="Top" Grid.ColumnSpan="2">Mandag</TextBlock>
 
                             <TextBlock Grid.Row="0" Grid.Column="2" FontSize="30" Grid.ColumnSpan="2"  FontWeight="Bold" Text="{Binding DenneUge.mandag.Ret}" HorizontalAlignment="Stretch"></TextBlock>
-                            <TextBlock Grid.Row="1" Grid.Column="3" Text="Hvor mange"></TextBlock>
+                            <TextBlock Grid.Row="1" Grid.Column="3" Text="{Binding DeltagereMandag}"></TextBlock>
                             <TextBlock Grid.Row="1" Grid.Column="0" VerticalAlignment="Center">Chefkok:</TextBlock>
                             <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding DenneUge.mandag.ChefKok}" HorizontalAlignment="Stretch" VerticalAlignment="Center"></TextBlock>
 
@@ -119,6 +119,7 @@
                             <TextBlock FontSize="30" VerticalAlignment="Top" Grid.ColumnSpan="2">Tirsdag</TextBlock>
 
                             <TextBlock Grid.Row="0" Grid.Column="2" FontSize="30" Grid.ColumnSpan="2"  FontWeight="Bold" Text="{Binding DenneUge.tirsdag.Ret}" HorizontalAlignment="Stretch"></TextBlock>
+                            <TextBlock Grid.Row="1" Grid.Column="3" Text="{Binding DeltagereTirsdag}"></TextBlock>
 
                             <TextBlock Grid.Row="1" Grid.Column="0" VerticalAlignment="Center">Chefkok:</TextBlock>
                             <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding DenneUge.tirsdag.ChefKok}" HorizontalAlignment="Stretch" VerticalAlignment="Center"></TextBlock>
@@ -152,6 +153,7 @@
                             <TextBlock FontSize="30" VerticalAlignment="Top" Grid.ColumnSpan="2">Onsdag</TextBlock>
 
                             <TextBlock Grid.Row="0" Grid.Column="2" FontSize="30" Grid.ColumnSpan="2"  FontWeight="Bold" Text="{Binding DenneUge.onsdag.Ret}" HorizontalAlignment="Stretch"></TextBlock>
+                            <TextBlock Grid.Row="1" Grid.Column="3" Text="{Binding DeltagereOnsdag}"></TextBlock>
 
                             <TextBlock Grid.Row="1" Grid.Column="0" VerticalAlignment="Center">Chefkok:</TextBlock>
                             <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding DenneUge.onsdag.ChefKok}" HorizontalAlignment="Stretch" VerticalAlignment="Center"></TextBlock>
@@ -185,6 +187,7 @@
                             <TextBlock FontSize="30" VerticalAlignment="Top" Grid.ColumnSpan="2">Torsdag</TextBlock>
 
                             <TextBlock Grid.Row="0" Grid.Column="2" FontSize="30" Grid.ColumnSpan="2"  FontWeight="Bold" Text="{Binding DenneUge.torsdag.Ret}" HorizontalAlignment="Stretch"></TextBlock>
+                            <TextBlock Grid.Row="1" Grid.Column="3" Text="{Binding DeltagereTorsdag}"></TextBlock>
 
                             <TextBlock Grid.Row="1" Grid.Column="0" VerticalAlignment="Center">Chefkok:</TextBlock>
                             <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding DenneUge.torsdag.ChefKok}" HorizontalAlignment="Stretch" VerticalAlignment="Center"></TextBlock>
@@ -231,6 +234,7 @@
                             <TextBlock FontSize="30" VerticalAlignment="Top" Grid.ColumnSpan="2">Mandag</TextBlock>
 
                             <TextBlock Grid.Row="0" Grid.Column="2" FontSize="30" Grid.ColumnSpan="2"  FontWeight="Bold" Text="{Binding NæsteUge.mandag.Ret}" HorizontalAlignment="Stretch"></TextBlock>
+                            <TextBlock Grid.Row="1" Grid.Column="3" Text="{Binding DeltagereMandagNæsteUge}"></TextBlock>
 
                             <TextBlock Grid.Row="1" Grid.Column="0" VerticalAlignment="Center">Chefkok:</TextBlock>
                             <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding NæsteUge.mandag.ChefKok}" HorizontalAlignment="Stretch" VerticalAlignment="Center"></TextBlock>
@@ -265,6 +269,7 @@
                             <TextBlock FontSize="30" VerticalAlignment="Top" Grid.ColumnSpan="2">Tirsdag</TextBlock>
 
                             <TextBlock Grid.Row="0" Grid.Column="2" FontSize="30" Grid.ColumnSpan="2"  FontWeight="Bold" Text="{Binding NæsteUge.tirsdag.Ret}" HorizontalAlignment="Stretch"></TextBlock>
+                            <TextBlock Grid.Row="1" Grid.Column="3" Text="{Binding DeltagereTirsdagNæsteUge}"></TextBlock>
 
                             <TextBlock Grid.Row="1" Grid.Column="0" VerticalAlignment="Center">Chefkok:</TextBlock>
                             <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding NæsteUge.tirsdag.ChefKok}" HorizontalAlignment="Stretch" VerticalAlignment="Center"></TextBlock>
@@ -298,6 +303,7 @@
                             <TextBlock FontSize="30" VerticalAlignment="Top" Grid.ColumnSpan="2">Onsdag</TextBlock>
 
                             <TextBlock Grid.Row="0" Grid.Column="2" FontSize="30" Grid.ColumnSpan="2"  FontWeight="Bold" Text="{Binding NæsteUge.onsdag.Ret}" HorizontalAlignment="Stretch"></TextBlock>
+                            <TextBlock Grid.Row="1" Grid.Column="3" Text="{Binding DeltagereOnsdagNæsteUge}"></TextBlock>
 
                             <TextBlock Grid.Row="1" Grid.Column="0" VerticalAlignment="Center">Chefkok:</TextBlock>
                             <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding NæsteUge.onsdag.ChefKok}" HorizontalAlignment="Stretch" VerticalAlignment="Center"></TextBlock>
@@ -331,6 +337,7 @@
                             <TextBlock FontSize="30" VerticalAlignment="Top" Grid.ColumnSpan="2">Torsdag</TextBlock>
 
                             <TextBlock Grid.Row="0" Grid.Column="2" FontSize="30" Grid.ColumnSpan="2"  FontWeight="Bold" Text="{Binding NæsteUge.torsdag.Ret}" HorizontalAlignment="Stretch"></TextBlock>
+                            <TextBlock Grid.Row="1" Grid.Column="3" Text="{Binding DeltagereTorsdagNæsteUge}"></TextBlock>
 
                             <TextBlock Grid.Row="1" Grid.Column="0" VerticalAlignment="Center">Chefkok:</TextBlock>
                             <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding NæsteUge.torsdag.ChefKok}" HorizontalAlignment="Stretch" VerticalAlignment="Center"></TextBlock>

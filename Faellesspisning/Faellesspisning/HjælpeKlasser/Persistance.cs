@@ -6,14 +6,13 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.Storage;
 using Windows.UI.Popups;
+using Faellesspisning;
 using Newtonsoft.Json;
 
 namespace Faellesspisning
 {
     class Persistance
     {
-        
-
         public static async void SaveJson(object collection,string filenameSave)
         {
             string newjson = JsonConvert.SerializeObject(collection);
@@ -24,31 +23,27 @@ namespace Faellesspisning
             await FileIO.WriteTextAsync(localFile, newjson);
            
         }
-
-        public static async Task<GemUge> LoadGemFromJsonAsync(string filenameLoad)
+        public static async Task<GemUge> LoadUgeFraJsonAsync(string filenameLoad)
         {
             string JsonString = await DeSerializeFileAsync(filenameLoad);
             return
                 (GemUge)
                 JsonConvert.DeserializeObject(JsonString, typeof(GemUge));
         }
-        public static async Task<Dictionary<int,Bolig>> LoadStandardFromJsonAsync(string filenameLoad)
+        public static async Task<Dictionary<int,Bolig>> LoadStandardFraJsonAsync(string filenameLoad)
         {
             string JsonString = await DeSerializeFileAsync(filenameLoad);
             return
                 (Dictionary<int,Bolig>)
                 JsonConvert.DeserializeObject(JsonString, typeof(Dictionary<int,Bolig>));
         }
-        public static async Task<List<Arrangement>> LoadArrangementFromJsonAsync(string filenameLoad)
+        public static async Task<List<Arrangement>> LoadArrangementFraJsonAsync(string filenameLoad)
         {
             string JsonString = await DeSerializeFileAsync(filenameLoad);
             return
                 (List<Arrangement>)
                 JsonConvert.DeserializeObject(JsonString, typeof(List<Arrangement>));
         }
-
-
-
         public static async Task<string> DeSerializeFileAsync(String fileName)
         {
             StorageFile localFile = await ApplicationData.Current.LocalFolder.GetFileAsync(fileName);
@@ -62,6 +57,5 @@ namespace Faellesspisning
                 await messageDialog.ShowAsync();
             }
         }
-
     }
 }

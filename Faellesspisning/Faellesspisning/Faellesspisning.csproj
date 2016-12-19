@@ -98,28 +98,25 @@
     <Compile Include="Model\Betaling.cs" />
     <Compile Include="Model\Arrangement.cs" />
     <Compile Include="Model\Bolig.cs" />
-    <Compile Include="Util\Dato.cs" />
+    <Compile Include="HjælpeKlasser\Dato.cs" />
     <Compile Include="Model\Dag.cs" />
-    <Compile Include="Model\GemUge.cs" />
-    <Compile Include="Model\Historik.cs" />
+    <Compile Include="HjælpeKlasser\GemUge.cs" />
     <Compile Include="View\HistorikView.xaml.cs">
       <DependentUpon>HistorikView.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\HistorikVM.cs" />
-    <Compile Include="Model\HusSamling.cs" />
     <Compile Include="View\MadPlanlaegningView.xaml.cs">
       <DependentUpon>MadPlanlaegningView.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\MadPlanlaegningViewVM.cs" />
-    <Compile Include="Util\Persistance.cs" />
+    <Compile Include="HjælpeKlasser\Persistance.cs" />
     <Compile Include="Properties\Annotations2.cs" />
-    <Compile Include="Util\RelayArgCommand.cs" />
-    <Compile Include="Util\RelayCommand.cs" />
-    <Compile Include="Util\Singleton.cs" />
+    <Compile Include="HjælpeKlasser\RelayArgCommand.cs" />
+    <Compile Include="HjælpeKlasser\RelayCommand.cs" />
+    <Compile Include="HjælpeKlasser\Singleton.cs" />
     <Compile Include="View\TilmedlingView.xaml.cs">
       <DependentUpon>TilmedlingView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Model\Tilmelding.cs" />
     <Compile Include="ViewModel\TilmeldlingVM.cs" />
     <Compile Include="Model\Uge.cs" />
     <Compile Include="View\UgePlanView.xaml.cs">

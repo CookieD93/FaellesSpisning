@@ -6,22 +6,27 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.Storage;
 using Eventmaker.Common;
+using Faellesspisning;
 
 namespace Faellesspisning
 {
     class MadPlanlaegningViewVM
     {
         private Uge _denneUge;
+        private string _dmUdlæg;
+        private string _dTiUdlæg;
+        private string _doUdlæg;
+        private string _dToUdlæg;
+        private string _nmUdlæg;
+        private string _nTiUdlæg;
+        private string _noUdlæg;
+        private string _nToUdlæg;
         public RelayCommand GemRetterForDenneUgeRelayCommand { get; set; }
         public RelayCommand GemRetterForNæsteUgeRelayCommand { get; set; }
         public RelayCommand GemArrangementRelayCommand { get; set; }
         public Arrangement ArrangementIPlanlægning { get; set; }
-        // En constructer der laver et nyt object af en klassen Uge
-        // Denne skal så hente alle data fra Bolig klassen, og gemme det i List/Dictionary/OC
-        // Dette Uge object skal enten automatisk oprettes ved begyndelsen på en ny uge[1], eller ved en "manuel" knap på UgePlanLægnings View
-
         #region Props til Databinding
-
+        //Ikke Brugte Props
         //Ret
         //public string DMRet { get; set; }
         //public string DTiRet { get; set; }
@@ -67,58 +72,123 @@ namespace Faellesspisning
         //public string NTiNote { get; set; }
         //public string NONote { get; set; }
         //public string NToNote { get; set; }
-        ////Udlæg
-        //public string DMUdlæg { get; set; }
-        //public string DTiUdlæg { get; set; }
-        //public string DOUdlæg { get; set; }
-        //public string DToUdlæg { get; set; }
-        //public string NMUdlæg { get; set; }
-        //public string NTiUdlæg { get; set; }
-        //public string NOUdlæg { get; set; }
-        //public string NToUdlæg { get; set; } 
-
+        //Udlæg
+        public string DMUdlæg
+        {
+            get { return _dmUdlæg; }
+            set
+            {
+                _dmUdlæg = value;
+                DenneUge.mandag.Udlæg= tryParseToDouble(value);
+            }
+        }
+        public string DTiUdlæg
+        {
+            get { return _dTiUdlæg; }
+            set
+            {
+                _dTiUdlæg = value;
+                DenneUge.tirsdag.Udlæg=tryParseToDouble(value);
+            }
+        }
+        public string DOUdlæg
+        {
+            get { return _doUdlæg; }
+            set
+            {
+                _doUdlæg = value;
+                DenneUge.onsdag.Udlæg=tryParseToDouble(value);
+            }
+        }
+        public string DToUdlæg
+        {
+            get { return _dToUdlæg; }
+            set
+            {
+                _dToUdlæg = value;
+                DenneUge.torsdag.Udlæg=tryParseToDouble(value);
+            }
+        }
+        public string NMUdlæg
+        {
+            get { return _nmUdlæg; }
+            set
+            {
+                _nmUdlæg = value;
+                NæsteUge.mandag.Udlæg=tryParseToDouble(value);
+            }
+        }
+        public string NTiUdlæg
+        {
+            get { return _nTiUdlæg; }
+            set
+            {
+                _nTiUdlæg = value;
+                NæsteUge.tirsdag.Udlæg=tryParseToDouble(value);
+            }
+        }
+        public string NOUdlæg
+        {
+            get { return _noUdlæg; }
+            set
+            {
+                _noUdlæg = value;
+                NæsteUge.onsdag.Udlæg=tryParseToDouble(value);
+            }
+        }
+        public string NToUdlæg
+        {
+            get { return _nToUdlæg; }
+            set
+            {
+                _nToUdlæg = value;
+                NæsteUge.torsdag.Udlæg=tryParseToDouble(value);
+            }
+        }
         #endregion
-
         public Uge DenneUge
         {
             get { return _denneUge; }
             set { _denneUge = value; }
         }
-
         public Uge NæsteUge { get; set; }
-
+        private double tryParseToDouble(string input)
+        {
+            double result;
+            if (double.TryParse(input, out result) && double.Parse(input) > 0)
+            {
+               return result;
+            }   
+                Persistance.MessageDialogHelper.Show(@"Udlægget er ikke et tal, der vil derfor blive gemt et udlæg på 0 hvis der bliver trykket ""Gem"" ", "fejl");
+                return 0;
+        }
         public MadPlanlaegningViewVM()
         {
             _denneUge = Singleton.GetInstance().DenneTempUge;
             NæsteUge = Singleton.GetInstance().NæsteTempUge;
-            GemRetterForDenneUgeRelayCommand = new RelayCommand(Save);
-            GemRetterForNæsteUgeRelayCommand = new RelayCommand(SaveNæste);
+            GemRetterForDenneUgeRelayCommand = new RelayCommand(SaveUge);
+            GemRetterForNæsteUgeRelayCommand = new RelayCommand(SaveNæsteUge);
             GemArrangementRelayCommand = new RelayCommand(GemArrangement);
- 
             ArrangementIPlanlægning = new Arrangement();
-
-            // Psuedo kode:
-            // 1. Hvis der ikke er en fil med navnet uge+(getWeek).json så skal der oprettes et object der hedder Uge+(getWeek).
-            //      Findes filen, skal denne loades ind i UgePlanlægnings Viewet
         }
-
         public void GemArrangement()
         {
             Singleton.GetInstance().ArrengementListe.Add(ArrangementIPlanlægning);
-            Persistance.SaveJson(Singleton.GetInstance().ArrengementListe,"Arrangementer.json");
+            Persistance.SaveJson(Singleton.GetInstance().ArrengementListe, "Arrangementer.json");
             Persistance.MessageDialogHelper.Show("File Saved", "Saved");
 
         }
-        public void Save()
+        public void SaveUge()
         {
             GemUge gem = new GemUge();
             gem.importTilGemDenneUge();
             Persistance.SaveJson(gem,"Uge"+Dato.GetDenneUge()+".json");
-        }public void SaveNæste()
+        }
+        public void SaveNæsteUge()
         {
             GemUge gem = new GemUge();
             gem.importTilGemNæsteUge();
-            Persistance.SaveJson(gem,"Uge"+Dato.GetNextUge()+".json");
+            Persistance.SaveJson(gem,"Uge"+Dato.GetNæsteUge()+".json");
         }
     }
 }
