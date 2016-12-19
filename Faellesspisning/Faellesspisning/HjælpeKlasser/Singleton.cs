@@ -47,7 +47,7 @@ namespace Faellesspisning
             gem.importTilGemDenneUge();
             Persistance.SaveJson(gem, "Uge" + Dato.GetDenneUge() + ".json");
         }
-        private async Task CheckStandard()
+        public async Task CheckStandard()
         {
             try
             {

@@ -60,6 +60,7 @@ namespace Faellesspisning
          }
         public async void SetStandard()
         {
+            await Singleton.GetInstance().CheckStandard();
             await OCTilDagList(Singleton.GetInstance().StandardListe);
             Persistance.SaveJson(Singleton.GetInstance().StandardListe, "Standard.json");
             Tilmeld();
