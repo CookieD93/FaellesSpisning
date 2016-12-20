@@ -8,6 +8,7 @@ namespace Faellesspisning
 {
     class GemUge
     {
+        // Denne klasse importere og eksportere fra Singleton'en
         public Uge GemtUge { get; set; }
         public GemUge()
         {

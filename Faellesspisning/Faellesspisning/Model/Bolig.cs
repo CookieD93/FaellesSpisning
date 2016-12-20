@@ -8,7 +8,6 @@ using Windows.UI.Xaml.Automation;
 
 namespace Faellesspisning
 {
-
     class Bolig
     {
         public int BoligNr { get; set; }
@@ -19,30 +18,18 @@ namespace Faellesspisning
         public Bolig(int boligNr)
         {
             BoligNr = boligNr;
-            //UgeList = new List<List<int>>();
-            //_standarder = int[4, 4];
             DaglistMan = new List<int>();
             DaglistTir = new List<int>();
             DaglistOns = new List<int>();
             DaglistTor = new List<int>();
 
-            
-
             for (int i = 0; i < 4; i++)
             {
-               
-                
                 DaglistMan.Add(0);
                 DaglistTir.Add(0);
                 DaglistOns.Add(0);
                 DaglistTor.Add(0);
-               
-
             }
-            
-            
-            
-            
         }
     }
 }

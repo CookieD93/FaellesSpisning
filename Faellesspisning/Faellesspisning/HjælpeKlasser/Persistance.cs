@@ -13,6 +13,7 @@ namespace Faellesspisning
 {
     class Persistance
     {
+        // Denne klasse bruges til at gemme og læse filer
         public static async void SaveJson(object collection,string filenameSave)
         {
             string newjson = JsonConvert.SerializeObject(collection);
@@ -21,7 +22,6 @@ namespace Faellesspisning
                     ApplicationData.Current.LocalFolder.CreateFileAsync(filenameSave,
                         CreationCollisionOption.ReplaceExisting);
             await FileIO.WriteTextAsync(localFile, newjson);
-           
         }
         public static async Task<GemUge> LoadUgeFraJsonAsync(string filenameLoad)
         {

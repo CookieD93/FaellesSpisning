@@ -10,6 +10,7 @@ namespace Faellesspisning
 {
     class Dato
     {
+        // Denne klasse bruges til at hente uge nummeret
         public static int UgeNr(int uge)
         {
             DateTimeFormatInfo dfi = DateTimeFormatInfo.CurrentInfo;

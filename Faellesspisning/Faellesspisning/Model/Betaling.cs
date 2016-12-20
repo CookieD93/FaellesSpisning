@@ -51,7 +51,7 @@ namespace Faellesspisning
             string result;
             if (KuvertPris()<=0||DeltagereValgtHus(j)<=0)
             {
-                result = $"ikke nok tal til beregning";
+                result = $"Ikke nok værdier til beregning";
                 return result;
             }
             result = $"{KuvertPris() * DeltagereValgtHus(j)}";
