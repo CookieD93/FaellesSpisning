@@ -58,7 +58,9 @@
             </Grid.DataContext>
 
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
@@ -66,31 +68,20 @@
                 <RowDefinition Height="*"/>
 
             </Grid.RowDefinitions>
-            <ComboBox x:Name="comboBox" Header="Husnummer" FontSize="18" HorizontalAlignment="Center"  BorderBrush="#0078d7" Grid.Row="0" VerticalAlignment="Center" Width="160" ItemsSource="{Binding Boligliste.Keys}" SelectedValue="{Binding DropDownValg, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1"/>
+            <ComboBox x:Name="comboBox" Header="Husnummer" FontSize="18" HorizontalAlignment="Center"  BorderBrush="#0078d7" Grid.Row="0" VerticalAlignment="Center" Width="160" ItemsSource="{Binding Boligliste.Keys}" SelectedValue="{Binding DropDownValg, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Column="3"/>
 
             <ListView Name="UgeViser" Grid.Column="1" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
 
             <TextBlock Name="Hus" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="50,0,0,0" Text="Hus: " FontSize="50"/>
             <TextBlock Name="SelectedHus" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="160,-2,0,-3" FontSize="50" Text="{Binding DropDownValg, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="129" />
-            <Grid Grid.Row="1"  HorizontalAlignment="Left">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Grid BorderThickness="1" BorderBrush="CadetBlue" Grid.Column="1"  HorizontalAlignment="Left" MaxHeight="45" MaxWidth="200" MinWidth="150">
-                    <TextBlock x:Name="Betaling" FontSize="19" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.Column="1" MaxHeight="60" MaxWidth="200" MinWidth="150" TextAlignment="Right" Text="{Binding Payment, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5"/>
-           
 
-                </Grid>
-                <TextBlock Name="betaling" Text="Betaling for hele  ugen:" TextWrapping="Wrap" MaxHeight="60" MinWidth="200" FontSize="19" VerticalAlignment="Center"/>
-                <TextBlock Name="KrB" Text="kr." MaxHeight="45" MinWidth="200" FontSize="19" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                    
-                
+            <Grid BorderThickness="2" BorderBrush="#0078d7" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Stretch" MaxHeight="45" MinWidth="150" Margin="20 0 20 0">
+                <TextBlock x:Name="Betaling" FontSize="19" HorizontalAlignment="Left" Margin="10,0,10,0" Grid.Column="1" MaxHeight="60" MinWidth="150" TextAlignment="Right" Text="{Binding Payment, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5"/>
 
-
+                <TextBlock Name="KrB" Text="kr." MaxHeight="45" FontSize="19" Margin="0 0 10 0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
             </Grid>
-            
+            <TextBlock Name="betaling" Text="Betaling for hele  ugen:" Grid.Row="1" TextWrapping="Wrap" HorizontalAlignment="Right" Margin="0 0 20 0" Grid.Column="1" MaxHeight="60" MinWidth="200" FontSize="19" VerticalAlignment="Center"/>
+
         </Grid>
 
     </Grid>

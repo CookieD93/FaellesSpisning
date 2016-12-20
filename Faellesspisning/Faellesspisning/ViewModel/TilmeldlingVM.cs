@@ -73,11 +73,11 @@ namespace Faellesspisning
                 GemUge gem = new GemUge();
                 gem.importTilGemNæsteUge();
                 Persistance.SaveJson(gem, "Uge" + Dato.GetNæsteUge() + ".Json");
-                Persistance.MessageDialogHelper.Show("Din Tilmelding er hermed gemt!","Gemt");
+                Persistance.MessageDialogHelper.Show("Din Tilmelding er hermed gemt!","Gemt!");
             }
             catch (FormatException)
             {
-                Persistance.MessageDialogHelper.Show("Der stod tekst i et felt","Fejl");
+                Persistance.MessageDialogHelper.Show("Der stod tekst i et felt","Fejl!");
             }
         }
         public async Task OCTilDagList(Dictionary<int,Bolig> hvilkenBoligListe)

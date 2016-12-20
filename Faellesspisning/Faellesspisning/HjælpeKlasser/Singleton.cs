@@ -12,6 +12,7 @@ namespace Faellesspisning
 {
     class Singleton
     {
+        // Singleton'en sørger for at holde liv i alle de informationer der skal gemmes mellem alle sider
         private static Singleton _instance = new Singleton();
         public Uge DenneTempUge { get; set; }
         public Uge NæsteTempUge { get; set; }

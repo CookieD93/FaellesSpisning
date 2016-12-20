@@ -75,7 +75,7 @@ namespace Faellesspisning
         //Udlæg
         public string DMUdlæg
         {
-            get { return _dmUdlæg; }
+            get { return $"{DenneUge.mandag.Udlæg}"; }
             set
             {
                 _dmUdlæg = value;
@@ -84,7 +84,7 @@ namespace Faellesspisning
         }
         public string DTiUdlæg
         {
-            get { return _dTiUdlæg; }
+            get { return $"{DenneUge.tirsdag.Udlæg}"; }
             set
             {
                 _dTiUdlæg = value;
@@ -93,7 +93,7 @@ namespace Faellesspisning
         }
         public string DOUdlæg
         {
-            get { return _doUdlæg; }
+            get { return $"{DenneUge.onsdag.Udlæg}"; }
             set
             {
                 _doUdlæg = value;
@@ -102,7 +102,7 @@ namespace Faellesspisning
         }
         public string DToUdlæg
         {
-            get { return _dToUdlæg; }
+            get { return $"{DenneUge.torsdag.Udlæg}"; }
             set
             {
                 _dToUdlæg = value;
@@ -111,7 +111,7 @@ namespace Faellesspisning
         }
         public string NMUdlæg
         {
-            get { return _nmUdlæg; }
+            get { return $"{NæsteUge.mandag.Udlæg}"; }
             set
             {
                 _nmUdlæg = value;
@@ -120,7 +120,7 @@ namespace Faellesspisning
         }
         public string NTiUdlæg
         {
-            get { return _nTiUdlæg; }
+            get { return $"{NæsteUge.tirsdag.Udlæg}"; }
             set
             {
                 _nTiUdlæg = value;
@@ -129,7 +129,7 @@ namespace Faellesspisning
         }
         public string NOUdlæg
         {
-            get { return _noUdlæg; }
+            get { return $"{NæsteUge.onsdag.Udlæg}"; }
             set
             {
                 _noUdlæg = value;
@@ -138,7 +138,7 @@ namespace Faellesspisning
         }
         public string NToUdlæg
         {
-            get { return _nToUdlæg; }
+            get { return $"{NæsteUge.torsdag.Udlæg}"; }
             set
             {
                 _nToUdlæg = value;
@@ -159,7 +159,7 @@ namespace Faellesspisning
             {
                return result;
             }   
-                Persistance.MessageDialogHelper.Show(@"Udlægget er ikke et tal, der vil derfor blive gemt et udlæg på 0 hvis der bliver trykket ""Gem"" ", "fejl");
+                Persistance.MessageDialogHelper.Show(@"Udlægget er ikke et tal, der vil derfor blive gemt et udlæg på 0 hvis der bliver trykket ""Gem"" ", "Fejl!");
                 return 0;
         }
         public MadPlanlaegningViewVM()
@@ -175,7 +175,7 @@ namespace Faellesspisning
         {
             Singleton.GetInstance().ArrengementListe.Add(ArrangementIPlanlægning);
             Persistance.SaveJson(Singleton.GetInstance().ArrengementListe, "Arrangementer.json");
-            Persistance.MessageDialogHelper.Show("File Saved", "Saved");
+            Persistance.MessageDialogHelper.Show("Arrangement er gemt!", "Gemt!");
 
         }
         public void SaveUge()
@@ -183,12 +183,14 @@ namespace Faellesspisning
             GemUge gem = new GemUge();
             gem.importTilGemDenneUge();
             Persistance.SaveJson(gem,"Uge"+Dato.GetDenneUge()+".json");
+            Persistance.MessageDialogHelper.Show("Udlægget er gemt", "Gemt!");
         }
         public void SaveNæsteUge()
         {
             GemUge gem = new GemUge();
             gem.importTilGemNæsteUge();
             Persistance.SaveJson(gem,"Uge"+Dato.GetNæsteUge()+".json");
+            Persistance.MessageDialogHelper.Show("Alle ændringer er gemt!", "Gemt!");
         }
     }
 }
