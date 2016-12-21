@@ -96,7 +96,7 @@
 
                             <TextBlock FontWeight="Bold"  Grid.Row="1" Grid.Column="2" VerticalAlignment="Bottom">Note:</TextBlock>
                             <Grid BorderBrush="#0078d7" BorderThickness="2" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="2">
-                                <TextBlock Padding="5" Text="{Binding DenneUge.mandag.Note}"></TextBlock>
+                                <TextBlock Padding="5" Text="{Binding DenneUge.mandag.Note}" TextWrapping="WrapWholeWords"></TextBlock>
 
                                 
                             </Grid>
@@ -134,7 +134,7 @@
 
                             <TextBlock Grid.Row="1" Grid.Column="2" FontWeight="Bold" VerticalAlignment="Bottom">Note:</TextBlock>
                             <Grid BorderBrush="#0078d7" BorderThickness="2" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="2">
-                                <TextBlock Padding="5" Text="{Binding DenneUge.tirsdag.Note}"></TextBlock>
+                                <TextBlock Padding="5" Text="{Binding DenneUge.tirsdag.Note}" TextWrapping="WrapWholeWords"></TextBlock>
                             </Grid>
                         </Grid>
 
@@ -169,7 +169,7 @@
 
                             <TextBlock Grid.Row="1" FontWeight="Bold" Grid.Column="2" VerticalAlignment="Bottom">Note:</TextBlock>
                             <Grid BorderBrush="#0078d7" BorderThickness="2" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="2">
-                                <TextBlock Padding="5" Text="{Binding DenneUge.onsdag.Note}"></TextBlock>
+                                <TextBlock Padding="5" Text="{Binding DenneUge.onsdag.Note}" TextWrapping="WrapWholeWords"></TextBlock>
                             </Grid>
                         </Grid>
 
@@ -203,7 +203,7 @@
 
                             <TextBlock Grid.Row="1" Grid.Column="2" FontWeight="Bold" VerticalAlignment="Bottom">Note:</TextBlock>
                             <Grid BorderBrush="#0078d7" BorderThickness="2" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="2">
-                                <TextBlock Padding="5" Text="{Binding DenneUge.torsdag.Note}"></TextBlock>
+                                <TextBlock Padding="5" Text="{Binding DenneUge.torsdag.Note}" TextWrapping="WrapWholeWords" HorizontalAlignment="Left"></TextBlock>
                             </Grid>
                         </Grid>
                     </Grid>
@@ -252,7 +252,7 @@
 
                             <TextBlock Grid.Row="1" Grid.Column="2" FontWeight="Bold" VerticalAlignment="Bottom">Note:</TextBlock>
                             <Grid BorderBrush="#0078d7" BorderThickness="2" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="2">
-                                <TextBlock Padding="5" Text="{Binding NæsteUge.mandag.Note}"></TextBlock>
+                                <TextBlock Padding="5" Text="{Binding NæsteUge.mandag.Note}" TextWrapping="WrapWholeWords"></TextBlock>
                             </Grid>
                         </Grid>
 
@@ -289,7 +289,7 @@
 
                             <TextBlock Grid.Row="1" Grid.Column="2" FontWeight="Bold" VerticalAlignment="Bottom">Note:</TextBlock>
                             <Grid BorderBrush="#0078d7" BorderThickness="2" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="2">
-                                <TextBlock Padding="5" Text="{Binding NæsteUge.tirsdag.Note}"></TextBlock>
+                                <TextBlock Padding="5" Text="{Binding NæsteUge.tirsdag.Note}" TextWrapping="WrapWholeWords"></TextBlock>
                             </Grid>
                         </Grid>
 
@@ -325,7 +325,7 @@
 
                             <TextBlock Grid.Row="1" Grid.Column="2" FontWeight="Bold" VerticalAlignment="Bottom">Note:</TextBlock>
                             <Grid BorderBrush="#0078d7" BorderThickness="2" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="2">
-                                <TextBlock Padding="5" Text="{Binding NæsteUge.onsdag.Note}"></TextBlock>
+                                <TextBlock Padding="5" Text="{Binding NæsteUge.onsdag.Note}" TextWrapping="WrapWholeWords"></TextBlock>
                             </Grid>
                         </Grid>
 
@@ -360,7 +360,7 @@
 
                             <TextBlock Grid.Row="1" Grid.Column="2" FontWeight="Bold" VerticalAlignment="Bottom">Note:</TextBlock>
                             <Grid BorderBrush="#0078d7" BorderThickness="2" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="2">
-                                <TextBlock Padding="5" Text="{Binding NæsteUge.torsdag.Note}"></TextBlock>
+                                <TextBlock Padding="5" Text="{Binding NæsteUge.torsdag.Note}" TextWrapping="WrapWholeWords"></TextBlock>
                             </Grid>
                         </Grid>
                     </Grid>
