@@ -22,6 +22,7 @@ namespace Faellesspisning
         public static ObservableCollection<string> OConsdag { get; set; }
         public static ObservableCollection<string> OCtorsdag { get; set; }
         public ObservableCollection<int> DropdownHuse { get; set; }
+
         public int DropDownValg
         {
             get { return _dropDownValg; }
@@ -32,6 +33,7 @@ namespace Faellesspisning
                 GetView();
             }
         }
+
         public TilmeldlingVm()
         {
             DropdownHuse = new ObservableCollection<int>(Singleton.GetInstance().NæsteTempUge.BoligListe.Keys);
@@ -43,6 +45,7 @@ namespace Faellesspisning
             OCtorsdag = new ObservableCollection<string>();
             GetView();
         }
+
         public void GetView()
         {
             OCmandag.Clear();
@@ -57,13 +60,23 @@ namespace Faellesspisning
                 OConsdag.Add(Convert.ToString(temp.DaglistOns[i]));
                 OCtorsdag.Add(Convert.ToString(temp.DaglistTor[i]));
             }
-         }
+        }
+
         public async void SetStandard()
         {
-            await Singleton.GetInstance().CheckStandard();
-            await OCTilDagList(Singleton.GetInstance().StandardListe);
-            Persistance.SaveJson(Singleton.GetInstance().StandardListe, "Standard.json");
-            Tilmeld();
+            try
+            {
+                await Singleton.GetInstance().CheckStandard();
+                await OCTilDagList(Singleton.GetInstance().StandardListe);
+                Persistance.SaveJson(Singleton.GetInstance().StandardListe, "Standard.json");
+                Tilmeld();
+            }
+            catch (FormatException)
+            {
+
+                Persistance.MessageDialogHelper.Show("Der stod tekst i et felt", "Fejl!");
+            }
+            
         }
         public async void Tilmeld()
         {
