@@ -40,6 +40,8 @@ namespace Faellesspisning
         public UgePlanVM()
         {
             Boot();
+            DenneUge = Singleton.GetInstance().DenneTempUge;
+            NæsteUge = Singleton.GetInstance().NæsteTempUge;
         }
         public async Task Boot()
         {
