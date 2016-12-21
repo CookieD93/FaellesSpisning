@@ -26,6 +26,7 @@ namespace Faellesspisning
         public double KuvertPris()
         {
             return UgentligUdlæg() / DeltagereIAlt();
+            
         }
         public double DeltagereValgtHus(int i)
         {
@@ -54,8 +55,11 @@ namespace Faellesspisning
                 result = $"Ikke nok værdier til beregning";
                 return result;
             }
-            result = $"{KuvertPris() * DeltagereValgtHus(j)}";
-            return result;
+            double multiplier = Math.Pow(10, Convert.ToDouble(2));
+            return $"{Math.Ceiling((KuvertPris() * DeltagereValgtHus(j)) * multiplier) / multiplier}";
+
+           // result = $"{Math.Ceiling(KuvertPris() * DeltagereValgtHus(j))}";
+           // return result;
         }
         public double DeltagereMandag()
         {
